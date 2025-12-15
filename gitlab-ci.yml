@@ -1,0 +1,53 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  Destination: 'dist'
+  Stg_Tag: 'Techbodia-STG'
+  Stg_Branch: 'staging'
+  Prod_Tag: 'Techbodia-Production'
+  Prod_Branch: 'production'
+
+.robocopy-with-update-version: &robocopy-with-update-version |
+  Robocopy ${env:CI_PROJECT_DIR}\${Destination} \\${ServerDomain}\f$\Website\${env:CI_PROJECT_NAME}\${Destination} /e /purge; 
+  if (($lastexitcode -band 24) -eq $false){write-host "Robocopy succeeded"} else {write-host "Robocopy fail, error code is $lastexitcode"}
+  $content = 'Release Time (GMT-4):'+ (Get-Date).ToString("yyyy/MM/dd HH:mm:ss") +"`n Version :"+$CI_COMMIT_SHA
+  $content | Set-Content -Path \\${ServerDomain}\f$\Website\${env:CI_PROJECT_NAME}\${Destination}\version.txt
+
+.build: &build
+  before_script:
+    - npm set registry https://registry.npmjs.org
+    - npm install
+  script: *robocopy-with-update-version
+  after_script:
+    - npm set registry http://npm.coreop.net
+  stage: build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+
+stg_build:
+  <<: *build
+  script: npm run build
+  variables:
+    ServerDomain: 'kh-z10.aw02.pbodia.com'
+    GIT_STRATEGY: none
+  tags:
+    - $Stg_Tag
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == $Stg_Branch
+
+prod_build:
+  <<: *build
+  script: npm run build
+  variables:
+    ServerDomain: 'kh-z10.aw02.pbodia.com'
+    GIT_STRATEGY: none
+  tags:
+    - $Prod_Tag
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == $Prod_Branch
