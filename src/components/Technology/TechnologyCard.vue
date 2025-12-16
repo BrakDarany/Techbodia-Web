@@ -3,7 +3,7 @@
     <div class="icon-container">
        <img :src="require(`@/assets/TechnologyStack/${iconName}.svg`)" :alt="iconName" width="24">
     </div>
-    <span class="text-[#475569] text-sm">{{ toPascalCase(iconName) }}</span>
+    <span class="text-[#475569] text-sm capitalize">{{ iconName }}</span>
   </div>
 </template>
 
@@ -12,12 +12,6 @@ defineProps<{
   iconName: string;
 }>();
 
-function toPascalCase(str: string) {
-  return str
-    .split(/[\s-_]+/) // split by space, dash, or underscore
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join('');
-}
 </script>
 
 <style scoped>

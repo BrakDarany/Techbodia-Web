@@ -1,8 +1,8 @@
 <template>
   <div
     class="w-14 h-14 bg-white rounded-lg shadow-sm
-           flex items-center justify-center mb-6
-           transition-transform group-hover:scale-110"
+      flex items-center justify-center mb-6
+      transition-transform"
     style="color: #e91e63"
   >
     <img :src="require(`@/assets/Expertise/${icon}.svg`)" :alt="title" width="24">
