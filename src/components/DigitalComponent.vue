@@ -1,9 +1,9 @@
 <template>
-  <div class="banner-container flex items-center justify-center">
+  <div class="banner-container flex flex-col items-center justify-center md:flex-row min-h-[90vh]">
     <div class="flex flex-col gap-4">
       <div class="
-        customer-text
-        inline-flex items-center justify-center py-1 rounded-full text-sm font-medium">
+        customer-text inline-flex items-center justify-center
+        py-1 rounded-full text-sm font-medium">
         Customer Satisfaction First
       </div>
 
@@ -19,8 +19,11 @@
         Architecting, building and securing the technology that empowering our global clients.
       </p>
 
-      <div class="flex items-center gap-5 mt-3">
-        <button class="apply-btn">Apply Now</button>
+      <div class="flex flex-col lg:flex-row lg:items-center gap-5 mt-3">
+        <button class="apply-btn">
+          Apply Now
+          <img src="../assets/DigitalFuture/arrow-right.svg" alt="#" width="24">
+        </button>
         <a href="#" class="culture-link">View Our Working Culture</a>
       </div>
 
@@ -40,7 +43,7 @@
       </div>
     </div>
 
-    <div class="banner-right">
+    <div class="video-section">
       <div class="video-container">
         <div class="video-placeholder rounded-3xl">
           <button class="play-button">
@@ -61,8 +64,7 @@
 .banner-container {
   padding: 4rem 2rem;
   gap: 2rem;
-  background-color: #faf7f9de;
-  height: 92vh;
+  background-color: #FAF7F9;
 }
 
 .banner-left {
@@ -75,10 +77,11 @@
   background-color: #FDF2F8;
   color: #E91E63;
   width: 220px;
+  margin-top: 73px;
 }
 
 .main-heading {
-  font-size: 70px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.3;
   margin: 0;
@@ -101,7 +104,7 @@
 .description {
   font-size: 16px;
   color: #475569;
-  line-height: 1.6;
+  line-height: 1.625;
   margin: 0;
   max-width: 520px;
 }
@@ -109,7 +112,7 @@
 .apply-btn {
   background: #E91E63;
   color: white;
-  padding: 0.9rem 2rem;
+  padding: 0.9rem;
   border: none;
   border-radius: 9999px;
   font-size: 1rem;
@@ -117,6 +120,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 170px;
 }
 
 .apply-btn:hover {
@@ -134,6 +142,7 @@
   transition: color 0.5s ease;
   border: 1px solid #E2E8F0;
   border-radius: 30px;
+  width: 262px;
 }
 
 .culture-link:hover {
@@ -165,7 +174,7 @@
   color: #64748B;
 }
 
-.banner-right {
+.video-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,8 +183,8 @@
 }
 
 .video-container {
-  width: 588px;
-  height: 270px;
+  width: 382px;
+  height: 215px;
   display: flex;
   flex-direction: column;
 }
@@ -228,5 +237,28 @@
 .video-duration {
   font-size: 0.875rem;
   opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .banner-container {
+    height: 92vh;
+  }
+
+  .main-heading {
+    font-size: 70px;
+  }
+
+  .video-container{
+    width: 588px;
+    height: 270px;
+  }
+
+  .stats-section{
+    border: none;
+  }
+
+  .customer-text{
+    margin: 0px;
+  }
 }
 </style>
