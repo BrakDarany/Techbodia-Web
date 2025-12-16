@@ -1,0 +1,95 @@
+<template>
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <!-- About Us -->
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-black">
+          About <span class="bg-pink-600 text-white px-3 py-1 inline-block">Us</span>
+        </h2>
+      </div>
+
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
+          Founded with a passion for technology and a commitment to excellence,
+          we have grown into a diverse team of problem solvers and creative
+          thinkers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <AboutUsCard
+          v-for="(value, index) in coreValueCards"
+          :key="index"
+          :title="value.title"
+          :description="value.description"
+          :icon-name="value.iconName"
+        />
+      </div>
+    </div>
+
+    <!-- Our Core Values -->
+    <div class="max-w-7xl mx-auto mt-24 lg:pr-14">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-black">
+          Our Core Values
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <OurCoreValueCard
+          v-for="(value, index) in ourCoreValues"
+          :key="index"
+          :title="value.title"
+          :description="value.description"
+          :icon-name="value.iconName"
+        />
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import AboutUsCard from './AboutUs/AboutUsCard.vue';
+import OurCoreValueCard from './AboutUs/OurCoreValueCard.vue';
+
+const coreValueCards = [
+  {
+    title: 'Our Vision',
+    description: 'We constantly ask questions and seek new perspectives to drive innovation.',
+    iconName: 'Our-Vision',
+  },
+  {
+    title: 'Trust',
+    description: 'We build relationships based on transparency, honesty, and mutual respect.',
+    iconName: 'Our-Mission',
+  },
+];
+
+const ourCoreValues = [
+  {
+    title: 'Our Vision',
+    description: 'We constantly ask questions and seek new perspectives to drive innovation.',
+    iconName: 'be-curious',
+  },
+  {
+    title: 'Trust',
+    description: 'We build relationships based on transparency, honesty, and mutual respect.',
+    iconName: 'trust',
+  },
+  {
+    title: 'Continuous Learning',
+    description: 'We are committed to continuous learning and elevating our standards.',
+    iconName: 'never-stop-improve',
+  },
+  {
+    title: 'Evolution & Growth',
+    description: 'We regularly review our work and processes to evolve and overcome challenges.',
+    iconName: 'inspect-and-adapt',
+  },
+  {
+    title: 'Results Driven',
+    description: 'We stay focused on clear objectives to deliver measurable results.',
+    iconName: 'goal-driven',
+  },
+];
+</script>

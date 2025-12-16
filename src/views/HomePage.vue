@@ -4,6 +4,7 @@
   <ExpertiseComponent />
   <TechnologyComponent />
   <PassionAndFun />
+  <AboutUsComponent />
 </template>
 
 <script setup lang="ts">
@@ -12,4 +13,5 @@ import DigitalComponent from '@/components/DigitalComponent.vue';
 import ExpertiseComponent from '@/components/ExpertiseComponent.vue';
 import TechnologyComponent from '@/components/TechnologyComponent.vue';
 import PassionAndFun from '@/components/PassionAndFun.vue';
+import AboutUsComponent from '@/components/AboutUsComponent.vue';
 </script>
