@@ -7,31 +7,16 @@
       </p>
     </div>
     <div class="grid-container">
-      <div
+      <TechnologyCard
         v-for="(value, index) in technologyIcon"
         :key="index"
-        class="w-20 flex flex-col gap-3"
-      >
-        <div class="icon-container">
-          <img :src="getIcon(value)" :alt="value" />
-        </div>
-        <span class="text-[#475569] text-sm">{{ toPascalCase(value) }}</span>
-      </div>
+        :icon-name="value"
+      />
     </div>
   </div>
 </template>
 <script setup lang="ts">
-const svgContext = require.context(
-  '../assets/TechnologyStack',
-  false,
-  /\.svg$/,
-);
-
-const iconMap: Record<string, any> = {};
-svgContext.keys().forEach((path) => {
-  const filename = path.replace('./', '').replace('.svg', '');
-  iconMap[filename] = svgContext(path).default || svgContext(path);
-});
+import TechnologyCard from './Technology/TechnologyCard.vue';
 
 const technologyIcon = [
   'vue-js',
@@ -47,14 +32,6 @@ const technologyIcon = [
   'docker',
   'kubernetes',
 ];
-
-const getIcon = (name: string) => iconMap[name];
-function toPascalCase(str: string) {
-  return str
-    .split(/[\s-_]+/) // split by space, dash, or underscore
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join('');
-}
 </script>
 
 <style scoped>
