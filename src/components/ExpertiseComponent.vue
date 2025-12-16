@@ -2,7 +2,7 @@
   <div class="expertise-container">
     <div class="expertise-header">
       <p class="section-label">WHAT WE DO</p>
-      <h2 class="section-title">Our Expertise</h2>
+      <h2 class="section-title mt-4 mb-6">Our Expertise</h2>
       <p class="section-description">
         We deliver end-to-end technology solutions that drive growth and
         innovation.
@@ -101,7 +101,7 @@ const expertiseList = [
   padding: 4rem 2rem;
   margin: auto;
   background-color: #ffffff;
-  height: 80vh;
+  /* height: 80vh; */
   text-align: center;
 }
 
@@ -123,13 +123,12 @@ const expertiseList = [
   font-size: 2.5rem;
   font-weight: 700;
   color: #0f172a;
-  margin: 0.5rem 0;
   line-height: 1.2;
 }
 
 .section-description {
-  font-size: 1rem;
-  color: #64748b;
+  font-size: 18px;
+  color: #475569;
   margin: 1rem 0 0 0;
   max-width: 600px;
   margin-left: auto;
@@ -138,8 +137,9 @@ const expertiseList = [
 
 .expertise-grid {
   display: flex;
+  flex-direction: column;
   gap: 1.6rem;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -153,7 +153,7 @@ const expertiseList = [
 
 .expertise-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 8px rgba(233, 30, 99, 0.08);
+  box-shadow: 2px 10px 10px rgba(233, 30, 99, 0.08);
   border-color: rgba(233, 30, 99, 0.2);
 }
 
@@ -174,6 +174,7 @@ const expertiseList = [
   font-weight: 700;
   color: #0f172a;
   margin: 0 0 0.75rem 0;
+  text-align: left;
 }
 
 .card-description {
@@ -181,6 +182,21 @@ const expertiseList = [
   color: #64748b;
   line-height: 1.6;
   margin: 0;
-  width: 240px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .expertise-container{
+    height: 80vh;
+  }
+
+  .expertise-grid{
+    flex-direction: row;
+    max-width: 1200px;
+  }
+
+  .expertise-card:hover{
+    box-shadow: 2px 16px 16px rgba(233, 30, 99, 0.05);
+  }
 }
 </style>
