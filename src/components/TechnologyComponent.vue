@@ -15,7 +15,7 @@
         <div class="icon-container">
           <img :src="getIcon(value)" :alt="value" />
         </div>
-        <span>{{ toPascalCase(value) }}</span>
+        <span class="text-[#475569] text-sm">{{ toPascalCase(value) }}</span>
       </div>
     </div>
   </div>
@@ -66,7 +66,7 @@ function toPascalCase(str: string) {
   padding: 4rem 2rem;
   margin: auto;
   background-color: #f8fafc;
-  height: 80vh;
+  height: 100vh;
   text-align: center;
 }
 
@@ -106,16 +106,17 @@ function toPascalCase(str: string) {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3rem;
+  column-gap: 4rem;
   width: 100%;
   max-width: 900px;
+  color: #0f172a;
 }
 .icon-container {
   background-color: white;
   border-radius: 0.5rem;
   font-weight: 600;
-  color: #0f172a;
   width: 100%;
   height: 80px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -123,13 +124,26 @@ function toPascalCase(str: string) {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .icon-container:hover{
-} */
+.icon-container:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 .icon-container img {
   width: 34px;
   height: 34px;
+}
+
+@media (min-width: 768px) {
+  .grid-container{
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .technology-container{
+    height: 80vh;
+  }
 }
 </style>
