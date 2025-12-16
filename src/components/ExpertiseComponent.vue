@@ -15,7 +15,7 @@
         class="expertise-card"
       >
         <div
-          class="w-14 h-14 bg-white rounded-lg shadow-sm
+          class="w-14 h-14 bg-white rounded-lg shadow-xs
           flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
           v-html="item.icon"
           style="color: #e91e63"
