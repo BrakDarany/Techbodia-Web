@@ -1,64 +1,71 @@
 <template>
-  <div class="banner-container flex flex-col items-center justify-center md:flex-row min-h-[90vh]">
-    <div class="flex flex-col gap-4">
-      <div class="
-        customer-text inline-flex items-center justify-center
-        py-1 rounded-full text-sm font-medium">
-        Customer Satisfaction First
-      </div>
-
-      <div>
-        <div class="main-heading">
-          <span class="heading-dark">We Build</span>
-          <span class="heading-gradient">Digital Future</span>
+  <section>
+    <div class="banner-container flex flex-col items-center justify-center md:flex-row min-h-[90vh]">
+      <div class="flex flex-col gap-4">
+        <div class="
+          customer-text inline-flex items-center justify-center
+          py-1 rounded-full text-sm font-medium">
+          Customer Satisfaction First
         </div>
-      </div>
 
-      <p class="description">
-        Transforming ideas into powerful, tailor-made digital solutions.
-        Architecting, building and securing the technology that empowering our global clients.
-      </p>
-
-      <div class="flex flex-col lg:flex-row lg:items-center gap-5 mt-3">
-        <button class="apply-btn">
-          Apply Now
-          <img src="../assets/DigitalFuture/arrow-right.svg" alt="#" width="24">
-        </button>
-        <a href="#" class="culture-link">View Our Working Culture</a>
-      </div>
-
-      <div class="stats-section">
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Projects</div>
+        <div>
+          <div class="main-heading">
+            <span class="heading-dark">We Build</span>
+            <span class="heading-gradient">Digital Future</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Experts</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Offices</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="video-section">
-      <div class="video-container">
-        <div class="video-placeholder rounded-3xl">
-          <button class="play-button">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="24" fill="white" fill-opacity="0.2"/>
-              <path d="M19 16L19 32L32 24L19 16Z" fill="white"/>
-            </svg>
+        <p class="description">
+          Transforming ideas into powerful, tailor-made digital solutions.
+          Architecting, building and securing the technology that empowering our global clients.
+        </p>
+
+        <div class="flex flex-col lg:flex-row lg:items-center gap-5 mt-3">
+          <button class="apply-btn">
+            Apply Now
+            <img src="../assets/DigitalFuture/arrow-right.svg" alt="#" width="24">
           </button>
+          <a href="#" class="culture-link">View Our Working Culture</a>
+        </div>
+
+        <div class="stats-section">
+          <div class="stat-item" v-for="(stat, index) in stats" :key="index">
+            <div class="stat-number">{{ stat.number }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-section">
+        <div class="video-container">
+          <div class="video-placeholder rounded-3xl">
+            <button class="play-button">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="24" fill="white" fill-opacity="0.2"/>
+                <path d="M19 16L19 32L32 24L19 16Z" fill="white"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script setup lang="ts">
-
+const stats = [
+  {
+    number: '50+',
+    label: 'Projects',
+  },
+  {
+    number: '50+',
+    label: 'Experts',
+  },
+  {
+    number: '2',
+    label: 'Offices',
+  },
+];
 </script>
 <style scoped>
 .banner-container {
