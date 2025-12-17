@@ -84,10 +84,8 @@ const technologyIcon = [
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 3rem;
-  column-gap: 4rem;
-  width: 100%;
-  max-width: 900px;
+  grid-auto-rows: 100px;
+  gap: 3rem;
   color: #0f172a;
 }
 .icon-container {
@@ -114,7 +112,17 @@ const technologyIcon = [
   height: 34px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .technology-container{
+    height: 80vh;
+  }
+}
+
+@media (min-width: 1025px) {
   .grid-container{
     grid-template-columns: repeat(6, 1fr);
   }

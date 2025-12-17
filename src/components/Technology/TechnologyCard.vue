@@ -1,5 +1,5 @@
 <template>
-  <div class="w-20 flex flex-col gap-3">
+  <div class="flex flex-col gap-3" style="width: 80px; height: 160px;">
     <div class="icon-container">
        <img :src="require(`@/assets/TechnologyStack/${iconName}.svg`)" :alt="iconName" width="24">
     </div>
