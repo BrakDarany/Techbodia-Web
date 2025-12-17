@@ -28,7 +28,7 @@
     </div>
 
     <!-- Our Core Values -->
-    <div class="max-w-7xl mx-auto mt-24 lg:pr-14">
+    <div class="max-w-7xl mx-auto mt-24 lg:pr-7">
       <div class="text-center mb-12">
         <h2 class="text-2xl font-bold text-black">
           Our Core Values
