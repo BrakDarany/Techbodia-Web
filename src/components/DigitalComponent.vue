@@ -1,7 +1,7 @@
 <template>
   <section>
-    <div class="banner-container flex flex-col items-center justify-center md:flex-row min-h-[90vh]">
-      <div class="flex flex-col gap-4">
+    <div class="banner-container flex flex-col lg:flex-row items-center justify-center">
+      <div class="flex flex-col gap-6">
         <div class="
           customer-text inline-flex items-center justify-center
           py-1 rounded-full text-sm font-medium">
@@ -70,7 +70,6 @@ const stats = [
 <style scoped>
 .banner-container {
   padding: 4rem 2rem;
-  gap: 2rem;
   background-color: #FAF7F9;
 }
 
@@ -84,7 +83,6 @@ const stats = [
   background-color: #FDF2F8;
   color: #E91E63;
   width: 220px;
-  margin-top: 73px;
 }
 
 .main-heading {
@@ -109,7 +107,7 @@ const stats = [
 }
 
 .description {
-  font-size: 16px;
+  font-size: 18px;
   color: #475569;
   line-height: 1.625;
   margin: 0;
@@ -160,8 +158,8 @@ const stats = [
 .stats-section {
   display: flex;
   gap: 3rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 0.5px solid rgba(241, 245, 249, 1);
 }
 
@@ -187,6 +185,8 @@ const stats = [
   align-items: center;
   height: 208px;
   width: 512px;
+  margin-top: 24px;
+  margin-bottom: 34px;
 }
 
 .video-container {
@@ -194,6 +194,8 @@ const stats = [
   height: 215px;
   display: flex;
   flex-direction: column;
+  width: 324px;
+  height: 210px;
 }
 
 .video-placeholder {
@@ -247,10 +249,9 @@ const stats = [
 }
 
 @media (min-width: 768px) {
-  .banner-container {
-    height: 92vh;
+  .banner-container{
+    gap: 2rem;
   }
-
   .main-heading {
     font-size: 70px;
   }
@@ -261,11 +262,20 @@ const stats = [
   }
 
   .stats-section{
-    border: none;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .banner-container {
+    height: 92vh;
+    gap: 2rem;
   }
 
-  .customer-text{
-    margin: 0px;
+  .stats-section{
+    margin-top: 2rem;
+    padding-top: 2rem;
   }
 }
 </style>
