@@ -6,6 +6,8 @@
   <PassionAndFun />
   <AboutUsComponent />
   <JoinOurTeam />
+  <ContactUs />
+  <FooterSection />
 </template>
 
 <script setup lang="ts">
@@ -16,4 +18,6 @@ import TechnologyComponent from '@/components/TechnologyComponent.vue';
 import PassionAndFun from '@/components/PassionAndFun.vue';
 import AboutUsComponent from '@/components/AboutUsComponent.vue';
 import JoinOurTeam from '@/components/JoinOurTeam.vue';
+import ContactUs from '@/components/ContactUs.vue';
+import FooterSection from '@/components/FooterSection.vue';
 </script>
