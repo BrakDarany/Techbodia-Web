@@ -5,6 +5,7 @@
   <TechnologyComponent />
   <PassionAndFun />
   <AboutUsComponent />
+  <JoinOurTeam />
 </template>
 
 <script setup lang="ts">
@@ -14,4 +15,5 @@ import ExpertiseComponent from '@/components/ExpertiseComponent.vue';
 import TechnologyComponent from '@/components/TechnologyComponent.vue';
 import PassionAndFun from '@/components/PassionAndFun.vue';
 import AboutUsComponent from '@/components/AboutUsComponent.vue';
+import JoinOurTeam from '@/components/JoinOurTeam.vue';
 </script>
