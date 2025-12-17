@@ -1,38 +1,52 @@
 <template>
-  <div class="navbar-container flex justify-between
-      p-3 py-1 lg:justify-around lg:py-1">
-    <img class="h-[48px] w-[48px] lg:h-[72px] lg:w-[72px]" src="../assets/Navbar/TB-logo.svg" alt="#">
+  <div
+    class="fixed top-0 left-0 right-0 w-full z-1000
+      shadow-[0_2px_8px_rgba(0,0,0,0.1)] bg-white flex
+      justify-between px-6 py-3 lg:justify-around lg:py-1"
+  >
+    <img
+      class="h-12 w-12 lg:h-18 lg:w-18"
+      src="../assets/Navbar/TB-logo.svg"
+      alt="#"
+    >
 
     <div
-      class="nav-bar hidden lg:flex flex-row justify-end items-center gap-7
-      transition-colors"
+      class="hidden lg:flex flex-row justify-end items-center
+        gap-7 text-sm font-medium text-slate-600
+        transition-colors duration-500"
     >
-      <div class="nav-link">
-        <router-link to="/">Home</router-link>
-      </div>
-      <div class="nav-link">
-        <router-link to="/how-we-work">Services</router-link>
-      </div>
-      <div class="nav-link">
-         <router-link to="/about">Culture</router-link>
-      </div>
-      <div class="nav-link">
-        <router-link to="/about-us">About</router-link>
-      </div>
-      <div class="nav-link">
-        <router-link to="/contact">Contact</router-link>
-      </div>
+      <router-link
+        v-for="link in navLinks"
+        :key="link.path"
+        :to="link.path"
+        :class="[
+          'transition-colors duration-300',
+          $route.path === link.path
+            ? 'text-rose-500 font-semibold'
+            : 'hover:text-rose-500'
+        ]"
+      >
+        {{ link.label }}
+      </router-link>
       <button
         @click="goToCareer"
-        class="career-btn"
-        style="background-color: #E91E63;"
+        class="bg-rose-500 text-white text-sm font-semibold
+          rounded-full px-6 py-2.5 transition-all duration-300
+          shadow-[0_4px_15px_-4px_rgba(255,21,132,0.6)]
+          hover:shadow-[0_8px_25px_-4px_rgba(255,21,132,0.6)]
+          hover:-translate-y-0.5"
       >
         Careers Opportunity
       </button>
     </div>
-    <!-- <img class="h-[48px] w-[48px] lg:h-[72px] lg:w-[72px]" /> -->
 
-    <img class="block md:hidden" src="../assets/Navbar/menu-icon.svg" alt="#" width="26" height="26">
+    <img
+      class="block lg:hidden"
+      src="../assets/Navbar/menu-icon.svg"
+      alt="#"
+      width="26"
+      height="26"
+    >
   </div>
 </template>
 
@@ -41,54 +55,15 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
+const navLinks = [
+  { path: '/', label: 'Home' },
+  { path: '/how-we-work', label: 'Services' },
+  { path: '/about', label: 'Culture' },
+  { path: '/about-us', label: 'About' },
+  { path: '/contact', label: 'Contact' },
+];
+
 const goToCareer = () => {
   router.push('/career');
 };
-
 </script>
-
-<style>
-.navbar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-.career-btn {
-  background-color: #E91E63;
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 9999px;
-  padding: 10px 24px;
-  transition: all 300ms ease;
-  position: relative;
-  box-shadow: 0 4px 15px -4px rgba(255, 21, 132, 0.6);
-}
-
-.career-btn:hover {
-  transform: translateY(-3px);
-  border-radius: 20px;
-  box-shadow: 0 8px 25px -4px rgba(255, 21, 132, 0.6);
-}
-
-.active {
-  color: #E91E63;
-}
-
-.nav-bar{
-  font-size: 14px;
-  font-weight:500;
-  color: #475569;
-  transition: color 500ms ease;
-}
-
-.nav-link:hover {
-  color: #E91E63;
-}
-</style>
