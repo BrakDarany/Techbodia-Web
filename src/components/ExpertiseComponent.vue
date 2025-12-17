@@ -99,8 +99,8 @@ const expertiseList = [
 }
 
 .expertise-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.6rem;
   width: 100%;
   margin: 0 auto;
@@ -132,17 +132,28 @@ const expertiseList = [
   border-radius: 0.5rem;
 }
 
-@media (min-width: 768px) {
-  .expertise-container{
-    height: 80vh;
-  }
-
-  .expertise-grid{
-    flex-direction: row;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
     max-width: 1200px;
   }
 
-  .expertise-card:hover{
+  .expertise-card:hover {
+    box-shadow: 2px 16px 16px rgba(233, 30, 99, 0.05);
+  }
+}
+
+@media (min-width: 1025px) {
+  .expertise-container {
+    height: 80vh;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+  }
+
+  .expertise-card:hover {
     box-shadow: 2px 16px 16px rgba(233, 30, 99, 0.05);
   }
 }
