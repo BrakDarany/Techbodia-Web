@@ -2,45 +2,27 @@
   <div class="bg-white rounded-2xl shadow-lg p-8">
     <form @submit.prevent="submitForm" class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">
-            First Name
-          </label>
-          <input
-            v-model="form.firstName"
-            type="text"
-            placeholder="John"
-            class="w-full rounded-lg border border-gray-300 px-4 py-3
-         focus:ring-2 focus:ring-pink-500 focus:outline-none"
-          />
-        </div>
+        <FormInput
+          v-model="form.firstName"
+          label="First Name"
+          type="text"
+          placeholder="John"
+        />
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">
-            Last Name
-          </label>
-          <input
-            v-model="form.lastName"
-            type="text"
-            placeholder="Doe"
-            class="w-full rounded-lg border border-gray-300 px-4 py-3
-         focus:ring-2 focus:ring-pink-500 focus:outline-none"
-          />
-        </div>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">
-          Email Address
-        </label>
-        <input
-          v-model="form.email"
-          type="email"
-          placeholder="john@example.com"
-          class="w-full rounded-lg border border-gray-300 px-4 py-3
-         focus:ring-2 focus:ring-pink-500 focus:outline-none"
+        <FormInput
+          v-model="form.lastName"
+          label="Last Name"
+          type="text"
+          placeholder="Doe"
         />
       </div>
+
+      <FormInput
+        v-model="form.email"
+        label="Email Address"
+        type="email"
+        placeholder="john@example.com"
+      />
 
       <div>
         <label class="block text-sm font-medium text-gray-700 mb-1">
@@ -50,8 +32,8 @@
           v-model="form.message"
           rows="5"
           placeholder="Tell us about your project..."
-          class="w-full rounded-lg border border-gray-300 px-4 py-3
-         focus:ring-2 focus:ring-pink-500 focus:outline-none  resize-none"
+          class="w-full rounded-xl border border-gray-200 px-4 py-3
+         focus:border-pink-500 focus:outline-none transition-colors resize-none"
         ></textarea>
       </div>
 
@@ -67,6 +49,7 @@
 
 <script setup>
 import { reactive } from 'vue';
+import FormInput from './FormInput.vue';
 
 const emit = defineEmits(['submit']);
 

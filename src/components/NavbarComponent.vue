@@ -1,12 +1,7 @@
 <template>
-  <div class="flex justify-between p-5 lg:justify-around py-5" style="background-color: white;">
-    <div class="flex gap-2 justify-center items-center">
-      <div class="w-10 h-10 flex items-center justify-center rounded-lg"
-        style="background-color: #E91E63;">
-        TB
-      </div>
-      <span class="font-bold text-xl text-[black]">Techbodia</span>
-    </div>
+  <div class="navbar-container flex justify-between
+      p-3 py-1 lg:justify-around lg:py-1">
+    <img class="h-[48px] w-[48px] lg:h-[72px] lg:w-[72px]" src="../assets/Navbar/TB-logo.svg" alt="#">
 
     <div
       class="nav-bar hidden lg:flex flex-row justify-end items-center gap-7
@@ -35,6 +30,8 @@
         Careers Opportunity
       </button>
     </div>
+    <!-- <img class="h-[48px] w-[48px] lg:h-[72px] lg:w-[72px]" /> -->
+
     <img class="block md:hidden" src="../assets/Navbar/menu-icon.svg" alt="#" width="26" height="26">
   </div>
 </template>
@@ -51,6 +48,17 @@ const goToCareer = () => {
 </script>
 
 <style>
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
 .career-btn {
   background-color: #E91E63;
   color: white;

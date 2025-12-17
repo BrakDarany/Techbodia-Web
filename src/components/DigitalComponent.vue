@@ -4,7 +4,7 @@
       <div class="flex flex-col gap-6">
         <div class="
           customer-text inline-flex items-center justify-center
-          py-1 rounded-full text-sm font-medium">
+          py-1 rounded-full text-sm font-medium mt-22">
           Customer Satisfaction First
         </div>
 
@@ -269,8 +269,7 @@ const stats = [
 
 @media (min-width: 1024px){
   .banner-container {
-    height: 92vh;
-    gap: 2rem;
+      gap: 2rem;
   }
 
   .stats-section{

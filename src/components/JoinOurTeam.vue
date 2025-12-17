@@ -1,8 +1,6 @@
 <template>
   <section class="bg-white py-24">
     <div class="max-w-7xl mx-auto px-6">
-
-      <!-- Header -->
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold text-slate-900">
           Join Our Team
@@ -19,23 +17,18 @@
         </p>
       </div>
 
-      <!-- Job Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
         <CarreerCard v-for="job in jobs" :key="job.title" :job="job" />
       </div>
       <div class="flex flex-col items-center justify-center mt-12 space-y-6">
-        <!-- Text -->
         <p class="text-[#475569] text-base">
           Don't see your position? Send us your CV anyway!
         </p>
 
-        <!-- Black Button -->
         <button class="flex items-center gap-3 bg-slate-900 text-white
              px-8 py-4 rounded-full font-semibold
              hover:bg-slate-800 transition-colors duration-300">
-          <!-- Icon -->
            <img src="../assets/JoinOurTeam/message-icon.svg" width="22" height="22"/>
-
           <span>Send General Application</span>
         </button>
       </div>
