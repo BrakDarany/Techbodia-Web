@@ -36,7 +36,7 @@
 
         <button class="flex items-center gap-3 bg-slate-900 text-white
              px-8 py-4 rounded-full font-semibold
-             hover:bg-slate-800 transition-colors duration-300">
+             hover:bg-slate-700 transition-colors duration-300">
            <img src="../assets/JoinOurTeam/message-icon.svg" width="22" height="22"/>
           <span>Send General Application</span>
         </button>
