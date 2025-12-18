@@ -6,7 +6,7 @@
           We Are Made Of
           <span class="block text-pink-600">Passion & Fun</span>
         </h1>
-        <p class="mt-5 max-w-2xl text-slate-600 text-lg">
+        <p class="text-body-lg mt-5 max-w-2xl">
           Our culture is our superpower. We believe that a happy team creates <br> the best work.
         </p>
       </div>

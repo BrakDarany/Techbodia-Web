@@ -16,7 +16,7 @@
       </div>
 
       <h1
-        class="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6"
+        class="text-5xl md:text-7xl font-bold text-slate-900 leading-tight"
       >
         We Build
         <br />
@@ -28,7 +28,7 @@
       </h1>
 
       <p
-        class="text-lg md:text-[18px] text-[#475569] leading-relaxed max-w-130"
+        class="text-body-lg leading-relaxed max-w-130"
       >
         Transforming ideas into powerful, tailor-made digital solutions.
         Architecting, building and securing the technology that empowering our

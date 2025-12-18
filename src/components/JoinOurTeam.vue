@@ -6,7 +6,7 @@
           Join Our Team
         </h1>
 
-        <p class="mt-6 text-slate-600 leading-relaxed">
+        <p class="mt-6 text-body-lg leading-relaxed">
           For those champions who interested with our position and willing to join our
           company as a Techbodiers, please kindly drop us an email.
           We can't wait to meet you!

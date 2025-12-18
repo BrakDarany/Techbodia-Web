@@ -7,7 +7,7 @@
       data-aos-duration="2000">
       <p class="text-pink-600 text-sm font-bold tracking-widest uppercase">WHAT WE DO</p>
       <h2 class="mt-4 mb-6 text-4xl font-bold text-slate-900 leading-tight">Our Expertise</h2>
-      <p class="text-lg text-slate-500 max-w-xl mx-auto">
+      <p class="text-body-lg max-w-xl mx-auto">
         We deliver end-to-end technology solutions that drive growth and innovation.
       </p>
     </div>

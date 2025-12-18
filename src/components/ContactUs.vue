@@ -8,7 +8,7 @@
           <h1 class="text-4xl font-extrabold text-gray-900 leading-tight">
             Let's Build Something<br />Amazing Together
           </h1>
-          <p class="text-lg mt-4 text-gray-600">
+          <p class="text-body-lg mt-4">
             Ready to start your next project? We're here to help you transform
             your ideas into reality.
           </p>
@@ -92,4 +92,5 @@ const contactList = [
   filter: invert(24%) sepia(93%) saturate(3000%) hue-rotate(315deg)
     brightness(95%) contrast(95%);
 }
+
 </style>

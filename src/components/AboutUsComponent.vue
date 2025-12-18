@@ -8,7 +8,7 @@
       </div>
 
       <div data-aos="fade-up" data-aos-duration="2000" class="text-center mb-16 max-w-3xl mx-auto">
-        <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
+        <p class="text-body-lg leading-relaxed">
           Founded with a passion for technology and a commitment to excellence,
           we have grown into a diverse team of problem solvers and creative
           thinkers.

@@ -2,6 +2,84 @@
 
 @config '../../tailwind.config.js';
 
+/* ============================================
+   Design System CSS Variables
+   ============================================ */
+
+:root {
+  /* ===========================================
+     Font Sizes
+     =========================================== */
+  --font-size-xs: 0.75rem;      /* 12px - badges, tags */
+  --font-size-sm: 0.875rem;     /* 14px - small labels, helper text */
+  --font-size-base: 1rem;       /* 16px - standard text */
+  --font-size-lg: 1.125rem;     /* 18px - body text, descriptions */
+  --font-size-xl: 1.25rem;      /* 20px - card titles */
+  --font-size-2xl: 1.5rem;      /* 24px - subheadings */
+  --font-size-3xl: 1.875rem;    /* 30px - stats, metrics */
+  --font-size-4xl: 2.25rem;     /* 36px - section headings */
+  --font-size-5xl: 3rem;        /* 48px - hero titles */
+  --font-size-7xl: 4.5rem;      /* 72px - large hero titles */
+
+  /* ===========================================
+     Font Weights
+     =========================================== */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;    /* navigation labels, badge text */
+  --font-weight-semibold: 600;  /* card titles, button text */
+  --font-weight-bold: 700;      /* main headings, strong emphasis */
+  --font-weight-extrabold: 800; /* prominent headlines */
+
+  /* ===========================================
+     Button Colors - Primary (Pink)
+     =========================================== */
+  --btn-primary-bg: #E91E63;
+  --btn-primary-bg-hover: #D81B60;      /* pink-600 */
+  --btn-primary-bg-active: #C2185B;     /* pink-700 */
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-shadow: rgba(233, 30, 99, 0.2);
+  --btn-primary-shadow-hover: rgba(233, 30, 99, 0.3);
+
+  /* ===========================================
+     Button Colors - Secondary (Dark/Slate)
+     =========================================== */
+  --btn-secondary-bg: #0F172A;          /* slate-900 */
+  --btn-secondary-bg-hover: #334155;    /* slate-700 */
+  --btn-secondary-text: #FFFFFF;
+
+  /* ===========================================
+     Button Colors - Outline
+     =========================================== */
+  --btn-outline-bg: transparent;
+  --btn-outline-bg-hover: #FCE4EC;      /* pink-50 */
+  --btn-outline-border: #E91E63;
+  --btn-outline-text: #E91E63;
+  --btn-outline-text-hover: #C2185B;
+
+  /* ===========================================
+     Brand Colors
+     =========================================== */
+  --color-primary: #E91E63;
+  --color-primary-light: #F8BBD9;
+  --color-primary-dark: #C2185B;
+  --color-secondary: #9333EA;           /* purple-600 */
+
+  /* ===========================================
+     Text Colors
+     =========================================== */
+  --color-text-primary: #0F172A;        /* slate-900 */
+  --color-text-secondary: #475569;      /* slate-600 */
+  --color-text-muted: #64748B;          /* slate-500 */
+  --color-text-light: #94A3B8;          /* slate-400 */
+
+  /* ===========================================
+     Background Colors
+     =========================================== */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #FAF7F9;        /* light pink tint */
+  --color-bg-tertiary: #F8FAFC;         /* slate-50 */
+}
+
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -17,5 +95,15 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* ===========================================
+   Utility Classes
+   =========================================== */
+@layer utilities {
+  .text-body-lg {
+    font-size: var(--font-size-lg);           /* 18px */
+    color: var(--color-text-secondary);       /* #475569 */
   }
 }

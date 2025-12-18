@@ -7,7 +7,7 @@
       data-aos-duration="1500"
       class="mb-12 text-center">
       <h2 class="text-3xl font-bold text-slate-900 leading-snug mb-2">Technology Stack</h2>
-      <p class="text-base text-slate-600 mx-auto max-w-xl">
+      <p class="text-body-lg mx-auto max-w-xl">
         Our team are experts in the latest technologies
       </p>
     </div>
