@@ -40,6 +40,7 @@
           class="flex items-center justify-center gap-1 w-42.5 py-3
           rounded-full bg-[#E91E63] text-white font-medium text-base
           shadow-[0_8px_24px_rgba(233,30,99,0.3)] transition-transform duration-300 hover:bg-pink-700"
+          @click="scrollToSection('join-our-team')"
         >
           Apply Now
           <img
@@ -106,4 +107,11 @@ const stats = [
   { number: '50+', label: 'Experts' },
   { number: '2', label: 'Offices' },
 ];
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
