@@ -1,5 +1,5 @@
 <template>
-  <section class="lg:h-[80vh] bg-gray-50 flex flex-col items-center justify-center px-6 py-16">
+  <section id="contact-us" class="lg:h-[80vh] bg-gray-50 flex flex-col items-center justify-center px-6 py-16">
     <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div
         data-aos="fade-right"

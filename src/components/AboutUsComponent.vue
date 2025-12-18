@@ -1,7 +1,7 @@
 <template>
-  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+  <section id="about-us" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="max-w-7xl mx-auto">
-      <div data-aos="fade-up" data-aos-duration="2000" class="text-center mb-12">
+      <div data-aos="fade-up" data-aos-duration="2000" class="text-center lg:mt-12 mb-12">
         <h2 class="text-4xl md:text-5xl font-bold text-black">
           About <span class="bg-pink-600 text-white px-3 py-1 inline-block">Us</span>
         </h2>

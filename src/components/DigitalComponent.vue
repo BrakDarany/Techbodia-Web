@@ -1,5 +1,6 @@
 <template>
   <section
+    id="digital-future"
     class="bg-[#FAF7F9] px-8 py-16 flex flex-col items-center lg:flex-row lg:items-center lg:justify-center lg:gap-8"
   >
     <div

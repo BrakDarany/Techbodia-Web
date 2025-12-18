@@ -1,5 +1,6 @@
 <template>
   <div
+    id="expertise"
     class="flex flex-col items-center justify-center px-8 py-16 bg-white text-center mx-auto md:py-24 lg:h-[80vh]">
     <div class="mb-12"
       data-aos="fade-up"
