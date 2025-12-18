@@ -18,6 +18,8 @@
         :key="index"
         :title="value.title"
         :image="value.image"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
     </div>
   </section>

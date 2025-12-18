@@ -1,7 +1,9 @@
 <template>
   <section class="lg:h-[80vh] bg-gray-50 flex flex-col items-center justify-center px-6 py-16">
     <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div>
+      <div
+        data-aos="fade-right"
+        data-aos-duration="2000">
         <div class="flex flex-col">
           <h1 class="text-4xl font-extrabold text-gray-900 leading-tight">
             Let's Build Something<br />Amazing Together
@@ -26,7 +28,10 @@
         </div>
       </div>
 
-      <ContactForm @submit="handleSubmit" />
+      <ContactForm
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        @submit="handleSubmit" />
     </div>
   </section>
 </template>

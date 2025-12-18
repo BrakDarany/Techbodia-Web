@@ -1,14 +1,13 @@
 <template>
   <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-    <!-- About Us -->
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
+      <div data-aos="fade-up" data-aos-duration="2000" class="text-center mb-12">
         <h2 class="text-4xl md:text-5xl font-bold text-black">
           About <span class="bg-pink-600 text-white px-3 py-1 inline-block">Us</span>
         </h2>
       </div>
 
-      <div class="text-center mb-16 max-w-3xl mx-auto">
+      <div data-aos="fade-up" data-aos-duration="2000" class="text-center mb-16 max-w-3xl mx-auto">
         <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
           Founded with a passion for technology and a commitment to excellence,
           we have grown into a diverse team of problem solvers and creative
@@ -23,11 +22,12 @@
           :title="value.title"
           :description="value.description"
           :icon-name="value.iconName"
+          :data-aos="index === 0 ? 'fade-left' : 'fade-right'"
+          data-aos-duration="2000"
         />
       </div>
     </div>
 
-    <!-- Our Core Values -->
     <div class="max-w-7xl mx-auto mt-24 lg:pr-7">
       <div class="text-center mb-12">
         <h2 class="text-2xl font-bold text-black">
@@ -37,6 +37,8 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <OurCoreValueCard
+          data-aos="fade-up"
+          data-aos-duration="2000"
           v-for="(value, index) in ourCoreValues"
           :key="index"
           :title="value.title"

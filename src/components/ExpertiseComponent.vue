@@ -1,6 +1,9 @@
 <template>
-  <div class="flex flex-col items-center justify-center px-8 py-16 bg-white text-center mx-auto md:py-24 lg:h-[80vh]">
-    <div class="mb-12">
+  <div
+    class="flex flex-col items-center justify-center px-8 py-16 bg-white text-center mx-auto md:py-24 lg:h-[80vh]">
+    <div class="mb-12"
+      data-aos="fade-up"
+      data-aos-duration="2000">
       <p class="text-pink-600 text-sm font-bold tracking-widest uppercase">WHAT WE DO</p>
       <h2 class="mt-4 mb-6 text-4xl font-bold text-slate-900 leading-tight">Our Expertise</h2>
       <p class="text-lg text-slate-500 max-w-xl mx-auto">
@@ -8,12 +11,15 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-2 lg:grid-cols-4 max-w-300">
+    <div
+      class="grid grid-cols-1 gap-6 w-full md:grid-cols-2 lg:grid-cols-4 max-w-300">
       <div
         v-for="(item, index) in expertiseList"
         :key="index"
         class="bg-slate-50 p-6 rounded-xl border border-gray-200/30
         transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-pink-200/50"
+        data-aos="fade-up"
+        data-aos-duration="1500"
       >
         <ExpertiseCard
           :title="item.title"

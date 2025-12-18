@@ -1,69 +1,55 @@
 <template>
-  <div
-    class="fixed top-0 left-0 right-0 w-full z-1000
-      shadow-[0_2px_8px_rgba(0,0,0,0.1)] bg-white flex
-      justify-between px-6 py-3 lg:justify-around lg:py-1"
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
   >
-    <img
-      class="h-12 w-12 lg:h-18 lg:w-18"
-      src="../assets/Navbar/TB-logo.svg"
-      alt="#"
-    >
-
     <div
-      class="hidden lg:flex flex-row justify-end items-center
-        gap-7 text-sm font-medium text-slate-600
-        transition-colors duration-500"
+      class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
     >
-      <router-link
-        v-for="link in navLinks"
-        :key="link.path"
-        :to="link.path"
-        :class="[
-          'transition-colors duration-300',
-          $route.path === link.path
-            ? 'text-rose-500 font-semibold'
-            : 'hover:text-rose-500'
-        ]"
-      >
-        {{ link.label }}
-      </router-link>
+      <div class="flex items-center gap-2 cursor-pointer">
+        <img
+          class="w-12 h-12 lg:w-14.5 lg:h-14.5"
+          src="../assets/Navbar/TB-logo.svg" alt="#">
+      </div>
+
+      <div class="hidden md:flex items-center gap-8">
+        <button
+          v-for="item in navItems"
+          :key="item.id"
+          type="button"
+          class="text-sm font-medium transition-colors hover:text-[#E91E63]"
+          :class="item.active ? 'text-[#E91E63]' : 'text-slate-600'"
+        >
+          {{ item.label }}
+        </button>
+
+        <button
+          type="button"
+          class="px-6 py-2.5 bg-[#E91E63]
+              text-white text-sm font-semibold rounded-full
+              hover:bg-pink-600 transition-all shadow-lg shadow-pink-200
+              hover:shadow-pink-300 transform hover:-translate-y-0.5"
+        >
+          Careers Opportunity
+        </button>
+      </div>
+
       <button
-        @click="goToCareer"
-        class="bg-rose-500 text-white text-sm font-semibold
-          rounded-full px-6 py-2.5 transition-all duration-300
-          shadow-[0_4px_15px_-4px_rgba(255,21,132,0.6)]
-          hover:shadow-[0_8px_25px_-4px_rgba(255,21,132,0.6)]
-          hover:-translate-y-0.5"
+        type="button"
+        class="md:hidden p-2"
+        aria-label="Open menu"
       >
-        Careers Opportunity
+        <img src="../assets/Navbar/menu-icon.svg" alt="#" width="28" height="28">
       </button>
     </div>
-
-    <img
-      class="block lg:hidden"
-      src="../assets/Navbar/menu-icon.svg"
-      alt="#"
-      width="26"
-      height="26"
-    >
-  </div>
+  </nav>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-
-const navLinks = [
-  { path: '/', label: 'Home' },
-  { path: '/how-we-work', label: 'Services' },
-  { path: '/about', label: 'Culture' },
-  { path: '/about-us', label: 'About' },
-  { path: '/contact', label: 'Contact' },
+const navItems = [
+  { id: 'home', label: 'Home', active: true },
+  { id: 'services', label: 'Services', active: false },
+  { id: 'culture', label: 'Culture', active: false },
+  { id: 'about', label: 'About', active: false },
+  { id: 'contact', label: 'Contact', active: false },
 ];
-
-const goToCareer = () => {
-  router.push('/career');
-};
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white py-24">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="text-4xl md:text-5xl font-bold text-slate-900">
           Join Our Team
         </h1>
@@ -18,9 +18,18 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-        <CarreerCard v-for="job in jobs" :key="job.title" :job="job" />
+        <CarreerCard
+          v-for="job in jobs"
+          :key="job.title"
+          :job="job"
+          data-aos="fade-up"
+          data-aos-duration="1800"
+        />
       </div>
-      <div class="flex flex-col items-center justify-center mt-12 space-y-6">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1800"
+        class="flex flex-col items-center justify-center mt-12 space-y-6">
         <p class="text-[#475569] text-base">
           Don't see your position? Send us your CV anyway!
         </p>

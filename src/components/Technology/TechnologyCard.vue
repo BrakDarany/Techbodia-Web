@@ -1,5 +1,11 @@
 <template>
-  <div class="flex flex-col gap-3 w-20 h-40">
+  <div
+    class="flex flex-col gap-3 w-20 h-40"
+    data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="1500"
+    >
+    <!-- data-aos-easing="linear" -->
     <div
       class="bg-white w-full h-20 rounded-xl
       flex justify-center items-center shadow-sm

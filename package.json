@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/vue-splide": "^0.6.12",
+    "aos": "^2.3.4",
     "element-plus": "^2.1.11",
     "lodash": "^4.17.21",
     "swiper": "^9.0.0",

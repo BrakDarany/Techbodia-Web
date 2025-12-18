@@ -1,7 +1,11 @@
 <template>
-  <section class="bg-[#FAF7F9] px-8 py-16
-            flex flex-col items-center lg:flex-row lg:items-center lg:justify-center lg:gap-8">
-    <div class="md:w-138 flex flex-col gap-6 items-start">
+  <section
+    class="bg-[#FAF7F9] px-8 py-16
+    flex flex-col items-center lg:flex-row lg:items-center lg:justify-center lg:gap-8">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      class="md:w-138 flex flex-col gap-6 items-start">
       <div class="inline-flex items-center justify-center py-1 rounded-full text-sm font-medium mt-22
                bg-[#FDF2F8] text-[#E91E63] w-55">
         Customer Satisfaction First
@@ -35,7 +39,7 @@
         </a>
       </div>
 
-      <div class="flex gap-12 mt-4 pt-4 border-t border-gray-200 md:mt-6 md:pt-6 lg:mt-8 lg:pt-8">
+      <div class="w-4/5 flex gap-12 mt-4 pt-4 border-t border-slate-100  md:mt-6 md:pt-6 lg:mt-8 lg:pt-8">
         <div class="flex flex-col" v-for="(stat, index) in stats" :key="index">
           <div class="text-3xl md:text-[30px] font-bold text-[#0F172A]">{{ stat.number }}</div>
           <div class="text-sm text-[#64748B]">{{ stat.label }}</div>
@@ -43,8 +47,11 @@
       </div>
     </div>
 
-    <div class="md:w-138 flex justify-center items-center mt-6 lg:mt-0">
-      <div class="relative w-81 h-52.5 md:w-147 md:h-67.5 flex items-center justify-center
+    <div
+      data-aos="fade-left"
+      data-aos-duration="2000"
+      class="md:w-138 flex justify-center items-center mt-6 lg:mt-0">
+      <div class="relative w-81 h-52.5 md:w-147 md:h-67.5 lg:w-lg lg:h-72 flex items-center justify-center
                rounded-3xl bg-[#0F172A] shadow-[0_20px_40px_rgba(0,0,0,0.2)] overflow-hidden">
         <button class="flex items-center justify-center transition-transform duration-300 hover:scale-110
                  bg-none border-none cursor-pointer">
