@@ -29,6 +29,7 @@
               text-white text-sm font-semibold rounded-full
               hover:bg-pink-600 transition-all shadow-lg shadow-pink-200
               hover:shadow-pink-300 transform hover:-translate-y-0.5"
+          @click="scrollToSection('join-our-team')"
         >
           Careers Opportunity
         </button>
