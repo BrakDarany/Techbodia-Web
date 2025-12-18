@@ -16,7 +16,7 @@
 
         <div class="mt-10 space-y-6">
           <ContactInfo v-for="(item, index) in contactList" :key="index" :icon="item.icon" :title="item.title"
-            :value="item.value">
+            :value="item.value" :link="item.link">
             <div v-if="item.socials" class="flex gap-4 text-gray-600 mt-2">
               <a
                 v-for="(social, i) in item.socials"
@@ -64,6 +64,7 @@ const contactList = [
     icon: 'Phone',
     title: 'Telegram',
     value: '+855 10 919 651',
+    link: 'https://t.me/+85510919651',
   },
   {
     icon: 'Telegram',

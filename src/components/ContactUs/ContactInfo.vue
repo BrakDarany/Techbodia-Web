@@ -7,7 +7,8 @@
     <div>
       <p class="font-semibold text-gray-900">{{ title }}</p>
       <slot>
-      <p class="text-gray-600 hover:text-pink-600">{{ value }}</p>
+        <a v-if="link" :href="link" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors duration-300">{{ value }}</a>
+        <p v-else class="text-gray-600 hover:text-pink-600">{{ value }}</p>
       </slot>
     </div>
   </div>
@@ -18,5 +19,6 @@ defineProps({
   icon: String,
   title: String,
   value: String,
+  link: String,
 });
 </script>
