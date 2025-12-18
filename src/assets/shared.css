@@ -103,7 +103,12 @@
    =========================================== */
 @layer utilities {
   .text-body-lg {
-    font-size: var(--font-size-lg);           /* 18px */
-    color: var(--color-text-secondary);       /* #475569 */
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+  }
+  .text-body-4xl {
+    font-size: var(--font-size-4xl);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
   }
 }
