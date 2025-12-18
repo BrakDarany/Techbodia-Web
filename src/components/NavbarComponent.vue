@@ -38,10 +38,60 @@
       <button
         type="button"
         class="md:hidden p-2"
-        aria-label="Open menu"
+        :aria-label="isMobileMenuOpen ? 'Close menu' : 'Open menu'"
+        @click="isMobileMenuOpen = !isMobileMenuOpen"
       >
-        <img src="../assets/Navbar/menu-icon.svg" alt="#" width="28" height="28">
+        <img
+          v-if="!isMobileMenuOpen"
+          src="../assets/Navbar/menu-icon.svg"
+          alt="#"
+          width="28"
+          height="28"
+        >
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7 text-slate-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
       </button>
+    </div>
+
+    <div
+      v-if="isMobileMenuOpen"
+      class="fixed top-20 left-0 right-0 bg-white z-40 md:hidden shadow-lg"
+    >
+      <div class="p-6 flex flex-col gap-6">
+        <button
+          v-for="item in navItems"
+          :key="item.id"
+          type="button"
+          class="text-left text-base font-medium transition-colors hover:text-[#E91E63] py-1"
+          :class="activeSection === item.id ? 'text-[#E91E63]' : 'text-slate-700'"
+          @click="scrollToSection(item.sectionId); isMobileMenuOpen = false"
+        >
+          {{ item.label }}
+        </button>
+
+        <button
+          type="button"
+          class="mt-2 w-full px-6 py-3 bg-[#E91E63]
+              text-white text-base font-semibold rounded-md
+              hover:bg-pink-600 transition-all shadow-lg shadow-pink-200"
+          @click="scrollToSection('join-our-team'); isMobileMenuOpen = false"
+        >
+          Careers Opportunity
+        </button>
+      </div>
     </div>
   </nav>
 </template>
@@ -58,6 +108,7 @@ const navItems = [
 ];
 
 const activeSection = ref('home');
+const isMobileMenuOpen = ref(false);
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
