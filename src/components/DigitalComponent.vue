@@ -75,7 +75,7 @@
       class="md:w-138 flex justify-center items-center mt-6 lg:mt-0"
     >
       <div
-        class="relative w-81 h-52.5 md:w-147 md:h-67.5
+        class="relative w-95.5 h-53.75 md:w-147 md:h-67.5
         lg:w-lg lg:h-72 flex items-center justify-center
         rounded-3xl bg-[#0F172A] shadow-[0_20px_40px_rgba(0,0,0,0.2)] overflow-hidden"
       >
