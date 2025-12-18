@@ -22,6 +22,7 @@
                 v-for="(social, i) in item.socials"
                 :key="i"
                 :href="social.link"
+                target="_blank"
                 class="flex gap-2 items-center group"
               >
                 <img
@@ -59,6 +60,7 @@ const contactList = [
     icon: 'Message',
     title: 'Email Us',
     value: 'info.hr@techbodia.com',
+    link: 'mailto:info.hr@techbodia.com',
   },
   {
     icon: 'Phone',
@@ -73,12 +75,12 @@ const contactList = [
       {
         name: 'Facebook',
         icon: 'Facebook',
-        link: '#',
+        link: 'https://web.facebook.com/techbodia',
       },
       {
         name: 'LinkedIn',
         icon: 'Linkin',
-        link: '#',
+        link: 'https://www.linkedin.com/company/techbodia/posts/?feedView=all',
       },
     ],
   },
