@@ -5,11 +5,10 @@
     data-aos-easing="linear"
     data-aos-duration="1500"
     >
-    <!-- data-aos-easing="linear" -->
     <div
       class="bg-white w-full h-20 rounded-xl
       flex justify-center items-center shadow-sm
-      transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+      transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-200"
     >
       <img
         :src="require(`@/assets/TechnologyStack/${iconName}.svg`)"

@@ -18,11 +18,22 @@
           <ContactInfo v-for="(item, index) in contactList" :key="index" :icon="item.icon" :title="item.title"
             :value="item.value">
             <div v-if="item.socials" class="flex gap-4 text-gray-600 mt-2">
-              <a v-for="(social, i) in item.socials" :key="i" :href="social.link"
-                class="hover:text-pink-600 flex gap-2">
-                <img :src="require(`@/assets/ContactUs/${social.icon}.svg`)"  alt="#" width="20" height="20" />
-                {{ social.name }}
+              <a
+                v-for="(social, i) in item.socials"
+                :key="i"
+                :href="social.link"
+                class="flex gap-2 items-center group"
+              >
+                <img
+                  :src="require(`@/assets/ContactUs/${social.icon}.svg`)"
+                  alt="#"
+                  width="20"
+                  height="20"
+                  class="social-icon transition-all duration-300"
+                />
+                <span class="transition-colors duration-300 group-hover:text-pink-600">{{ social.name }}</span>
               </a>
+
             </div>
           </ContactInfo>
         </div>
@@ -72,3 +83,10 @@ const contactList = [
   },
 ];
 </script>
+
+<style scoped>
+.group:hover .social-icon {
+  filter: invert(24%) sepia(93%) saturate(3000%) hue-rotate(315deg)
+    brightness(95%) contrast(95%);
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white border border-[#f1f5f9] rounded-2xl
-   hover:shadow-md transition-shadow duration-300 p-8 "
+   hover:shadow-lg hover:shadow-gray-200 transition-all duration-500 p-8 "
    >
     <div class="bg-gray-50 w-12 h-12 rounded-3xl flex
       items-center justify-center">

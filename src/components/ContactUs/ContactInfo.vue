@@ -7,7 +7,7 @@
     <div>
       <p class="font-semibold text-gray-900">{{ title }}</p>
       <slot>
-      <p class="text-gray-600">{{ value }}</p>
+      <p class="text-gray-600 hover:text-pink-600">{{ value }}</p>
       </slot>
     </div>
   </div>

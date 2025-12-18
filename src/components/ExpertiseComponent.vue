@@ -13,14 +13,7 @@
 
     <div
       class="grid grid-cols-1 gap-6 w-full md:grid-cols-2 lg:grid-cols-4 max-w-300">
-      <div
-        v-for="(item, index) in expertiseList"
-        :key="index"
-        class="bg-slate-50 p-6 rounded-xl border border-gray-200/30
-        transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-pink-200/50"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
+      <div v-for="(item, index) in expertiseList" :key="index">
         <ExpertiseCard
           :title="item.title"
           :description="item.description"
