@@ -49,14 +49,14 @@
             class="w-6"
           />
         </button>
-        <a
-          href="#"
+        <button
           class="w-65.5 py-3 px-6 rounded-[30px] text-base font-semibold
           text-[#0F172A] bg-white border border-[#E2E8F0] transition-colors
           duration-500 hover:text-[#E91E63] hover:border-[#E91E63] text-center"
+          @click="scrollToSection('passion-and-fun')"
         >
           View Our Working Culture
-        </a>
+        </button>
       </div>
 
       <div

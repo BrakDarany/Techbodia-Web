@@ -62,7 +62,7 @@ const contactList = [
   },
   {
     icon: 'Phone',
-    title: 'Call Us',
+    title: 'Telegram',
     value: '+855 10 919 651',
   },
   {
