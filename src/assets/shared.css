@@ -81,6 +81,7 @@
   --color-bg-primary: #FFFFFF;
   --color-bg-secondary: #FAF7F9;        /* light pink tint */
   --color-bg-tertiary: #F8FAFC;         /* slate-50 */
+  
 }
 
 /*
@@ -191,5 +192,14 @@
   .text-sm-dark-slate{
     font-size: var(--font-size-sm);
     color: var(--color-text-dark-slate);
+  }
+  .bg-secondary {
+    background-color: var(--color-bg-secondary);
+  }
+  .bg-primary{
+    background-color: var(--color-bg-primary);
+  }
+  .bg-tertiary{
+    background-color: var(--color-bg-tertiary);
   }
 }

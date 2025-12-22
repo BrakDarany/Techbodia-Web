@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col justify-center items-center px-8 py-16 mx-auto lg:h-[78vh] bg-[#F8FAFC] text-center">
+    class="flex flex-col justify-center items-center px-8 py-16 mx-auto lg:h-[78vh] bg-tertiary text-center">
     <div
       data-aos="fade-up"
       data-aos-easing="linear"

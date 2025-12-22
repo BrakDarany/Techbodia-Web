@@ -1,5 +1,5 @@
 <template>
-  <section id="join-our-team" class="bg-white py-24">
+  <section id="join-our-team" class="bg-primary py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="text-5xl-primary-bold md:text-5xl">
