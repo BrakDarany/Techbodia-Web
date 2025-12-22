@@ -4,13 +4,13 @@
            transition duration-300 hover:shadow-lg hover:border-pink-200"
   >
     <div class="flex items-start justify-between mb-4">
-      <h3 class="text-lg font-semibold text-slate-900">
+      <h3 class="text-lg-primary-bold">
         {{ job.title }}
       </h3>
 
       <span
         v-if="job.status === 'Open'"
-        class="bg-green-100 text-green-700 text-xs font-medium
+        class="bg-green-100 text-xs-dark-green-medium
                px-3 py-1 rounded-full"
       >
         Open
@@ -18,7 +18,7 @@
 
       <span
         v-else
-        class="bg-slate-100 text-slate-600 text-xs font-medium
+        class="bg-slate-100 text-xs-muted-bold
                px-3 py-1 rounded-full"
       >
         Closed
@@ -26,8 +26,8 @@
     </div>
 
     <!-- Salary -->
-    <p class="text-sm text-slate-500">Salary Range</p>
-    <p class="text-lg font-semibold text-slate-900 mt-1">
+    <p class="text-sm-muted">Salary Range</p>
+    <p class="text-lg-primary-bold mt-1">
       {{ job.salary }}
     </p>
 

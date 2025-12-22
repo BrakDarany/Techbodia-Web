@@ -67,10 +67,13 @@
   /* ===========================================
      Text Colors
      =========================================== */
-  --color-text-primary: #0F172A;        /* slate-900 */
-  --color-text-secondary: #475569;      /* slate-600 */
-  --color-text-muted: #64748B;          /* slate-500 */
-  --color-text-light: #94A3B8;          /* slate-400 */
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748B;
+  --color-text-light: #94A3B8;
+  --color-text-muted-dark: #62748E;
+  --color-text-dark-green: #15803D;
+  --color-text-dark-slate: #334155;
 
   /* ===========================================
      Background Colors
@@ -102,13 +105,91 @@
    Utility Classes
    =========================================== */
 @layer utilities {
-  .text-body-lg {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-secondary);
+  .text-base-primary-bold {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
   }
-  .text-body-4xl {
+  .text-lg-primary-bold {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-xl-primary-bold {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-2xl-primary-bold{
+    font-size: var(--font-size-2xl);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-3xl-primary-bold{
+    font-size: var(--font-size-3xl);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-4xl-primary-bold{
     font-size: var(--font-size-4xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
+  }
+  .text-5xl-primary-bold{
+    font-size: var(--font-size-5xl);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-sm-secondary{
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+  .text-base-secondary{
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+  }
+  .text-lg-seconday{
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+  }
+
+  .text-xl-seconday{
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+  }
+  .text-sm-primary-pink-bold{
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+  .text-base-primary-pink{
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+  }
+  .text-5xl-primary-pink{
+    font-size: var(--font-size-5xl);
+    color: var(--color-primary);
+  }
+  .text-sm-muted{
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  .text-xs-muted-bold{
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-sm-muted-dark{
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted-dark);
+  }
+  .text-xs-dark-green-medium{
+    font-size: var(--font-size-xs);
+    color: var(--color-text-dark-green);
+    font-weight: var(--font-weight-medium);
+  }
+  .text-sm-dark-slate{
+    font-size: var(--font-size-sm);
+    color: var(--color-text-dark-slate);
   }
 }

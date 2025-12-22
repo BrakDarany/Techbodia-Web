@@ -2,11 +2,11 @@
   <section id="passion-and-fun" class="py-24 bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-14">
-        <h1 class="text-4xl md:text-5xl font-bold text-slate-900">
+        <h1 class="text-5xl-primary-bold md:text-5xl font-bold text-slate-900">
           We Are Made Of
-          <span class="block text-pink-600">Passion & Fun</span>
+          <span class="block text-5xl-primary-pink">Passion & Fun</span>
         </h1>
-        <p class="text-body-lg mt-5 max-w-2xl">
+        <p class="text-lg-seconday mt-5 max-w-2xl">
           Our culture is our superpower. We believe that a happy team creates <br> the best work.
         </p>
       </div>

@@ -10,11 +10,11 @@
                group-hover:scale-110" :src="require(`@/assets/Expertise/${icon}.svg`)" :alt="title" />
       </div>
 
-      <h3 class="text-lg font-bold text-slate-900 mb-3 text-left">
+      <h3 class="text-xl-primary-bold mb-3 text-left">
         {{ title }}
       </h3>
 
-      <p class="text-sm text-slate-500 leading-relaxed text-left">
+      <p class="text-sm-secondary leading-relaxed text-left">
         {{ description }}
       </p>
     </div>

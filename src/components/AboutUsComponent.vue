@@ -2,13 +2,13 @@
   <section id="about-us" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="max-w-7xl mx-auto">
       <div data-aos="fade-up" data-aos-duration="2000" class="text-center lg:mt-12 mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold text-black">
+        <h2 class="text-5xl-primary-bold md:text-5xl">
           About <span class="bg-pink-600 text-white px-3 py-1 inline-block">Us</span>
         </h2>
       </div>
 
       <div data-aos="fade-up" data-aos-duration="2000" class="text-center mb-16 max-w-3xl mx-auto">
-        <p class="text-body-lg leading-relaxed">
+        <p class="text-xl-seconday leading-relaxed">
           Founded with a passion for technology and a commitment to excellence,
           we have grown into a diverse team of problem solvers and creative
           thinkers.
@@ -30,7 +30,7 @@
 
     <div class="max-w-7xl mx-auto mt-24 lg:pr-7">
       <div class="text-center mb-12">
-        <h2 class="text-2xl font-bold text-black">
+        <h2 class="text-2xl-primary-bold">
           Our Core Values
         </h2>
       </div>

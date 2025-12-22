@@ -16,7 +16,7 @@
       </div>
 
       <h1
-        class="text-5xl md:text-7xl font-bold text-slate-900 leading-tight"
+        class="text-5xl-primary-bold md:text-7xl leading-tight"
       >
         We Build
         <br />
@@ -28,7 +28,7 @@
       </h1>
 
       <p
-        class="text-body-lg leading-relaxed max-w-130"
+        class="text-lg-seconday leading-relaxed max-w-130"
       >
         Transforming ideas into powerful, tailor-made digital solutions.
         Architecting, building and securing the technology that empowering our
@@ -63,10 +63,10 @@
         class="w-4/5 flex gap-12 mt-4 pt-4 border-t border-slate-100 md:mt-6 md:pt-6 lg:mt-8 lg:pt-8"
       >
         <div class="flex flex-col" v-for="(stat, index) in stats" :key="index">
-          <div class="text-3xl md:text-[30px] font-bold text-[#0F172A]">
+          <div class="text-3xl-primary-bold md:text-[30px]">
             {{ stat.number }}
           </div>
-          <div class="text-sm text-[#64748B]">{{ stat.label }}</div>
+          <div class="text-sm-muted">{{ stat.label }}</div>
         </div>
       </div>
     </div>

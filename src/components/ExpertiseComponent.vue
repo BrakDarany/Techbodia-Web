@@ -5,9 +5,9 @@
     <div class="mb-12"
       data-aos="fade-up"
       data-aos-duration="2000">
-      <p class="text-pink-600 text-sm font-bold tracking-widest uppercase">WHAT WE DO</p>
-      <h2 class="mt-4 mb-6 text-body-4xl leading-tight">Our Expertise</h2>
-      <p class="text-body-lg max-w-xl mx-auto">
+      <p class="text-sm-primary-pink-bold tracking-widest uppercase">WHAT WE DO</p>
+      <h2 class="mt-4 mb-6 text-5xl-primary-bold leading-tight">Our Expertise</h2>
+      <p class="text-lg-seconday w-full mx-auto">
         We deliver end-to-end technology solutions that drive growth and innovation.
       </p>
     </div>

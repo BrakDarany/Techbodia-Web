@@ -16,7 +16,7 @@
         class="w-8 h-8"
       />
     </div>
-    <span class="text-slate-600 text-sm capitalize">{{ iconName }}</span>
+    <span class="text-sm-secondary capitalize">{{ iconName }}</span>
   </div>
 </template>
 

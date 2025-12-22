@@ -2,17 +2,17 @@
   <section id="join-our-team" class="bg-white py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="2000">
-        <h1 class="text-4xl md:text-5xl font-bold text-slate-900">
+        <h1 class="text-5xl-primary-bold md:text-5xl">
           Join Our Team
         </h1>
 
-        <p class="mt-6 text-body-lg leading-relaxed">
+        <p class="mt-6 text-lg-seconday leading-relaxed">
           For those champions who interested with our position and willing to join our
           company as a Techbodiers, please kindly drop us an email.
           We can't wait to meet you!
         </p>
 
-        <p class="mt-4 text-sm text-slate-500">
+        <p class="mt-4 text-sm-muted-dark">
           We mostly focus on finding staff, not clients here.
         </p>
       </div>
@@ -30,12 +30,12 @@
         data-aos="fade-up"
         data-aos-duration="1800"
         class="flex flex-col items-center justify-center mt-12 space-y-6">
-        <p class="text-[#475569] text-base">
+        <p class="text-base-secondary">
           Don't see your position? Send us your CV anyway!
         </p>
 
-        <button class="flex items-center gap-3 bg-slate-900 text-white
-             px-8 py-4 rounded-full font-semibold
+        <button class="flex items-center gap-3 bg-slate-900 text-white font-semibold
+             px-8 py-4 rounded-full
              hover:bg-slate-700 transition-colors duration-300">
            <img src="../assets/JoinOurTeam/message-icon.svg" width="22" height="22"/>
           <span>Send General Application</span>

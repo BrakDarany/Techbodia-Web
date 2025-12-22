@@ -5,10 +5,10 @@
         data-aos="fade-right"
         data-aos-duration="2000">
         <div class="flex flex-col">
-          <h1 class="text-4xl font-extrabold text-gray-900 leading-tight">
+          <h1 class="text-4xl-primary-bold leading-tight">
             Let's Build Something<br />Amazing Together
           </h1>
-          <p class="text-body-lg mt-4">
+          <p class="text-lg-seconday mt-4">
             Ready to start your next project? We're here to help you transform
             your ideas into reality.
           </p>

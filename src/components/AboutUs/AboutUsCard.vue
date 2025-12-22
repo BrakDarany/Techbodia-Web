@@ -6,8 +6,8 @@
       <img :src="require(`@/assets/AboutUs/${iconName}.svg`)" :alt="title" width="24"
         height="24">
     </div>
-    <h3 class="text-2xl font-bold text-gray-900 my-4">{{ title }}</h3>
-    <p class="text-gray-600 leading-relaxed">
+    <h3 class="text-2xl-primary-bold my-4">{{ title }}</h3>
+    <p class="text-base-secondary leading-relaxed">
       {{ description }}
     </p>
   </div>
