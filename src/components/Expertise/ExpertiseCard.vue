@@ -1,5 +1,5 @@
 <template>
-  <div class="group bg-slate-50 p-6 rounded-2xl border border-slate-100
+  <div class="w-full h-60 group bg-slate-50 p-6 rounded-2xl border border-slate-100
               transition-shadow transition-border duration-3000 ease-in-out
               hover:shadow-pink-100/50 hover:shadow-xl hover:border hover:border-pink-100"
               data-aos="fade-up" data-aos-duration="1500">
