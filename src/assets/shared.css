@@ -74,6 +74,7 @@
   --color-text-muted-dark: #62748E;
   --color-text-dark-green: #15803D;
   --color-text-dark-slate: #334155;
+  --color-text-white: #FFFFFF;
 
   /* ===========================================
      Background Colors
@@ -106,6 +107,9 @@
    Utility Classes
    =========================================== */
 @layer utilities {
+  /* ===========================================
+     TEXT — PRIMARY (Dark / Main)
+     =========================================== */
   .text-base-primary-bold {
     font-size: var(--font-size-base);
     color: var(--color-text-primary);
@@ -121,85 +125,257 @@
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
   }
-  .text-2xl-primary-bold{
+  .text-2xl-primary-bold {
     font-size: var(--font-size-2xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
   }
-  .text-3xl-primary-bold{
+  .text-3xl-primary-bold {
     font-size: var(--font-size-3xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
   }
-  .text-4xl-primary-bold{
+  .text-4xl-primary-bold {
     font-size: var(--font-size-4xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
   }
-  .text-5xl-primary-bold{
+  .text-5xl-primary-bold {
     font-size: var(--font-size-5xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
   }
-  .text-sm-secondary{
+  .text-7xl-primary-bold {
+    font-size: var(--font-size-7xl);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+  }
+
+  /* ===========================================
+     TEXT — SECONDARY
+     =========================================== */
+  .text-sm-secondary {
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
   }
-  .text-base-secondary{
+  .text-base-secondary {
     font-size: var(--font-size-base);
     color: var(--color-text-secondary);
   }
-  .text-lg-seconday{
+  .text-lg-seconday {
     font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
   }
-
-  .text-xl-seconday{
+  .text-xl-seconday {
     font-size: var(--font-size-xl);
     color: var(--color-text-secondary);
   }
-  .text-sm-primary-pink-bold{
+
+  /* ===========================================
+     TEXT — PRIMARY PINK (Brand)
+     =========================================== */
+  .text-sm-primary-pink-bold {
     font-size: var(--font-size-sm);
     color: var(--color-primary);
     font-weight: bold;
   }
-  .text-base-primary-pink{
+  .text-base-primary-pink {
     font-size: var(--font-size-base);
     color: var(--color-primary);
   }
-  .text-5xl-primary-pink{
+  .text-4xl-primary-pink {
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+  }
+  .text-5xl-primary-pink {
     font-size: var(--font-size-5xl);
     color: var(--color-primary);
   }
-  .text-sm-muted{
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-  }
-  .text-xs-muted-bold{
+
+  /* ===========================================
+     TEXT — MUTED / HELPER
+     =========================================== */
+  .text-xs-muted-bold {
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
     font-weight: var(--font-weight-bold);
   }
-  .text-sm-muted-dark{
+  .text-sm-muted {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  .text-sm-muted-dark {
     font-size: var(--font-size-sm);
     color: var(--color-text-muted-dark);
   }
-  .text-xs-dark-green-medium{
+
+  /* ===========================================
+     TEXT — STATUS / SPECIAL
+     =========================================== */
+  .text-xs-dark-green-medium {
     font-size: var(--font-size-xs);
     color: var(--color-text-dark-green);
     font-weight: var(--font-weight-medium);
   }
-  .text-sm-dark-slate{
+  .text-sm-dark-slate {
     font-size: var(--font-size-sm);
     color: var(--color-text-dark-slate);
+  }
+
+  /* ===========================================
+     TEXT — WHITE
+     =========================================== */
+  .text-base-white {
+    font-size: var(--font-size-base);
+    color: var(--color-text-white);
+  }
+
+  /* ===========================================
+     BACKGROUND UTILITIES
+     =========================================== */
+  .bg-primary {
+    background-color: var(--color-bg-primary);
   }
   .bg-secondary {
     background-color: var(--color-bg-secondary);
   }
-  .bg-primary{
-    background-color: var(--color-bg-primary);
-  }
-  .bg-tertiary{
+  .bg-tertiary {
     background-color: var(--color-bg-tertiary);
   }
+  .bg-pink {
+    background-color: var(--color-primary);
+  }
+  .bg-pink:hover {
+    background-color: var(--color-primary-dark);
+  }
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+  /* ===========================================
+     Title UTILITIES
+     =========================================== */
+  .title-primary-bold {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-4xl)
+  }
+
+  @media (min-width: 1024px) {
+    .title-primary-bold {
+      font-size: var(--font-size-5xl);
+    }
+  }
+
+  .title-tertiary-bold{
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-5xl)
+  }
+
+  @media (min-width: 1023px) {
+    .title-tertiary-bold {
+      font-size: var(--font-size-7xl);
+    }
+  }
+
+  .title-pink-bold {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-4xl)
+  }
+
+  @media (min-width: 1024px) {
+    .title-pink-bold {
+      font-size: var(--font-size-5xl);
+    }
+  }
+
+  .text-lg-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+  }
+
+  .text-base-description{
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+
+    padding: 0.75rem 1.5rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    /* box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3); */
+
+    transform: translateY(0);
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    /* box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4); */
+  }
+
+  /* ===========================================
+     BUTTON — SHAPE MODIFIERS
+     =========================================== */
+  .btn-round {
+    border-radius: 9999px;
+  }
+
+  .btn-rounded {
+    border-radius: 0.75rem; /* example */
+  }
+
+  .btn-square {
+    border-radius: 0; /* no radius */
+  }
+
+  .btn-shadow{
+    box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3)
+  }
+
+  .btn-hover-lift:hover {
+    transform: translateY(-0.125rem);
+  }
+
+  /* ===========================================
+     BUTTON — OUTLINE PRIMARY
+     =========================================== */
+  .btn-outline-primary {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #E2E8F0; /* slate-200 */
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    transition:
+      color 0.5s ease,
+      border-color 0.5s ease,
+      background-color 0.5s ease;
+  }
+
+  .btn-outline-primary:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
 }

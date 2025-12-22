@@ -34,9 +34,7 @@
     <!-- Button -->
     <button
       v-if="job.status === 'Open'"
-      class="mt-6 w-full bg-[#E91E63] text-white font-semibold
-             py-3 rounded-xl transition
-             hover:bg-pink-700 active:scale-[0.98]"
+      class="mt-6 w-full btn-primary btn-rounded"
     >
       Apply Now
     </button>

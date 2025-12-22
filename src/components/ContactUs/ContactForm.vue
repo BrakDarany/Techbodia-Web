@@ -39,7 +39,7 @@
 
       <button
         type="submit"
-        class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-4 rounded-xl transition"
+        class="w-full btn-primary btn-rounded btn-hover-lift"
       >
         Send Message
       </button>

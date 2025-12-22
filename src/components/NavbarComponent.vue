@@ -32,10 +32,7 @@
 
         <button
           type="button"
-          class="px-6 py-2.5 bg-[#E91E63]
-                 text-white text-sm font-semibold rounded-full
-                 hover:bg-pink-600 transition-all shadow-lg shadow-pink-200
-                 hover:shadow-pink-300 transform hover:-translate-y-0.5"
+          class="btn-primary btn-shadow btn-round btn-hover-lift"
           @click="goTo('#join-our-team')"
         >
           Careers Opportunity
@@ -95,9 +92,7 @@
 
         <button
           type="button"
-          class="mt-2 w-full px-6 py-3 bg-[#E91E63]
-                 text-white text-base font-semibold rounded-md
-                 hover:bg-pink-600 transition-all shadow-lg shadow-pink-200"
+          class="mt-2 w-full btn-primary btn-rounded"
           @click="goTo('#join-our-team')"
         >
           Careers Opportunity

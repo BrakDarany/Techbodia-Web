@@ -15,8 +15,8 @@
         Customer Satisfaction First
       </div>
 
-      <h1
-        class="text-5xl-primary-bold md:text-7xl leading-tight"
+      <p
+        class="title-tertiary-bold leading-tight"
       >
         We Build
         <br />
@@ -25,10 +25,10 @@
         >
           Digital Future
         </span>
-      </h1>
+      </p>
 
       <p
-        class="text-lg-seconday leading-relaxed max-w-130"
+        class="text-lg-description leading-relaxed max-w-130"
       >
         Transforming ideas into powerful, tailor-made digital solutions.
         Architecting, building and securing the technology that empowering our
@@ -37,9 +37,7 @@
 
       <div class="flex flex-col lg:flex-row lg:items-center gap-5 mt-3">
         <button
-          class="flex items-center justify-center gap-1 w-42.5 py-3
-          rounded-full bg-[#E91E63] text-white font-medium text-base
-          shadow-[0_8px_24px_rgba(233,30,99,0.3)] transition-transform duration-300 hover:bg-pink-700"
+          class="btn-primary btn-round w-42.5"
           @click="scrollToSection('join-our-team')"
         >
           Apply Now
@@ -49,10 +47,9 @@
             class="w-6"
           />
         </button>
+
         <button
-          class="w-65.5 py-3 px-6 rounded-[30px] text-base font-semibold
-          text-[#0F172A] bg-white border border-[#E2E8F0] transition-colors
-          duration-500 hover:text-[#E91E63] hover:border-[#E91E63] text-center"
+          class="w-65.5 btn-outline-primary btn-round"
           @click="scrollToSection('passion-and-fun')"
         >
           View Our Working Culture
@@ -77,7 +74,7 @@
       class="md:w-138 flex justify-center items-center mt-6 lg:mt-0"
     >
       <div
-        class="relative w-95.5 h-53.75 md:w-147 md:h-67.5
+        class="relative w-85.5 h-53.75 md:w-147 md:h-67.5
         lg:w-lg lg:h-72 flex items-center justify-center
         rounded-3xl bg-[#0F172A] shadow-[0_20px_40px_rgba(0,0,0,0.2)] overflow-hidden"
       >

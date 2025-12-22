@@ -2,9 +2,9 @@
   <section id="about-us" class="py-16 px-4 sm:px-6 lg:px-8 bg-tertiary">
     <div class="max-w-7xl mx-auto">
       <div data-aos="fade-up" data-aos-duration="2000" class="text-center lg:mt-12 mb-12">
-        <h2 class="text-5xl-primary-bold md:text-5xl">
+        <p class="title-primary-bold">
           About <span class="bg-pink-600 text-white px-3 py-1 inline-block">Us</span>
-        </h2>
+        </p>
       </div>
 
       <div data-aos="fade-up" data-aos-duration="2000" class="text-center mb-16 max-w-3xl mx-auto">

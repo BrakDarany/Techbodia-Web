@@ -8,8 +8,8 @@
       <p class="text-base-primary-bold">{{ title }}</p>
       <slot>
         <a v-if="link" :href="link" target="_blank"
-        class="text-base-secondary hover:text-pink-600 transition-colors duration-300">{{ value }}</a>
-        <p v-else class="text-base-secondary hover:text-pink-600">{{ value }}</p>
+        class="text-base-description hover:text-pink-600 transition-colors duration-300">{{ value }}</a>
+        <p v-else class="text-base-description hover:text-pink-600">{{ value }}</p>
       </slot>
     </div>
   </div>

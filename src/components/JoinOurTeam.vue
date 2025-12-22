@@ -2,11 +2,11 @@
   <section id="join-our-team" class="bg-primary py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="2000">
-        <h1 class="text-5xl-primary-bold md:text-5xl">
+        <h1 class="title-primary-bold md:text-5xl">
           Join Our Team
         </h1>
 
-        <p class="mt-6 text-lg-seconday leading-relaxed">
+        <p class="mt-6 text-lg-description leading-relaxed">
           For those champions who interested with our position and willing to join our
           company as a Techbodiers, please kindly drop us an email.
           We can't wait to meet you!
@@ -30,7 +30,7 @@
         data-aos="fade-up"
         data-aos-duration="1800"
         class="flex flex-col items-center justify-center mt-12 space-y-6">
-        <p class="text-base-secondary">
+        <p class="text-base-description">
           Don't see your position? Send us your CV anyway!
         </p>
 

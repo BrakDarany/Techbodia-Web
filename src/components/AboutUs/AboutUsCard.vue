@@ -7,7 +7,7 @@
         height="24">
     </div>
     <h3 class="text-2xl-primary-bold my-4">{{ title }}</h3>
-    <p class="text-base-secondary leading-relaxed">
+    <p class="text-base-description leading-relaxed">
       {{ description }}
     </p>
   </div>
