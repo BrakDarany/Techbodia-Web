@@ -46,15 +46,10 @@
 </template>
 
 <script setup lang="ts">
+import { IJoinOurTeam } from '@/model/JoinOurTeam';
 import CarreerCard from './JoinOurTeam/CarreerCard.vue';
 
-interface Job {
-  title: string
-  salary: string
-  status: 'Open' | 'Closed'
-}
-
-const jobs: Job[] = [
+const jobs: IJoinOurTeam[] = [
   { title: 'Fullstack Developer', salary: '$800 - $1,500', status: 'Open' },
   { title: 'Network Engineer', salary: '$700 - $1,200', status: 'Open' },
   { title: 'NOC Engineer', salary: '$600 - $1,000', status: 'Closed' },

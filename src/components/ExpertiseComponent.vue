@@ -26,9 +26,10 @@
 </template>
 
 <script setup lang="ts">
+import { IExpertiseItem } from '@/model/Expertise';
 import ExpertiseCard from './Expertise/ExpertiseCard.vue';
 
-const expertiseList = [
+const expertiseList: IExpertiseItem[] = [
   {
     title: 'App Development',
     description:

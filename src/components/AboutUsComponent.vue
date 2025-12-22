@@ -51,10 +51,11 @@
 </template>
 
 <script setup lang="ts">
+import { ICoreValue } from '@/model/AboutUs';
 import AboutUsCard from './AboutUs/AboutUsCard.vue';
 import OurCoreValueCard from './AboutUs/OurCoreValueCard.vue';
 
-const coreValueCards = [
+const coreValueCards: ICoreValue[] = [
   {
     title: 'Our Vision',
     description: 'We constantly ask questions and seek new perspectives to drive innovation.',
@@ -67,7 +68,7 @@ const coreValueCards = [
   },
 ];
 
-const ourCoreValues = [
+const ourCoreValues: ICoreValue[] = [
   {
     title: 'Our Vision',
     description: 'We constantly ask questions and seek new perspectives to drive innovation.',

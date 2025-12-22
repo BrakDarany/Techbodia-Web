@@ -27,8 +27,9 @@
 
 <script setup lang="ts">
 import CultureCard from '@/components/PassionAndFun/PassionAndFunCard.vue';
+import { ICultureItem } from '@/model/PassionAndFun';
 
-const cultureData = [
+const cultureData: ICultureItem[] = [
   {
     title: 'Staff Monthly Birthday',
     image: 'https://browserstack.wpenginepowered.com/wp-content/uploads/2024/01/What-is-Test-Management-scaled.jpg',

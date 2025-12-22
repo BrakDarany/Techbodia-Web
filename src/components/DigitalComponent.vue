@@ -59,7 +59,7 @@
       <div
         class="w-4/5 flex gap-12 mt-4 pt-4 border-t border-slate-100 md:mt-6 md:pt-6 lg:mt-8 lg:pt-8"
       >
-        <div class="flex flex-col" v-for="(stat, index) in stats" :key="index">
+        <div class="flex flex-col" v-for="(stat, index) in companyStats" :key="index">
           <div class="text-3xl-primary-bold md:text-[30px]">
             {{ stat.number }}
           </div>
@@ -99,7 +99,9 @@
 </template>
 
 <script setup lang="ts">
-const stats = [
+import { ICompanyStat } from '@/model/DigitalFuture';
+
+const companyStats: ICompanyStat[] = [
   { number: '50+', label: 'Projects' },
   { number: '50+', label: 'Experts' },
   { number: '2', label: 'Offices' },

@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import TechnologyCard from './Technology/TechnologyCard.vue';
 
-const technologyIcon = [
+const technologyIcon: string[] = [
   'vue-js',
   'nuxt-js',
   'node-js',

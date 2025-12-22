@@ -48,14 +48,16 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { IContactItem } from '@/model/ContactUs';
 import ContactInfo from './ContactUs/ContactInfo.vue';
 import ContactForm from './ContactUs/ContactForm.vue';
 
-const handleSubmit = (data) => {
+const handleSubmit = (data: any) => {
   console.log('Form data from child:', data);
 };
-const contactList = [
+
+const contactList: IContactItem[] = [
   {
     icon: 'Message',
     title: 'Email Us',
