@@ -34,6 +34,7 @@
     <!-- Button -->
     <button
       v-if="job.status === 'Open'"
+      @click="goToJobDetail"
       class="mt-6 w-full btn-primary btn-rounded"
     >
       Apply Now
@@ -50,6 +51,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
 interface Job {
   title: string
   salary: string
@@ -59,4 +62,10 @@ interface Job {
 defineProps<{
   job: Job
 }>();
+
+const router = useRouter();
+
+function goToJobDetail() {
+  router.push({ name: 'ViewJobDetail', params: {} });
+}
 </script>

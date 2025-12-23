@@ -110,6 +110,10 @@
   /* ===========================================
      TEXT — PRIMARY (Dark / Main)
      =========================================== */
+  .text-base-primary {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+  }
   .text-base-primary-bold {
     font-size: var(--font-size-base);
     color: var(--color-text-primary);
@@ -140,16 +144,6 @@
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
   }
-  .text-5xl-primary-bold {
-    font-size: var(--font-size-5xl);
-    color: var(--color-text-primary);
-    font-weight: var(--font-weight-bold);
-  }
-  .text-7xl-primary-bold {
-    font-size: var(--font-size-7xl);
-    color: var(--color-text-primary);
-    font-weight: var(--font-weight-bold);
-  }
 
   /* ===========================================
      TEXT — SECONDARY
@@ -162,14 +156,6 @@
     font-size: var(--font-size-base);
     color: var(--color-text-secondary);
   }
-  .text-lg-seconday {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-secondary);
-  }
-  .text-xl-seconday {
-    font-size: var(--font-size-xl);
-    color: var(--color-text-secondary);
-  }
 
   /* ===========================================
      TEXT — PRIMARY PINK (Brand)
@@ -179,27 +165,10 @@
     color: var(--color-primary);
     font-weight: bold;
   }
-  .text-base-primary-pink {
-    font-size: var(--font-size-base);
-    color: var(--color-primary);
-  }
-  .text-4xl-primary-pink {
-    font-size: var(--font-size-4xl);
-    color: var(--color-primary);
-  }
-  .text-5xl-primary-pink {
-    font-size: var(--font-size-5xl);
-    color: var(--color-primary);
-  }
 
   /* ===========================================
      TEXT — MUTED / HELPER
      =========================================== */
-  .text-xs-muted-bold {
-    font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
-    font-weight: var(--font-weight-bold);
-  }
   .text-sm-muted {
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
@@ -216,10 +185,6 @@
     font-size: var(--font-size-xs);
     color: var(--color-text-dark-green);
     font-weight: var(--font-weight-medium);
-  }
-  .text-sm-dark-slate {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-dark-slate);
   }
 
   /* ===========================================
@@ -272,7 +237,7 @@
     font-size: var(--font-size-5xl)
   }
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     .title-tertiary-bold {
       font-size: var(--font-size-7xl);
     }
