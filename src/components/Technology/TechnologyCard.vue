@@ -3,7 +3,7 @@
     class="flex flex-col gap-3 w-20 h-40"
     data-aos="fade-up"
     data-aos-easing="linear"
-    data-aos-duration="1500"
+    data-aos-duration="800"
     >
     <div
       class="bg-white w-full h-20 rounded-xl

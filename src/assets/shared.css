@@ -225,34 +225,16 @@
     font-size: var(--font-size-4xl)
   }
 
-  @media (min-width: 1024px) {
-    .title-primary-bold {
-      font-size: var(--font-size-5xl);
-    }
-  }
-
   .title-tertiary-bold{
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-5xl)
   }
 
-  @media (min-width: 1024px) {
-    .title-tertiary-bold {
-      font-size: var(--font-size-7xl);
-    }
-  }
-
   .title-pink-bold {
     color: var(--color-primary);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-4xl)
-  }
-
-  @media (min-width: 1024px) {
-    .title-pink-bold {
-      font-size: var(--font-size-5xl);
-    }
   }
 
   .text-lg-description {
@@ -343,4 +325,21 @@
     border-color: var(--color-primary);
   }
 
+
+  /* ===========================================
+    Title UTILITIES — Large Screens (lg ≥ 1024px)
+    =========================================== */
+  @media (min-width: 1024px) {
+    .title-primary-bold {
+      font-size: var(--font-size-5xl);
+    }
+
+    .title-tertiary-bold {
+      font-size: var(--font-size-7xl);
+    }
+
+    .title-pink-bold {
+      font-size: var(--font-size-5xl);
+    }
+  }
 }

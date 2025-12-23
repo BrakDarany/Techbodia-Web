@@ -4,7 +4,7 @@
     class="flex flex-col items-center justify-center px-8 py-16 bg-primary text-center mx-auto md:py-24 lg:h-[80vh]">
     <div class="mb-12"
       data-aos="fade-up"
-      data-aos-duration="2000">
+      data-aos-duration="900">
       <p class="text-sm-primary-pink-bold tracking-widest uppercase">WHAT WE DO</p>
       <h2 class="mt-4 mb-6 title-primary-bold leading-tight">Our Expertise</h2>
       <p class="text-lg-description w-full mx-auto">
@@ -13,8 +13,12 @@
     </div>
 
     <div
-      class="grid grid-cols-1 gap-6 w-full md:grid-cols-2 lg:grid-cols-4 max-w-300">
-      <div v-for="(item, index) in expertiseList" :key="index">
+      class="grid grid-cols-1 gap-6 w-full md:grid-cols-2 lg:grid-cols-4 max-w-300"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="800"
+    >
+      <div v-for="(item, index) in expertiseList" :key="index" >
         <ExpertiseCard
           :title="item.title"
           :description="item.description"

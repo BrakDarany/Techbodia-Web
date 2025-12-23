@@ -3,7 +3,7 @@
     <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div
         data-aos="fade-right"
-        data-aos-duration="2000">
+        data-aos-duration="1000">
         <div class="flex flex-col">
           <h1 class="text-4xl-primary-bold leading-tight">
             Let's Build Something<br />Amazing Together
@@ -42,7 +42,7 @@
 
       <ContactForm
         data-aos="fade-left"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
         @submit="handleSubmit" />
     </div>
   </section>

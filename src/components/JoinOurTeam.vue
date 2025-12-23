@@ -1,7 +1,7 @@
 <template>
   <section id="join-our-team" class="bg-primary py-24">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="2000">
+      <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
         <h1 class="title-primary-bold md:text-5xl">
           Join Our Team
         </h1>
@@ -23,12 +23,12 @@
           :key="job.title"
           :job="job"
           data-aos="fade-up"
-          data-aos-duration="1800"
+          data-aos-duration="1000"
         />
       </div>
       <div
         data-aos="fade-up"
-        data-aos-duration="1800"
+        data-aos-duration="1000"
         class="flex flex-col items-center justify-center mt-12 space-y-6">
         <p class="text-base-description">
           Don't see your position? Send us your CV anyway!

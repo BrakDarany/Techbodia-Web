@@ -5,7 +5,7 @@
   >
     <div
       data-aos="fade-up"
-      data-aos-duration="2000"
+      data-aos-duration="800"
       class="md:w-138 flex flex-col gap-6 items-start"
     >
       <div
@@ -70,7 +70,7 @@
 
     <div
       data-aos="fade-left"
-      data-aos-duration="2000"
+      data-aos-duration="800"
       class="md:w-138 flex justify-center items-center mt-6 lg:mt-0"
     >
       <div

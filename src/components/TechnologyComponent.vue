@@ -4,7 +4,7 @@
     <div
       data-aos="fade-up"
       data-aos-easing="linear"
-      data-aos-duration="1500"
+      data-aos-duration="800"
       class="mb-12 text-center">
       <h2 class="text-3xl-primary-bold mb-2">Technology Stack</h2>
       <p class="text-base-description mx-auto max-w-xl">
