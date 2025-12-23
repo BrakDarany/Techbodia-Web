@@ -3,7 +3,6 @@
     class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
   >
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <!-- Logo -->
       <div
         class="flex items-center gap-2 cursor-pointer"
         @click="goTo('#digital-future')"
@@ -15,7 +14,6 @@
         >
       </div>
 
-      <!-- Desktop Menu -->
       <div class="hidden md:flex items-center gap-8">
         <button
           v-for="item in navItems"
@@ -39,7 +37,6 @@
         </button>
       </div>
 
-      <!-- Mobile Toggle -->
       <button
         type="button"
         class="md:hidden p-2"
@@ -71,7 +68,6 @@
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div
       v-if="isMobileMenuOpen"
       class="fixed top-20 left-0 right-0 bg-white z-40 md:hidden shadow-lg"
@@ -103,7 +99,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { INavItem } from '@/model/Navbar';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
 const router = useRouter();
@@ -111,7 +108,7 @@ const route = useRoute();
 
 const isMobileMenuOpen = ref(false);
 
-const navItems = [
+const navItems: INavItem[] = [
   { id: 'home', label: 'Home', hash: '#digital-future' },
   { id: 'services', label: 'Services', hash: '#expertise' },
   { id: 'culture', label: 'Culture', hash: '#passion-and-fun' },
@@ -119,10 +116,40 @@ const navItems = [
   { id: 'contact', label: 'Contact', hash: '#contact-us' },
 ];
 
-const activeSection = computed(() => navItems.find((item) => item.hash === route.hash)?.id ?? 'home');
+const activeSection = ref<string | null>(null);
+
+const updateActiveSection = () => {
+  if (route.name !== 'Home') {
+    activeSection.value = null;
+    return;
+  }
+
+  const sections = navItems.map((i: INavItem) => document.querySelector(i.hash));
+  sections.forEach((el, idx) => {
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= 100 && rect.bottom >= 100) {
+      activeSection.value = navItems[idx].id;
+    }
+  });
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', updateActiveSection);
+  updateActiveSection();
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateActiveSection);
+});
 
 const goTo = (hash: string) => {
-  router.push({ path: '/', hash });
+  if (window.location.pathname !== '/') {
+    router.push({ path: '/', hash });
+  } else {
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
   isMobileMenuOpen.value = false;
 };
 </script>

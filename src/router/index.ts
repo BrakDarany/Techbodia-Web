@@ -1,32 +1,45 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import MainLayout from '@/layouts/MainLayout.vue';
+import HomePage from '@/views/HomePage.vue';
+import ViewJobDetail from '@/components/JoinOurTeam/ViewJobDetail.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "Home" */ '../views/HomePage.vue'),
+    component: MainLayout,
+    children: [
+      {
+        path: '',
+        name: 'Home',
+        component: HomePage,
+      },
+      {
+        path: 'job-detail',
+        name: 'ViewJobDetail',
+        component: ViewJobDetail,
+      },
+    ],
   },
-  {
-    path: '/jobs/ViewJobDetail',
-    name: 'ViewJobDetail',
-    component: () => import('@/components/JoinOurTeam/ViewJobDetail.vue'),
-  },
-
 ];
 
-const router = createRouter({
+export default createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to) {
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
     if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth',
-        top: 80,
-      };
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          const el = document.querySelector(to.hash);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+          resolve({ el: to.hash });
+        }, 100);
+      });
     }
     return { top: 0 };
   },
 });
-
-export default router;

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-5xl mx-auto p-6 space-y-6">
+  <div class="max-w-5xl mx-auto mt-20 p-6 space-y-6">
     <!-- Job Header -->
     <div
       class="bg-white rounded-2xl shadow-lg p-8 border mb-10 border-gray-100 relative overflow-hidden"
@@ -171,12 +171,12 @@
           </h2>
         </div>
 
-        <p class="px-6 py-4 text-gray-600">
+        <p class="py-4 text-gray-600">
           Comprehensive benefits package including public holidays, flexible
           international working environment, and performance-based bonuses twice a year.
         </p>
 
-        <div class="grid grid-cols-1 gap-4 px-6 pb-6 md:grid-cols-2">
+        <div class="grid grid-cols-1 gap-4 pb-6 md:grid-cols-2">
           <BenefitCard text="Saturday and Sunday are off days" />
           <BenefitCard
             text="Cambodian Public Holidays and Annual Leave (subject to company policy)"
