@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <p class="mt-4 text-base-description">{{ props.job.description   }}</p>
+    <p class="mt-4 text-base-description">{{ props.job.description }}</p>
   </div>
 </template>
 

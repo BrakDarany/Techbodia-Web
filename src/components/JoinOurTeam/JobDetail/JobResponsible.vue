@@ -7,7 +7,7 @@
       <div
         class="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-50 text-white"
       >
-        <img :src="require(`@/assets/JoinOurTeam/JobDetail/${icon}.svg`)" :alt="icon" width="32" height="32"/>
+        <img :src="require(`@/assets/JoinOurTeam/JobDetail/${icon}.svg`)" :alt="icon" width="30" height="30"/>
       </div>
       <h2
         class="text-xl-primary-bold transition-colors duration-300 group-hover:text-pink-500"
