@@ -3,6 +3,8 @@
     title="Job Benefits"
     description="Comprehensive benefits package including public holidays, flexible
       international working environment, and performance-based bonuses twice a year."
+    data-aos="fade-left"
+    data-aos-duration="1000"
   >
     <template #icon>
       <img src="@/assets/JoinOurTeam/JobDetail/gift.svg" alt="Gift Icon" width="28" height="28" />

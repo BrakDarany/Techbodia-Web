@@ -3,6 +3,8 @@
     title="Leave Policy"
     description="We offer weekends off, paid annual and sick leave,
       wedding and paternity leave, with public holidays per the Cambodian calendar."
+    data-aos="fade-right"
+    data-aos-duration="1000"
   >
     <template #icon>
       <img src="@/assets/JoinOurTeam/JobDetail/policy.svg" alt="Gift Icon" width="32" height="32" />

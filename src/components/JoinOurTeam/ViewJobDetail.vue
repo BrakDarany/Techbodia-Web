@@ -1,22 +1,33 @@
 <template>
   <div class="max-w-6xl mx-auto mt-20 p-6 space-y-6">
-    <JobDescription
-      v-if="job"
-      :job="job"/>
-    <div class="grid lg:grid-cols-2 gap-4">
-      <JobResponsible
-        title="Requirement"
-        :responsibilities="job?.jobRequirement"
-        icon="requirement"
-      />
-      <JobResponsible
-        title="Responsibility"
-        :responsibilities="job?.jobResponsible"
-        icon="responsible"
-      />
+    <!-- Loading State -->
+    <div v-if="isLoading" class="flex flex-col items-center justify-center min-h-100">
+      <div class="animate-spin rounded-full h-12 w-12 border-4 border-pink-500 border-t-transparent"></div>
+      <p class="mt-4 text-gray-600">Loading job details...</p>
     </div>
-    <LeavePolocy v-if="job" :job-title="job.jobTitle"/>
-    <JobBenefit v-if="job" :job-title="job.jobTitle"/>
+
+    <!-- Content -->
+    <template v-else-if="job">
+      <JobDescription :job="job" />
+      <div class="grid lg:grid-cols-2 gap-4">
+        <JobResponsible
+          data-aos="flip-right"
+          data-aos-duration="1000"
+          title="Requirement"
+          :responsibilities="job.jobRequirement"
+          icon="requirement"
+        />
+        <JobResponsible
+          data-aos="flip-right"
+          data-aos-duration="1000"
+          title="Responsibility"
+          :responsibilities="job.jobResponsible"
+          icon="responsible"
+        />
+      </div>
+      <LeavePolocy :job-title="job.jobTitle"/>
+      <JobBenefit :job-title="job.jobTitle"/>
+    </template>
   </div>
 </template>
 <script setup lang="ts">
@@ -32,6 +43,7 @@ import LeavePolocy from './JobDetail/LeavePolocyCard.vue';
 const route = useRoute();
 const router = useRouter();
 const job = ref<IJobDetail>();
+const isLoading = ref(true);
 
 onMounted(() => {
   const jobTitleSlug = route.params.jobTitle as string;
@@ -57,5 +69,7 @@ onMounted(() => {
     console.error('Job not found:', jobTitleSlug);
     router.push('/join-our-team');
   }
+
+  isLoading.value = false;
 });
 </script>
