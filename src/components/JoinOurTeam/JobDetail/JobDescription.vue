@@ -1,6 +1,7 @@
 <template>
   <div
-    class="bg-white rounded-2xl shadow-lg p-8 border mb-10 border-gray-100 relative overflow-hidden"
+    class="bg-white rounded-2xl shadow-lg p-8 border mb-10 border-gray-100 relative overflow-hidden
+          transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl"
   >
     <div class="flex flex-col items-start gap-2 mg:gap-0 md:flex-row md:justify-between md:items-center">
       <h1 class="text-3xl-primary-bold">{{ props.job.jobTitle }}</h1>
