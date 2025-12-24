@@ -3,7 +3,7 @@
     <JobDescription
       v-if="job"
       :job="job"/>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid lg:grid-cols-2 gap-4">
       <JobResponsible
         title="Requirement"
         :responsibilities="job?.jobRequirement"

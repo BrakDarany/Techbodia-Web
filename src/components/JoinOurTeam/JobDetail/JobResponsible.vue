@@ -25,7 +25,7 @@
         class="text-gray-700"
       >
         <template v-if="hasSubItems(item)">
-          <span class="font-bold text-gray-900">{{ getTitle(item) }}</span>
+          <span class="text-base-primary-bold">{{ getTitle(item) }}</span>
           <div class="mt-2 ml-4 space-y-1">
             <p v-for="(subItem, subIndex) in getSubItems(item)" :key="subIndex">
               {{ subItem }}

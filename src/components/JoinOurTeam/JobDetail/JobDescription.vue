@@ -2,7 +2,7 @@
   <div
     class="bg-white rounded-2xl shadow-lg p-8 border mb-10 border-gray-100 relative overflow-hidden"
   >
-    <div class="flex justify-between items-center">
+    <div class="flex flex-col items-start gap-2 mg:gap-0 md:flex-row md:justify-between md:items-center">
       <h1 class="text-3xl-primary-bold">{{ props.job.jobTitle }}</h1>
       <button
         type="button"
@@ -16,7 +16,7 @@
         />
       </button>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-base-primary">
+    <div class="grid md:grid-cols-3 gap-4 mt-4 text-base-primary">
       <div
         v-for="(item, index) in infoItems"
         :key="index"
