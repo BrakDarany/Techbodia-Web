@@ -74,8 +74,8 @@
       class="md:w-138 flex justify-center items-center mt-6 lg:mt-0"
     >
       <div
-        class="relative w-85.5 md:max-w-147 md:mt-3
-        lg:max-w-xl aspect-video flex items-center justify-center
+        class="relative w-85.5 h-53.75 md:w-147 md:h-67.5
+        lg:w-lg lg:h-72 aspect-video flex items-center justify-center
         rounded-3xl shadow-2xl overflow-hidden"
       >
         <img
