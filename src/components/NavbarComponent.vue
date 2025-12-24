@@ -39,7 +39,7 @@
 
       <button
         type="button"
-        class="md:hidden p-2"
+        class="md:hidden"
         :aria-label="isMobileMenuOpen ? 'Close menu' : 'Open menu'"
         @click="isMobileMenuOpen = !isMobileMenuOpen"
       >

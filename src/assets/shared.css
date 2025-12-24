@@ -110,6 +110,11 @@
   /* ===========================================
      TEXT — PRIMARY (Dark / Main)
      =========================================== */
+  .text-sm-primary-bold {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+  }
   .text-base-primary {
     font-size: var(--font-size-base);
     color: var(--color-text-primary);
