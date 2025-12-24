@@ -74,32 +74,60 @@
       class="md:w-138 flex justify-center items-center mt-6 lg:mt-0"
     >
       <div
-        class="relative w-85.5 h-53.75 md:w-147 md:h-67.5
-        lg:w-lg lg:h-72 flex items-center justify-center
-        rounded-3xl bg-[#0F172A] shadow-[0_20px_40px_rgba(0,0,0,0.2)] overflow-hidden"
+        class="relative w-85.5 md:max-w-147 md:mt-3
+        lg:max-w-xl aspect-video flex items-center justify-center
+        rounded-3xl shadow-2xl overflow-hidden"
       >
+        <img
+          v-if="!isPlaying"
+          :src="youtubeThumbnail"
+          alt="Video thumbnail"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
         <button
-          class="flex items-center justify-center
+          v-if="!isPlaying"
+          @click="playVideo"
+          class="relative z-10 flex items-center justify-center
           transition-transform duration-300 hover:scale-110
           bg-none border-none cursor-pointer"
         >
           <svg
-            class="w-18 h-18 hover:w-18 hover:h-18"
+            class="w-18 h-18"
             viewBox="0 0 48 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="24" cy="24" r="24" fill="white" fill-opacity="0.2" />
-            <path d="M19 16L19 32L32 24L19 16Z" fill="white" />
+            <circle cx="24" cy="24" r="24" fill="gray" fill-opacity="0.2" />
+            <path d="M19 16L19 32L32 24L19 16Z" fill="gray" />
           </svg>
         </button>
+        <iframe
+          v-if="isPlaying"
+          :src="`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0`"
+          class="absolute inset-0 w-full h-full object-cover"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import { ICompanyStat } from '@/model/DigitalFuture';
+
+const youtubeVideoId = ref('XhQei6kUoKg');
+const isPlaying = ref(false);
+
+const youtubeThumbnail = computed(
+  () => `https://img.youtube.com/vi/${youtubeVideoId.value}/hq720.jpg`,
+);
+
+const playVideo = () => {
+  isPlaying.value = true;
+};
 
 const companyStats: ICompanyStat[] = [
   { number: '50+', label: 'Projects' },
