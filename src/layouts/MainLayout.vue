@@ -1,12 +1,12 @@
 <template>
-  <Navbar />
+  <NavbarMenu />
 
   <router-view />
 
-  <FooterSection />
+  <FooterContent />
 </template>
 
 <script setup lang="ts">
-import Navbar from '@/components/Navbar.vue';
-import FooterSection from '@/components/FooterSection.vue';
+import NavbarMenu from '@/components/NavbarMenu.vue';
+import FooterContent from '@/components/FooterContent.vue';
 </script>

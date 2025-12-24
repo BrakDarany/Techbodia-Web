@@ -31,52 +31,40 @@ import { ICultureItem } from '@/model/PassionAndFun';
 
 const cultureData: ICultureItem[] = [
   {
-    title: 'Staff Monthly Birthday',
-    image: 'https://browserstack.wpenginepowered.com/wp-content/uploads/2024/01/What-is-Test-Management-scaled.jpg',
+    title: 'Bear Painting',
+    image: 'Painting1',
   },
   {
-    title: 'Team Outing',
-    image: 'https://dayearlylearning.org/wp-content/uploads/2024/04/AdobeStock_181872075-scaled.jpeg',
+    title: 'All Hands Meeting',
+    image: 'AllHandMeeting1',
   },
   {
-    title: 'Staff Monthly Birthday',
-    image: 'https://browserstack.wpenginepowered.com/wp-content/uploads/2024/01/What-is-Test-Management-scaled.jpg',
+    title: 'Halloween Party',
+    image: 'Halloween',
   },
   {
-    title: 'Team Outing',
-    image: 'https://dayearlylearning.org/wp-content/uploads/2024/04/AdobeStock_181872075-scaled.jpeg',
+    title: 'Khmer Coder Event',
+    image: 'KhmerCoder1',
   },
   {
-    title: 'Staff Monthly Birthday',
-    image: 'https://browserstack.wpenginepowered.com/wp-content/uploads/2024/01/What-is-Test-Management-scaled.jpg',
+    title: 'Tech Community',
+    image: 'KhmerCoder2',
   },
   {
-    title: 'Team Outing',
-    image: 'https://dayearlylearning.org/wp-content/uploads/2024/04/AdobeStock_181872075-scaled.jpeg',
+    title: 'Team Picnic',
+    image: 'Picnic1',
   },
   {
-    title: 'Staff Monthly Birthday',
-    image: 'https://browserstack.wpenginepowered.com/wp-content/uploads/2024/01/What-is-Test-Management-scaled.jpg',
+    title: 'Outdoor Fun',
+    image: 'Picnic2',
   },
   {
-    title: 'Team Outing',
-    image: 'https://dayearlylearning.org/wp-content/uploads/2024/04/AdobeStock_181872075-scaled.jpeg',
+    title: 'Nature Day',
+    image: 'Picnic3',
   },
   {
-    title: 'Staff Monthly Birthday',
-    image: 'https://browserstack.wpenginepowered.com/wp-content/uploads/2024/01/What-is-Test-Management-scaled.jpg',
-  },
-  {
-    title: 'Team Outing',
-    image: 'https://dayearlylearning.org/wp-content/uploads/2024/04/AdobeStock_181872075-scaled.jpeg',
-  },
-  {
-    title: 'Staff Monthly Birthday',
-    image: 'https://browserstack.wpenginepowered.com/wp-content/uploads/2024/01/What-is-Test-Management-scaled.jpg',
-  },
-  {
-    title: 'Team Outing',
-    image: 'https://dayearlylearning.org/wp-content/uploads/2024/04/AdobeStock_181872075-scaled.jpeg',
+    title: 'Year End Party',
+    image: 'YearEngParty',
   },
 ];
 </script>
