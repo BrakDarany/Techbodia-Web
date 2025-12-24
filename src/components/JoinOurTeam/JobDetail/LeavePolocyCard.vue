@@ -10,7 +10,7 @@
 
     <ul class="list-disc list-inside space-y-2 marker:text-pink-500">
       <li
-        v-for="(value, index) in benefits"
+        v-for="(value, index) in leavePolicy"
         :key="index"
         class="text-gray-700">
         {{ value }}
@@ -20,9 +20,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import InfoCard from './InfoCard.vue';
 
-const benefits = [
+interface IProp {
+  jobTitle: string;
+}
+const props = defineProps<IProp>();
+
+const defaultLeavePolicy = [
   'Saturday and Sunday are off days.',
   '10 paid sick leave (Need to append the certificate of diagnosis from the hospital).',
   '7 paid wedding leave (Include Saturday & Sunday)',
@@ -30,4 +36,19 @@ const benefits = [
   '12 paid annual leaves(pro-rated)',
   'Public holiday follow Cambodia Calender',
 ];
+
+const casLeavePolicy = [
+  'Compensation leaves for Saturday, Sunday and Cambodian Public Holiday.',
+  '12 paid annual leaves (pro-rated).',
+  '7 paid wedding leave (Include Saturday & Sunday).',
+  '7 paid paternity leave (Include Saturday & Sunday) for taking care of the wife and newborn baby.',
+];
+
+const isCustomerService = computed(
+  () => props.jobTitle.toLowerCase().includes('customer service'),
+);
+
+const leavePolicy = computed(
+  () => (isCustomerService.value ? casLeavePolicy : defaultLeavePolicy),
+);
 </script>

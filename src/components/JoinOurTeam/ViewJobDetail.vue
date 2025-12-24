@@ -15,8 +15,8 @@
         icon="responsible"
       />
     </div>
-    <LeavePolocy />
-    <JobBenefit />
+    <LeavePolocy v-if="job" :job-title="job.jobTitle"/>
+    <JobBenefit v-if="job" :job-title="job.jobTitle"/>
   </div>
 </template>
 <script setup lang="ts">
