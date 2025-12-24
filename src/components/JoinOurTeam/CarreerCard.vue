@@ -5,67 +5,44 @@
   >
     <div class="flex items-start justify-between mb-4">
       <h3 class="text-lg-primary-bold">
-        {{ job.title }}
+        {{ job.jobTitle }}
       </h3>
-
-      <span
-        v-if="job.status === 'Open'"
-        class="bg-green-100 text-xs-dark-green-medium
-               px-3 py-1 rounded-full"
-      >
-        Open
-      </span>
-
-      <span
-        v-else
-        class="bg-slate-100 text-xs-muted-bold
-               px-3 py-1 rounded-full"
-      >
-        Closed
-      </span>
     </div>
 
-    <!-- Salary -->
     <p class="text-sm-muted">Salary Range</p>
     <p class="text-lg-primary-bold mt-1">
-      {{ job.salary }}
+      {{ job.salaryRange }}
     </p>
 
-    <!-- Button -->
     <button
-      v-if="job.status === 'Open'"
       @click="goToJobDetail"
-      class="mt-6 w-full btn-primary btn-rounded"
+      class="mt-6 w-full btn-primary btn-rounded flex items-center justify-center gap-2"
     >
-      Apply Now
-    </button>
-
-    <button
-      v-else
-      disabled
-      class="mt-6 w-full bg-slate-100 text-slate-400 font-semibold
-             py-3 rounded-xl cursor-not-allowed"
-    >
-      Not Hiring
+      View Job Details
     </button>
   </div>
 </template>
 <script setup lang="ts">
+import { IJobDetail } from '@/model/JoinOurTeam';
 import { useRouter } from 'vue-router';
 
-interface Job {
-  title: string
-  salary: string
-  status: 'Open' | 'Closed'
-}
-
-defineProps<{
-  job: Job
+const props = defineProps<{
+  job: IJobDetail
 }>();
 
 const router = useRouter();
-
 function goToJobDetail() {
-  router.push({ name: 'ViewJobDetail', params: {} });
+  const jobSlug = props.job.jobTitle
+    .toLowerCase()
+    .replace(/jr\./gi, 'jr')
+    .replace(/sr\./gi, 'sr')
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/-+/g, '-');
+
+  router.push({
+    name: 'ViewJobDetail',
+    params: { jobTitle: jobSlug },
+  });
 }
 </script>

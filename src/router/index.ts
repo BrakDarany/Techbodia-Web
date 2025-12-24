@@ -14,9 +14,10 @@ const routes = [
         component: HomePage,
       },
       {
-        path: 'job-detail',
+        path: 'job-detail/:jobTitle',
         name: 'ViewJobDetail',
         component: ViewJobDetail,
+        props: true,
       },
     ],
   },

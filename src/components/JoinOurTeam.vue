@@ -19,8 +19,8 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
         <CarreerCard
-          v-for="job in jobs"
-          :key="job.title"
+          v-for="job in jobData"
+          :key="job.jobTitle"
           :job="job"
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -46,20 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { IJoinOurTeam } from '@/model/JoinOurTeam';
+import jobData from '@/Data/JobData';
 import CarreerCard from './JoinOurTeam/CarreerCard.vue';
 
-const jobs: IJoinOurTeam[] = [
-  { title: 'Fullstack Developer', salary: '$800 - $1,500', status: 'Open' },
-  { title: 'Network Engineer', salary: '$700 - $1,200', status: 'Open' },
-  { title: 'NOC Engineer', salary: '$600 - $1,000', status: 'Closed' },
-  { title: 'Technical Support', salary: '$500 - $800', status: 'Open' },
-  { title: 'Finance Assistant', salary: '$400 - $700', status: 'Closed' },
-  { title: 'UI Designer', salary: '$600 - $1,000', status: 'Open' },
-  { title: 'Fullstack Developer', salary: '$800 - $1,500', status: 'Open' },
-  { title: 'Network Engineer', salary: '$700 - $1,200', status: 'Open' },
-  { title: 'NOC Engineer', salary: '$600 - $1,000', status: 'Closed' },
-  { title: 'Technical Support', salary: '$500 - $800', status: 'Open' },
-  { title: 'Finance Assistant', salary: '$400 - $700', status: 'Closed' },
-];
 </script>

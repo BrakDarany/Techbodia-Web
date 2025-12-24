@@ -5,7 +5,6 @@
            hover:bg-pink-50 hover:border-pink-200
            transition-all duration-200 cursor-default"
   >
-    <!-- Icon -->
     <div class="mt-0.5 flex h-8 w-8 items-center justify-center text-pink-500">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +22,8 @@
       </svg>
     </div>
 
-    <p class="text-sm text-center font-medium text-gray-700 leading-relaxed">
-      7 paid wedding leave (includes Saturday &amp; Sunday)
+    <p class="text-sm text-start font-medium text-gray-700 leading-relaxed">
+      {{ text }}
     </p>
   </div>
 </template>
