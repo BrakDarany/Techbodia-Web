@@ -15,15 +15,16 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+      >
         <AboutUsCard
           v-for="(value, index) in coreValueCards"
           :key="index"
           :title="value.title"
           :description="value.description"
           :icon-name="value.iconName"
-          :data-aos="index === 0 ? 'fade-left' : 'fade-right'"
-          data-aos-duration="1000"
         />
       </div>
     </div>
@@ -35,10 +36,11 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <OurCoreValueCard
-          data-aos="fade-up"
-          data-aos-duration="1000"
           v-for="(value, index) in ourCoreValues"
           :key="index"
           :title="value.title"

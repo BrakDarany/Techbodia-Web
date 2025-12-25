@@ -303,6 +303,19 @@
   }
 
   /* ===========================================
+     CARD — HOVER LIFT EFFECT
+     =========================================== */
+  .card-hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover-lift:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 18px 22px rgb(229, 231, 235, 0.5);
+    cursor: pointer;
+  }
+
+  /* ===========================================
      BUTTON — OUTLINE PRIMARY
      =========================================== */
   .btn-outline-primary {
