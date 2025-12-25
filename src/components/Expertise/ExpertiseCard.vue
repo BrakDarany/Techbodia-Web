@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-60 group bg-slate-50 p-6 rounded-2xl border border-slate-100
-              transition-shadow transition-border duration-3000 ease-in-out hover:cursor-pointer
-              hover:shadow-pink-100/50 hover:shadow-xl hover:border hover:border-pink-100"
+              transition-all duration-300 ease-in-out hover:cursor-pointer
+              hover:border-pink-200 hover:shadow-xl hover:shadow-pink-100/50"
               >
     <div class="flex flex-col">
       <div class="w-14 h-14 bg-white rounded-xl shadow-sm

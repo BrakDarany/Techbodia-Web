@@ -1,6 +1,5 @@
 <template>
-  <div class="bg-white border border-[#f1f5f9] rounded-2xl transition-all duration-500 p-8
-   hover:shadow-lg hover:shadow-gray-200 hover:cursor-pointer"
+  <div class="card-hover-lift bg-white border border-[#f1f5f9] rounded-2xl p-8"
    >
     <div class="bg-gray-50 w-12 h-12 rounded-3xl flex
       items-center justify-center">
