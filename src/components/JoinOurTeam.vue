@@ -17,14 +17,14 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16"
+          data-aos="fade-up"
+          data-aos-duration="1000">
         <CarreerCard
           v-for="job in jobData"
           :key="job.jobTitle"
           :job="job"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        />
+          />
       </div>
       <div
         data-aos="fade-up"

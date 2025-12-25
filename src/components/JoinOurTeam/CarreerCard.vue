@@ -1,7 +1,7 @@
 <template>
   <div
     class="border border-slate-200 rounded-2xl p-6 bg-white
-           transition duration-300 hover:shadow-lg hover:border-pink-200"
+           transition duration-500 hover:shadow-lg hover:border-pink-200"
   >
     <div class="flex items-start justify-between mb-4">
       <h3 class="text-lg-primary-bold">
