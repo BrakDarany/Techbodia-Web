@@ -1,7 +1,7 @@
 <template>
   <div
-    class="group relative bg-white rounded-xl shadow-md
-    border-t-4 border-pink-500 p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl"
+    class="h-207 group relative bg-white rounded-xl shadow-md
+    border-t-4 border-pink-500 p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
   >
     <div class="flex items-center gap-2 mb-4">
       <div
