@@ -276,7 +276,7 @@
 
   .btn-primary:hover {
     background-color: var(--color-primary-dark);
-    /* box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4); */
+    cursor: pointer;
   }
 
   /* ===========================================
@@ -328,6 +328,7 @@
   .btn-outline-primary:hover {
     color: var(--color-primary);
     border-color: var(--color-primary);
+    cursor: pointer;
   }
 
 

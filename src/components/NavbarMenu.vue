@@ -19,7 +19,7 @@
           v-for="item in navItems"
           :key="item.id"
           type="button"
-          class="text-sm font-medium transition-colors hover:text-[#E91E63]"
+          class="text-sm font-medium transition-colors hover:text-[#E91E63] hover:cursor-pointer"
           :class="activeSection === item.id
             ? 'text-[#E91E63]'
             : 'text-slate-600'"

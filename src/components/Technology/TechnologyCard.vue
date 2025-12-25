@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col gap-3 w-20 h-40"
+    class="flex flex-col gap-3 w-20 h-40 hover:cursor-pointer"
     data-aos="fade-up"
     data-aos-easing="linear"
     data-aos-duration="800"

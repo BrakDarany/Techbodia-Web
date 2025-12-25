@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white border-2 border-[#f1f5f9] rounded-2xl
-     lg:w-150 p-10">
+     lg:w-150 p-10 hover:cursor-pointer">
     <div :class="title === 'Our Mission' ? 'bg-purple-50' : 'bg-pink-50'" class="w-12 h-12 rounded-xl flex
       items-center justify-center">
       <img :src="require(`@/assets/AboutUs/${iconName}.svg`)" :alt="title" width="24"
