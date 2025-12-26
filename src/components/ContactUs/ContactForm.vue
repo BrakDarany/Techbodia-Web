@@ -216,12 +216,18 @@
             </div>
 
             <!-- PDF Preview -->
-            <iframe
+            <div
               v-if="isPdfFile"
-              :src="previewUrl + '#toolbar=0&navpanes=0'"
-              class="flex-1 w-full min-h-96"
-              frameborder="0"
-            ></iframe>
+              ref="pdfContainer"
+              class="flex-1 w-full bg-white overflow-auto pdf-container"
+            >
+              <canvas
+                v-for="pageNum in totalPages"
+                :key="pageNum"
+                :ref="(el) => setCanvasRef(el, pageNum)"
+                class="pdf-page mx-auto block"
+              ></canvas>
+            </div>
 
             <!-- DOC/DOCX - Cannot preview, show download option -->
             <div
@@ -268,9 +274,19 @@ import {
   ref,
   computed,
   onUnmounted,
+  watch,
+  nextTick,
 } from 'vue';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import * as pdfjsLib from 'pdfjs-dist';
 import jobData from '@/Data/JobData';
 import FormInput from './FormInput.vue';
+
+// Set PDF.js worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.mjs',
+  import.meta.url,
+).toString();
 
 const emit = defineEmits(['submit']);
 
@@ -279,6 +295,10 @@ const isDragging = ref(false);
 const fileError = ref('');
 const showPreview = ref(false);
 const previewUrl = ref('');
+const pdfContainer = ref(null);
+const totalPages = ref(0);
+const canvasRefs = ref({});
+let pdfDoc = null;
 
 const allowedTypes = [
   'application/pdf',
@@ -297,6 +317,62 @@ const form = reactive({
 });
 
 const isPdfFile = computed(() => form.cvFile?.type === 'application/pdf');
+
+const setCanvasRef = (el, pageNum) => {
+  if (el) {
+    canvasRefs.value[pageNum] = el;
+  }
+};
+
+const renderPage = async (pageNum) => {
+  if (!pdfDoc) return;
+
+  const page = await pdfDoc.getPage(pageNum);
+  const canvas = canvasRefs.value[pageNum];
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const containerWidth = pdfContainer.value?.clientWidth || 700;
+  const viewport = page.getViewport({ scale: 1 });
+  const scale = (containerWidth - 40) / viewport.width;
+  const scaledViewport = page.getViewport({ scale });
+
+  canvas.height = scaledViewport.height;
+  canvas.width = scaledViewport.width;
+
+  await page.render({
+    canvasContext: ctx,
+    viewport: scaledViewport,
+  }).promise;
+};
+
+const loadPdf = async () => {
+  if (!form.cvFile || !isPdfFile.value) return;
+
+  const arrayBuffer = await form.cvFile.arrayBuffer();
+  pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+  totalPages.value = pdfDoc.numPages;
+
+  await nextTick();
+
+  // Render all pages
+  const renderPromises = [];
+  for (let i = 1; i <= pdfDoc.numPages; i += 1) {
+    renderPromises.push(renderPage(i));
+  }
+  await Promise.all(renderPromises);
+};
+
+watch(showPreview, async (newVal) => {
+  if (newVal && isPdfFile.value) {
+    await nextTick();
+    await loadPdf();
+  } else {
+    totalPages.value = 0;
+    canvasRefs.value = {};
+    pdfDoc = null;
+  }
+});
 
 const triggerFileInput = () => {
   fileInput.value?.click();
@@ -402,5 +478,18 @@ onUnmounted(() => {
 .modal-enter-from .relative,
 .modal-leave-to .relative {
   transform: scale(0.95);
+}
+
+.pdf-container {
+  padding: 20px;
+}
+
+.pdf-page {
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-page:last-child {
+  margin-bottom: 0;
 }
 </style>
