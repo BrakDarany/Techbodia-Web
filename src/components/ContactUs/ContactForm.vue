@@ -217,24 +217,23 @@ const renderPage = async (pageNum) => {
   const canvas = canvasRefs.value[pageNum];
   if (!canvas) return;
 
-  const ctx = canvas.getContext('2d');
   const containerWidth = pdfContainer.value?.clientWidth || 700;
   const viewport = page.getViewport({ scale: 1 });
   const scale = (containerWidth - 40) / viewport.width;
-  const scaledViewport = page.getViewport({ scale });
 
   // Account for device pixel ratio for sharp rendering on high-DPI screens
   const pixelRatio = window.devicePixelRatio || 1;
+  const scaledViewport = page.getViewport({ scale: scale * pixelRatio });
 
-  canvas.width = scaledViewport.width * pixelRatio;
-  canvas.height = scaledViewport.height * pixelRatio;
+  // Set canvas internal resolution
+  canvas.width = scaledViewport.width;
+  canvas.height = scaledViewport.height;
 
   // Set display size via CSS
-  canvas.style.width = `${scaledViewport.width}px`;
-  canvas.style.height = `${scaledViewport.height}px`;
+  canvas.style.width = `${scaledViewport.width / pixelRatio}px`;
+  canvas.style.height = `${scaledViewport.height / pixelRatio}px`;
 
-  // Scale the context to account for the pixel ratio
-  ctx.scale(pixelRatio, pixelRatio);
+  const ctx = canvas.getContext('2d');
 
   await page.render({
     canvasContext: ctx,
