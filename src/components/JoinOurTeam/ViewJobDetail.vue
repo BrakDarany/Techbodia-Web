@@ -1,33 +1,39 @@
 <template>
   <div class="max-w-6xl mx-auto mt-20 p-6 space-y-6">
-    <!-- Loading State -->
-    <div v-if="isLoading" class="flex flex-col items-center justify-center min-h-100">
-      <div class="animate-spin rounded-full h-12 w-12 border-4 border-pink-500 border-t-transparent"></div>
-      <p class="mt-4 text-gray-600">Loading job details...</p>
+    <div
+      data-aos="fade-right"
+      data-aos-duration="800"
+    >
+      <JobDescription
+        v-if="job" :job="job"
+      />
     </div>
-
-    <!-- Content -->
-    <template v-else-if="job">
-      <JobDescription :job="job" />
-      <div class="grid lg:grid-cols-2 gap-4">
+    <div class="grid lg:grid-cols-2 gap-4">
+      <div
+        class="h-full" data-aos="flip-right" data-aos-duration="800"
+      >
         <JobResponsible
-          data-aos="flip-right"
-          data-aos-duration="1000"
+          v-if="job"
+          class="h-full"
           title="Requirement"
           :responsibilities="job.jobRequirement"
           icon="requirement"
         />
+      </div>
+      <div
+        class="h-full" data-aos="flip-right" data-aos-duration="800"
+      >
         <JobResponsible
-          data-aos="flip-right"
-          data-aos-duration="1000"
+          v-if="job"
+          class="h-full"
           title="Responsibility"
           :responsibilities="job.jobResponsible"
           icon="responsible"
         />
       </div>
-      <LeavePolocy :job-title="job.jobTitle"/>
-      <JobBenefit :job-title="job.jobTitle"/>
-    </template>
+    </div>
+    <LeavePolocy v-if="job" :job-title="job.jobTitle"/>
+    <JobBenefit v-if="job" :job-title="job.jobTitle"/>
   </div>
 </template>
 <script setup lang="ts">
