@@ -3,38 +3,21 @@
     <form @submit.prevent="submitForm" class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       </div>
-      <FormInput v-model="form.firstName" label="Full Name" type="text" />
+      <FormInput v-model="form.firstName" label="Full Name" type="text" required />
 
-      <FormInput v-model="form.lastName" label="Phone Number" type="text" />
+      <FormInput v-model="form.lastName" label="Phone Number" type="text" required />
 
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">
-          Apply For
-        </label>
-
-        <div class="relative">
-          <select v-model="form.position" class="w-full appearance-none rounded-xl border border-gray-200
-             pl-4 pr-12 py-3 bg-white
-             focus:border-pink-500 focus:outline-none transition-colors" :class="{ 'text-gray-400': !form.position }">
-            <option value="" disabled>Select a position</option>
-            <option v-for="job in jobData" :key="job.jobTitle" :value="job.jobTitle">
-              {{ job.jobTitle }}
-            </option>
-          </select>
-
-          <div class="pointer-events-none absolute inset-y-0 right-4
-                flex items-center text-gray-400">
-            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0
-              111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd" />
-            </svg>
-          </div>
-        </div>
-      </div>
+      <FormSelect
+        v-model="form.position"
+        label="Apply For"
+        placeholder="Select a position"
+        :options="jobOptions"
+        required
+      />
 
       <div>
         <label class="block text-sm font-medium text-gray-700 mb-1">
-          Upload CV
+          Upload CV<span class="text-red-500 ml-0.5">*</span>
         </label>
         <div class="w-full h-30 rounded-xl border border-dashed border-gray-300 px-4
           focus-within:border-pink-500 transition-colors cursor-pointer
@@ -96,8 +79,8 @@
       <button
         type="submit"
         class="w-full btn-primary btn-rounded btn-hover-lift"
-        :disabled="isSubmitting"
-        :class="{ 'opacity-50 cursor-not-allowed': isSubmitting }">
+        :disabled="isSubmitting || !isFormValid"
+        :class="{ 'opacity-50 cursor-not-allowed': isSubmitting || !isFormValid }">
         {{ isSubmitting ? 'Sending...' : 'Send Message' }}
       </button>
     </form>
@@ -178,6 +161,12 @@ import {
 import * as pdfjsLib from 'pdfjs-dist';
 import jobData from '@/Data/JobData';
 import FormInput from './FormInput.vue';
+import FormSelect from './FormSelect.vue';
+
+const jobOptions = jobData.map((job) => ({
+  value: job.jobTitle,
+  label: job.jobTitle,
+}));
 
 // Set PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -214,6 +203,13 @@ const form = reactive({
 });
 
 const isPdfFile = computed(() => form.cvFile?.type === 'application/pdf');
+
+const isFormValid = computed(
+  () => form.firstName.trim() !== ''
+    && form.lastName.trim() !== ''
+    && form.position !== ''
+    && form.cvFile !== null,
+);
 
 const setCanvasRef = (el, pageNum) => {
   if (el) {

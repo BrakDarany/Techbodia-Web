@@ -38,7 +38,7 @@
       <div class="flex flex-col lg:flex-row lg:items-center gap-5 mt-3">
         <button
           class="btn-primary btn-round w-42.5"
-          @click="scrollToSection('join-our-team')"
+          @click="scrollToSection('contact-us')"
         >
           Apply Now
           <img
