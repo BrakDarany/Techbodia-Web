@@ -223,8 +223,18 @@ const renderPage = async (pageNum) => {
   const scale = (containerWidth - 40) / viewport.width;
   const scaledViewport = page.getViewport({ scale });
 
-  canvas.height = scaledViewport.height;
-  canvas.width = scaledViewport.width;
+  // Account for device pixel ratio for sharp rendering on high-DPI screens
+  const pixelRatio = window.devicePixelRatio || 1;
+
+  canvas.width = scaledViewport.width * pixelRatio;
+  canvas.height = scaledViewport.height * pixelRatio;
+
+  // Set display size via CSS
+  canvas.style.width = `${scaledViewport.width}px`;
+  canvas.style.height = `${scaledViewport.height}px`;
+
+  // Scale the context to account for the pixel ratio
+  ctx.scale(pixelRatio, pixelRatio);
 
   await page.render({
     canvasContext: ctx,
