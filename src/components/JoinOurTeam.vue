@@ -26,21 +26,6 @@
           :job="job"
           />
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        class="flex flex-col items-center justify-center mt-12 space-y-6">
-        <p class="text-base-description">
-          Don't see your position? Send us your CV anyway!
-        </p>
-
-        <button class="flex items-center gap-3 bg-slate-900 text-white font-semibold
-             px-8 py-4 rounded-full
-             hover:bg-slate-700 transition-colors duration-300">
-           <img src="../assets/JoinOurTeam/message-icon.svg" width="22" height="22"/>
-          <span>Send General Application</span>
-        </button>
-      </div>
     </div>
   </section>
 </template>
