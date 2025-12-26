@@ -86,8 +86,19 @@
         <p v-if="fileError" class="mt-1 text-sm text-red-500">{{ fileError }}</p>
       </div>
 
-      <button type="submit" class="w-full btn-primary btn-rounded btn-hover-lift">
-        Send Message
+      <p v-if="submitSuccess" class="text-green-600 text-sm text-center">
+        ✓ Application sent successfully!
+      </p>
+      <p v-if="submitError" class="text-red-500 text-sm text-center">
+        {{ submitError }}
+      </p>
+
+      <button
+        type="submit"
+        class="w-full btn-primary btn-rounded btn-hover-lift"
+        :disabled="isSubmitting"
+        :class="{ 'opacity-50 cursor-not-allowed': isSubmitting }">
+        {{ isSubmitting ? 'Sending...' : 'Send Message' }}
       </button>
     </form>
 
@@ -343,8 +354,89 @@ const removeFile = () => {
   }
 };
 
-const submitForm = () => {
-  emit('submit', { ...form });
+const isSubmitting = ref(false);
+const submitSuccess = ref(false);
+const submitError = ref('');
+
+const submitForm = async () => {
+  // Telegram Bot configuration
+  const BOT_TOKEN = '8566112318:AAH7JnPNw1Q9wEv0MlQ9jHKVcUtIiltM5e0';
+  const CHAT_ID = '1032135167';
+
+  // Build the message text
+  const message = `📋 New Job Application
+
+👤 Full Name: ${form.firstName}
+📞 Phone Number: ${form.lastName}
+💼 Apply For: ${form.position || 'Not specified'}
+📎 CV: ${form.cvFile ? form.cvFile.name : 'Not attached'}
+
+---
+Sent from Techbodia Website`;
+
+  isSubmitting.value = true;
+  submitError.value = '';
+  submitSuccess.value = false;
+
+  try {
+    // Send text message to Telegram
+    const response = await fetch(
+      `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: 'HTML',
+        }),
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to send message');
+    }
+
+    // If there's a CV file, send it as a document
+    if (form.cvFile) {
+      const formData = new FormData();
+      formData.append('chat_id', CHAT_ID);
+      formData.append('document', form.cvFile);
+      formData.append('caption', `CV for ${form.firstName}`);
+
+      const docResponse = await fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`,
+        {
+          method: 'POST',
+          body: formData,
+        },
+      );
+
+      if (!docResponse.ok) {
+        throw new Error('Failed to send CV');
+      }
+    }
+
+    submitSuccess.value = true;
+
+    // Reset form after successful submission
+    form.firstName = '';
+    form.lastName = '';
+    form.position = '';
+    form.cvFile = null;
+    if (fileInput.value) {
+      fileInput.value.value = '';
+    }
+
+    emit('submit', { success: true });
+  } catch (error) {
+    console.error('Telegram send error:', error);
+    submitError.value = 'Failed to send message. Please try again.';
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 
 onUnmounted(() => {
