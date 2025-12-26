@@ -99,8 +99,37 @@
               <span class="text-sm text-gray-700">{{ form.cvFile.name }}</span>
               <button
                 type="button"
+                @click.stop="openPreview"
+                class="text-pink-500 hover:text-pink-600 transition-colors"
+                title="Preview CV"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268
+                    2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268
+                    -2.943-9.542-7z"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
                 @click.stop="removeFile"
                 class="text-gray-400 hover:text-red-500 transition-colors"
+                title="Remove file"
               >
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -119,11 +148,127 @@
         Send Message
       </button>
     </form>
+
+    <!-- CV Preview Modal -->
+    <Teleport to="body">
+      <Transition name="modal">
+        <div
+          v-if="showPreview"
+          class="fixed inset-0 z-50 flex items-center justify-center p-4"
+        >
+          <!-- Backdrop -->
+          <div
+            class="fixed inset-0 bg-black/50"
+            @click="closePreview"
+          ></div>
+
+          <!-- Modal Content -->
+          <div
+            class="relative bg-white rounded-2xl shadow-2xl flex flex-col
+            w-full max-w-3xl h-[85vh] overflow-hidden z-10"
+          >
+            <!-- Header -->
+            <div
+              class="flex items-center justify-between px-5 py-3 border-b
+              border-gray-200"
+            >
+              <div class="flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-pink-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
+                    012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
+                    01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-800">CV Preview</h3>
+                  <p class="text-xs text-gray-500">{{ form.cvFile?.name }}</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                @click="closePreview"
+                class="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100
+                rounded-lg transition-colors"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- PDF Preview -->
+            <iframe
+              v-if="isPdfFile"
+              :src="previewUrl + '#toolbar=0&navpanes=0'"
+              class="flex-1 w-full min-h-96"
+              frameborder="0"
+            ></iframe>
+
+            <!-- DOC/DOCX - Cannot preview, show download option -->
+            <div
+              v-else
+              class="flex-1 flex flex-col items-center justify-center py-12"
+            >
+              <svg
+                class="h-16 w-16 text-gray-300 mb-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
+                  012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
+                  01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <p class="text-gray-500 mb-4 text-sm">
+                Word documents cannot be previewed directly.
+              </p>
+              <button
+                type="button"
+                @click="downloadFile"
+                class="px-5 py-2 bg-pink-500 text-white text-sm rounded-xl
+                hover:bg-pink-600 transition-colors"
+              >
+                Download to View
+              </button>
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue';
+import {
+  reactive,
+  ref,
+  computed,
+  onUnmounted,
+} from 'vue';
 import jobData from '@/Data/JobData';
 import FormInput from './FormInput.vue';
 
@@ -132,6 +277,8 @@ const emit = defineEmits(['submit']);
 const fileInput = ref(null);
 const isDragging = ref(false);
 const fileError = ref('');
+const showPreview = ref(false);
+const previewUrl = ref('');
 
 const allowedTypes = [
   'application/pdf',
@@ -148,6 +295,8 @@ const form = reactive({
   message: '',
   cvFile: null,
 });
+
+const isPdfFile = computed(() => form.cvFile?.type === 'application/pdf');
 
 const triggerFileInput = () => {
   fileInput.value?.click();
@@ -186,7 +335,36 @@ const handleFileDrop = (event) => {
   }
 };
 
+const openPreview = () => {
+  if (form.cvFile) {
+    previewUrl.value = URL.createObjectURL(form.cvFile);
+    showPreview.value = true;
+  }
+};
+
+const closePreview = () => {
+  showPreview.value = false;
+  if (previewUrl.value) {
+    URL.revokeObjectURL(previewUrl.value);
+    previewUrl.value = '';
+  }
+};
+
+const downloadFile = () => {
+  if (form.cvFile) {
+    const url = URL.createObjectURL(form.cvFile);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = form.cvFile.name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }
+};
+
 const removeFile = () => {
+  closePreview();
   form.cvFile = null;
   fileError.value = '';
   if (fileInput.value) {
@@ -197,8 +375,32 @@ const removeFile = () => {
 const submitForm = () => {
   emit('submit', { ...form });
 };
+
+onUnmounted(() => {
+  if (previewUrl.value) {
+    URL.revokeObjectURL(previewUrl.value);
+  }
+});
 </script>
 
 <style scoped>
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
 
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active .relative,
+.modal-leave-active .relative {
+  transition: transform 0.3s ease;
+}
+
+.modal-enter-from .relative,
+.modal-leave-to .relative {
+  transform: scale(0.95);
+}
 </style>
