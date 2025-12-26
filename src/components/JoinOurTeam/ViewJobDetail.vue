@@ -10,23 +10,22 @@
     </div>
     <div class="grid lg:grid-cols-2 gap-4">
       <div
-        data-aos="flip-right"
-        data-aos-duration="800"
+        class="h-full" data-aos="flip-right" data-aos-duration="800"
       >
         <JobResponsible
           v-if="job"
+          class="h-full"
           title="Requirement"
           :responsibilities="job.jobRequirement"
           icon="requirement"
         />
       </div>
       <div
-        data-aos="flip-right"
-        data-aos-duration="800"
-        class="w-full h-full"
+        class="h-full" data-aos="flip-right" data-aos-duration="800"
       >
         <JobResponsible
           v-if="job"
+          class="h-full"
           title="Responsibility"
           :responsibilities="job.jobResponsible"
           icon="responsible"
