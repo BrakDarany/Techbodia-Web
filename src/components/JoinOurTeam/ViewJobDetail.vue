@@ -15,7 +15,7 @@
         <JobResponsible
           v-if="job"
           class="h-full"
-          title="Requirement"
+          :title="job.jobTitle.includes('Customer Service') ? 'Requirement (要求)' : 'Requirement'"
           :responsibilities="job.jobRequirement"
           icon="requirement"
         />
@@ -26,7 +26,7 @@
         <JobResponsible
           v-if="job"
           class="h-full"
-          title="Responsibility"
+          :title="job.jobTitle.includes('Customer Service') ? 'Responsible (负责任的)' : 'Responsible'"
           :responsibilities="job.jobResponsible"
           icon="responsible"
         />
