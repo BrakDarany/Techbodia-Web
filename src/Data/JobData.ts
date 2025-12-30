@@ -7,81 +7,123 @@ const jobData: IJobDetail[] = [
     description: `Lead technical projects, manage cross-functional teams,
       and ensure delivery of high-quality software and IT solutions.`,
     jobRequirement: [
-      `Technical Leadership
-        - Oversee the end-to-end technical delivery of products and solutions.
-        - Provide guidance and mentorship to the technical team.`,
-      `Client & Stakeholder Communication
-        - Act as the primary liaison for technical matters with clients.
-        - Communicate complex technical concepts clearly to stakeholders.`,
-      `Requirement Analysis & Documentation
-        - Gather and refine project requirements with clients and internal teams.
-        - Translate business demands into actionable specifications.`,
-      `Project & Resource Management
-        - Plan and coordinate projects including scope, timelines, and resources.
-        - Anticipate issues and ensure timely mitigation.`,
-      `Collaboration with Cross-Functional Teams
-        - Work with managers, product owners, designers, and analysts to align on goals.
-        - Facilitate cross-team interactions and integrate technical insights.`,
-      `Problem Resolution & Continuous Improvement
-        - Identify and resolve technical challenges to minimize disruption.
-        - Optimize technical workflows and maintain documentation standards.`,
-      `Reporting & Metrics
-        - Track and report on milestones, risks, and performance.
-        - Provide regular status updates to management.`,
-      `Staying Current & Industry Awareness
-        - Stay up-to-date on industry trends and tools.
-        - Advocate for new technologies and methodologies that enhance outputs.`,
+      `Education & Experience
+        - Bachelor’s degree in Business Administration, Management,
+         Information Technology, Computer Science, or a related field.
+        - Proven experience (3+ years) in technical leadership, engineering management, or a similar managerial role`,
+      `Technical Skills
+        - Strong analytical and problem-solving abilities, with proficiency in backend systems or infrastructure.
+        - Solid understanding of technical architectures, software
+        development processes (SDLC), and Agile/Scrum methodologies.
+        - Experience with data visualization tools for tracking and reporting metrics is a plus.`,
+      `Soft Skills
+        - Excellent communication and interpersonal skills, with the ability
+         to convey technical details to non-technical stakeholders.
+        - Strong organizational and time-management capabilities.
+        - Demonstrated success in conflict resolution, negotiation, and relationship-building.
+        - Proven track record of collaboration and teamwork.`,
+      `Additional Preferred Qualifications
+        - Experience in business operations or project coordination.
+        - Knowledge of software infrastructure, security, or cloud-based services.
+        - Experience implementing process improvements to drive operational efficiencies.`,
     ],
     jobResponsible: [
       `Technical Leadership
-        - Oversee end-to-end technical delivery.
-        - Provide guidance and mentorship to the team.`,
+        - Oversee the end-to-end technical delivery of products and 
+        solutions, ensuring alignment with organizational standards and best practices.
+        - Provide guidance and mentorship to the technical team,
+        fostering professional development and a culture of continuous improvement.`,
       `Client & Stakeholder Communication
-        - Act as primary liaison with clients.
-        - Communicate complex concepts clearly to stakeholders.`,
+        - Act as the primary liaison for technical matters when engaging
+        with clients, gathering requirements, and clarifying objectives.
+        - Communicate complex technical concepts in clear, non-
+        technical language to stakeholders and senior management.`,
       `Requirement Analysis & Documentation
-        - Collaborate to gather and refine requirements.
-        - Translate business needs into actionable specifications.`,
+        - Collaborate with clients and internal teams to gather and refine product or project requirements
+        - Translate business demands into actionable specifications for
+         the development or backend teams, ensuring clarity and feasibility.`,
       `Project & Resource Management
-        - Plan projects including scope, timelines, and resources.
-        - Prioritize tasks and delegate responsibilities effectively.`,
+        - Plan and coordinate technical projects, including scope, timelines, and resource allocations.
+        - Anticipate potential issues and ensure timely mitigation by 
+        effectively prioritizing tasks and delegating responsibilities.`,
+      `Collaboration with Cross-Functional Teams
+        - Work closely with managers, product owners, designers, and
+        business analysts to align on project goals and deliverables.
+        - Facilitate cross-team interactions, ensuring technical 
+        insights are integrated into product planning and roadmaps.`,
+      `Problem Resolution & Continuous Improvement
+        - Identify and resolve technical challenges, ensuring minimal
+        disruption to client operations or internal workflows.
+        - Drive process optimizations in technical workflows to enhance 
+        efficiency, reduce costs, and improve product quality.
+        - Establish and maintain documentation standards for
+        consistent and transparent reporting of technical issues and solutions.`,
+      `Reporting & Metrics
+        - Track and report on project milestones, technical risks, and overall performance against defined KPIs.
+        - Provide regular status updates to management, highlighting 
+        successes, challenges, and recommendations for improvements.`,
     ],
   },
   {
     jobTitle: 'Jr. Full-Stack Developer',
     salaryRange: '$400 - $1K',
-    description: `Develop and maintain web applications and services using C#, Vue.js with Nuxt,
-      Tailwind CSS, and Element UI. Contribute to both backend and frontend development,
-      ensuring performance, scalability, and code quality.`,
+    description: `Develop and maintain scalable web applications and services using C#, Vue.js with Nuxt,
+    Tailwind CSS, and Element UI. Lead development efforts across backend and frontend,
+    ensuring performance, scalability, and high code quality.`,
     jobRequirement: [
-      'Develop and maintain web applications and services using C#, Vue.js with Nuxt, Tailwind CSS, and Element UI.',
-      'Work on RESTful APIs, caching layers using Redis, and UI components.',
-      'Ensure cross-platform compatibility and responsive design.',
-      'Write clean, maintainable, and efficient code following best practices.',
-      'Debug and resolve issues while optimizing application performance.',
-      'Conduct manual and automated testing to ensure application reliability.',
-      'Identify, document, and fix bugs or performance issues.',
-      'Collaborate with product owners, designers, and IT teams.',
-      'Participate in Agile Scrum processes including sprints and retrospectives.',
-      'Deploy applications on IIS servers and Kubernetes (K8S) clusters.',
-      'Monitor system performance, scalability, and uptime.',
-      'Maintain up-to-date technical documentation.',
-      'Stay informed of the latest trends in C#, Vue.js, and cloud-based deployments.',
+      `Bachelor's degree in Computer Science, Information Technology,
+      or a related field, or equivalent work experience`,
+      'Strong knowledge of C#t and .NET Core',
+      'Proficiency in Vue.js with Nuxt',
+      'Experience with Tailwind CSS and ElementUI',
+      'Familiarity with Redis for caching',
+      'Basic knowledge of Kubernetes (K8S) and Docker (is a plus)',
+      'Experience deploying on IIS servers',
+      'Understanding of RESTful APIs and web standards',
+      'Problem-solving mindset and willingness to learn',
+      'Strong communication and teamwork skills',
     ],
     jobResponsible: [
-      "Bachelor's degree in Computer Science, Information Technology, or a related field (or equivalent experience).",
-      'Strong knowledge of C# and .NET Core.',
-      'Proficiency in Vue.js with Nuxt.',
-      'Experience with Tailwind CSS and Element UI.',
-      'Familiarity with Redis for caching.',
-      'Understanding of RESTful APIs and web standards.',
-      'Basic knowledge of Kubernetes (K8S) and Docker (plus).',
-      'Experience deploying applications on IIS servers.',
-      'Familiarity with Agile/Scrum development processes.',
-      'Understanding of microservices architecture (nice to have).',
-      'Knowledge of unit testing frameworks and CI/CD pipelines (nice to have).',
-      'Strong problem-solving mindset and willingness to learn.',
-      'Good communication skills and ability to work in a team.',
+      `Application Development
+        - Develop and maintain web applications and services using C#,
+        Vue.js with Nuxt, Tailwind CSS, and ElementUl.
+        - Work on APls, caching layers (using Redis), and Ul 
+        components, ensuring cross-platform compatibility and responsiveness.`,
+
+      `Coding & Debugging
+        - Write clean, maintainable, and efficient code for both backend
+        and frontend following best practices.
+        - Debug and resolve issues efficiently, optimizing performance.`,
+
+      `Testing & Quality Assurance
+        - Conduct both manual and automated testing to ensure application reliability.
+        - Identify, document, and fix bugs or performance issues.`,
+
+      `Team Collaboration
+        - Collaborate with cross-functional teams, including product
+        owner, designers, and IT, to develop and deploy solutions.
+        - Participate in Agile Scrum development processes,
+        contributing ideas during sprints and retrospectives.`,
+
+      `Problem Solving
+        - Tackle challenges in software development, such as
+        debugging complex issues or optimizing application performance.`,
+
+      `Deployment & Maintenance
+        - Deploy applications on IIS servers and Kubernetes (K8S) clusters.
+        - Monitor system performance and ensure scalability and uptime.`,
+
+      `Documentation
+        - Maintain up-to-date documentation for code and processes.`,
+
+      `Stay Updated
+        - Stay informed of the latest trends in C#, Vue.js, and cloud
+        based deployments.`,
+
+      `Nice to have
+        - Familiarity with Agile/Scrum development processes.
+        - Understanding of microservices architecture.
+        - Knowledge of unit testing frameworks and CI/CD pipelines.`,
     ],
   },
   {
@@ -128,6 +170,20 @@ const jobData: IJobDetail[] = [
       Support enterprise and cloud networking while ensuring performance, security,
       and business continuity.`,
     jobRequirement: [
+      'Able to communicate professionally in English (Chinese is a big plus).',
+      "Bachelor's degree in Computer Science, Information Technology, or a related field.",
+      '3+ years of hands-on experience in network engineering or IT infrastructure roles.',
+      'Strong knowledge of networking protocols (TCP/IP, BGP, OSPF, DNS, DHCP, etc.).',
+      'Experience with enterprise-grade network equipment (Cisco, Juniper, Fortinet, Aruba, etc.).',
+      'Familiarity with firewalls, VPNs, and network access control.',
+      'Experience with network monitoring tools (PRTG, Zabbix, SolarWinds, etc.).',
+      'Understanding of cloud networking (AWS VPC, Azure VNets, etc.).',
+      'Excellent problem-solving and troubleshooting skills.',
+      'Strong communication and documentation abilities.',
+      `Preferred Qualifications
+        - Certifications such as CCNA, CCNP, Fortinet NSE, or equivalent.`,
+    ],
+    jobResponsible: [
       'Design and implement LAN, WAN, VPN, SD-WAN, and cloud network architecture.',
       'Maintain and troubleshoot network hardware (routers, switches, firewalls, access points).',
       'Monitor network performance, usage, and reliability using network monitoring tools.',
@@ -139,19 +195,6 @@ const jobData: IJobDetail[] = [
       'Coordinate with vendors and ISPs to manage network services and support.',
       'Participate in disaster recovery and business continuity planning.',
     ],
-    jobResponsible: [
-      'Able to communicate professionally in English (Chinese is a big plus).',
-      "Bachelor's degree in Computer Science, Information Technology, or a related field.",
-      '3+ years of hands-on experience in network engineering or IT infrastructure roles.',
-      'Strong knowledge of networking protocols (TCP/IP, BGP, OSPF, DNS, DHCP, etc.).',
-      'Experience with enterprise-grade network equipment (Cisco, Juniper, Fortinet, Aruba, etc.).',
-      'Familiarity with firewalls, VPNs, and network access control.',
-      'Experience with network monitoring tools (PRTG, Zabbix, SolarWinds, etc.).',
-      'Understanding of cloud networking (AWS VPC, Azure VNets, etc.).',
-      'Excellent problem-solving and troubleshooting skills.',
-      'Strong communication and documentation abilities.',
-      'Preferred: Certifications such as CCNA, CCNP, Fortinet NSE, or equivalent.',
-    ],
   },
   {
     jobTitle: 'NOC Engineer',
@@ -159,15 +202,6 @@ const jobData: IJobDetail[] = [
     description: `Monitor and maintain network and IT systems, respond to incidents,
       support internal IT operations, and ensure security and compliance.`,
     jobRequirement: [
-      'Network and System Monitoring.',
-      'Incident Response and Troubleshooting.',
-      'Internal IT (MIS) Support.',
-      'Asset and Access Management.',
-      'Documentation and Reporting.',
-      'IT Security and Compliance Support.',
-      'Cross-Team Collaboration and Process Improvement.',
-    ],
-    jobResponsible: [
       'Able to communicate professionally in English (Chinese is a big plus).',
       'Familiarity with network protocols (TCP/IP, DNS, DHCP) and network monitoring tools.',
       'Basic knowledge of firewall, VPN, and security best practices.',
@@ -179,6 +213,15 @@ const jobData: IJobDetail[] = [
       'Able to work under pressure, especially during incident handling or system outages.',
       'Willingness to work in shifts or be on-call if required.',
     ],
+    jobResponsible: [
+      'Network and System Monitoring.',
+      'Incident Response and Troubleshooting.',
+      'Internal IT (MIS) Support.',
+      'Asset and Access Management.',
+      'Documentation and Reporting.',
+      'IT Security and Compliance Support.',
+      'Cross-Team Collaboration and Process Improvement.',
+    ],
   },
   {
     jobTitle: 'Technical Support',
@@ -187,36 +230,60 @@ const jobData: IJobDetail[] = [
       monitor system performance,
       and collaborate with cross-functional teams to ensure technical stability and issue resolution.`,
     jobRequirement: [
-      'Act as the first point of contact for clients and internal users reporting system issues.',
-      'Provide prompt and professional responses via ticketing system, chat, email, etc.',
-      'Diagnose, replicate, and document technical issues; escalate when necessary.',
-      'Classify and prioritize support requests based on severity, business impact, and SLAs.',
-      'Perform detailed troubleshooting across backend systems, APIs, and integrated platforms.',
-      'Collaborate with product and development teams to investigate bugs and performance issues.',
-      'Proactively monitor system alerts, logs, and dashboards for potential issues.',
-      'Assist in maintaining monitoring tools, support scripts, and internal knowledge bases.',
-      'Support scheduled maintenance, deployments, and post-release validation.',
-      'Participate in post-incident reviews and provide feedback for product improvements.',
-      'Maintain accurate records of customer interactions, issues, and resolutions.',
-      'Prepare reports highlighting trends, root causes, and system performance.',
-      'Identify opportunities to streamline support processes and implement automated tools.',
-      'Stay informed about system updates, new product features, and integration changes.',
+      `Education & Experience
+      - Bachelor's degree in Business Administration, Management, Information Technology, Computer Science, or a related field.`,
+      `Technical Skills
+          - Strong analytical and problem-solving abilities, with proficiency in backend systems or infrastructure.
+          - Familiarity with backend systems, APIs, and SQL database operations.
+          - Experience with system monitoring tools (e.g., Grafana, Kibana, Zabbix, or equivalent).
+          - Proficiency in Microsoft Office and ticket management tools (e.g., Jira, Zendesk).
+          - Basic understanding of SDLC, version control (Git), and Agile/Scrum workflows.`,
+      `Soft Skills
+          - Excellent communication and interpersonal skills.
+          - Strong attention to detail and commitment to service quality.
+          - Ability to multitask and prioritize in a fast-paced environment.
+          - Strong sense of accountability and collaboration across teams.`,
+      `Additional Preferred Qualifications
+          - Experience in business operations or project coordination.
+          - Knowledge of software infrastructure, security, or cloud-based services.
+          - Experience implementing process improvements to drive operational efficiencies.`,
     ],
     jobResponsible: [
-      `Bachelor's degree in Business Administration, Management,
-      Information Technology, Computer Science, or related field.`,
-      'Strong analytical and problem-solving abilities, with proficiency in backend systems or infrastructure.',
-      'Familiarity with backend systems, APIs, and SQL database operations.',
-      'Experience with system monitoring tools (e.g., Grafana, Kibana, Zabbix, or equivalent).',
-      'Proficiency in Microsoft Office and ticket management tools (e.g., Jira, Zendesk).',
-      'Basic understanding of SLC, version control (Git), and Agile/Scrum workflows.',
-      'Excellent communication and interpersonal skills.',
-      'Strong attention to detail and commitment to service quality.',
-      'Ability to multitask and prioritize in a fast-paced environment.',
-      'Strong sense of accountability and collaboration across teams.',
-      'Experience in business operations or project coordination (preferred).',
-      'Knowledge of software infrastructure, security, or cloud-based services (preferred).',
-      'Experience implementing process improvements to drive operational efficiencies (preferred).',
+      `Customer & Internal Support
+        - Act as the first point of contact for clients or internal users
+        reporting issues related to system functionality, connectivity, or performance.
+        - Provide prompt and professional responses through multiple
+        support channels (ticketing system, chat, email, etc.).
+        - Maintain a positive and empathetic approach while resolving technical concerns.`,
+      `Incident Management
+          - Diagnose, replicate, and document technical issues,
+          escalating when necessary to higher-level engineering teams.
+          - Classify and prioritize support requests based on severity, business impact, and SLAs.
+          - Track incidents through resolution and ensure proper closure with clear root-cause documentation.`,
+      `Troubleshooting & Root Cause Analysis
+          - Perform detailed troubleshooting across backend systems, APIs, and integrated platforms.
+          - Collaborate with product and development teams to investigate bugs, performance degradation, or configuration issues.
+          - Document resolution steps, best practices, and prevention methods for recurring issues.`,
+      `System Monitoring & Maintenance
+          - Proactively monitor system alerts, logs, and dashboards to identify potential issues before escalation.
+          - Assist in maintaining and updating monitoring tools, support scripts, and internal knowledge bases.
+          - Support scheduled maintenance, deployments, and post-release validation as needed.`,
+      `Cross-Team Collaboration
+          - Work closely with product managers, QA, and developers to
+          communicate client pain points and suggest improvements.
+          - Participate in post-incident reviews to improve technical stability and communication workflows.
+          - Provide feedback to improve product usability and reduce support workload through better design or documentation.`,
+      `Documentation & Reporting
+          - Maintain accurate records of customer interactions, reported issues, and corresponding resolutions.
+          - Prepare regular reports highlighting issue trends, root causes, and system performance insights.
+          - Update and maintain internal troubleshooting guides and standard operating procedures (SOPs).`,
+      `Process & Continuous Improvement
+          - Identify opportunities to streamline support processes and reduce resolution times.
+          - Assist in implementing automated monitoring, diagnostic, or alerting tools.
+          - Contribute to internal training sessions to enhance the team's collective troubleshooting knowledge.`,
+      `Stay Updated
+          - Stay informed about system updates, new product features, and integration changes.
+          - Continuously enhance technical and customer service skills through learning and certifications.`,
     ],
   },
   {
@@ -226,35 +293,144 @@ const jobData: IJobDetail[] = [
     manage information, facilitate cross-team collaboration,
       and contribute to process improvement and operational efficiency.`,
     jobRequirement: [
-      'Support the product department to ensure smooth and efficient operations.',
-      'Assist in coordinating and streamlining departmental tasks.',
-      'Respond promptly (within 15 minutes) to information requests from internal teams.',
-      'Take on a variety of tasks to ensure the product department functions seamlessly.',
-      `Collect, organize, and maintain documentation from third-party providers, 
-      including API updates and product launches.`,
-      'Develop and maintain a comprehensive internal knowledge base.',
-      'Document and share insights and information to enhance team efficiency.',
-      'Collaborate with engineering, sales, and other departments to align efforts.',
-      'Serve as a communication liaison with third-party providers and escalate urgent issues as needed.',
-      'Regularly inspect and adapt workflows and problem-solving processes for efficiency.',
-      `Take on tasks that support smooth departmental operations, such as meetings,
-      administrative work, and team coordination.`,
-      'Stay proactive in identifying areas for improvement and implement changes.',
+      'Able to communicate in English.',
+      'Excellent communication skills, both written and verbal.',
+      'Strong organizational skills with attention to detail.',
+      'Ability to work under pressure and manage multiple tasks simultaneously.',
+      'Flexibility to adapt to different departmental needs and tasks.',
+      'A proactive mindset with a focus on continuous improvement and adaptability.',
+      'Computer literate in Microsoft Word, Excel, and PowerPoint.',
     ],
     jobResponsible: [
-      'Able to communicate in English (Chinese is a plus).',
-      'Excellent written and verbal communication skills.',
-      'Strong organizational skills and attention to detail.',
-      'Ability to work under pressure and manage multiple tasks.',
-      'Flexible and adaptable to different departmental needs.',
-      'Proactive mindset with focus on continuous improvement.',
-      'Computer literate: Microsoft Word, Excel, PowerPoint.',
-      'Basic understanding of product management (nice to have).',
-      'Familiarity with API documentation (nice to have).',
-      'Experience in documentation and knowledge sharing within a team (nice to have).',
-      'Experience in customer support or similar roles (nice to have).',
-      'Technical background or degree in a technology-related field (nice to have).',
-      'Prior experience in a software or technology-related company (nice to have).',
+      `Product Department Operations
+          - Provide essential support to the product department to ensure smooth and efficient operations.
+          - Assist in coordinating and streamlining departmental tasks, ensuring that all processes run effectively.
+          - Respond promptly (within 15 minutes) to information requests from internal teams, especially the product department, to facilitate quick decision-making and problem-solving.
+          - Take on a variety of tasks and responsibilities as needed to ensure the product department functions seamlessly.`,
+
+      `Information Management
+          - Collect, organize, and maintain accurate documentation from third-party providers, including updates on API documents, product launches, and promotions.
+          - Develop and maintain a comprehensive knowledge base to ensure all teams have access to up-to-date and relevant information.
+          - Document and share insights and information within the organization to enhance team knowledge and efficiency.`,
+
+      `Cross-Functional Collaboration
+          - Collaborate with other departments such as engineering and sales to align efforts and provide the best possible service to customers.
+          - Facilitate clear and effective communication across teams, ensuring that all relevant information is shared and understood.`,
+
+      `Communication and Liaison
+          - Serve as a primary communication liaison between the company and third-party providers, ensuring timely and accurate exchange of information.
+          - Escalate urgent issues from third-party communication channels to the Product Team's Product Owner, ensuring rapid response and resolution.`,
+
+      `Process Improvement
+          - Regularly inspect and adapt workflows and problem-solving processes to enhance efficiency within the product department and across related teams.
+          - Proactively identify areas for improvement in communication, information management, and operational processes, and implement changes as needed.`,
+      `Departmental Support
+          - Take on any tasks that contribute to the smooth and efficient operation of the product department, including arranging
+          meetings,handling administrative tasks, or coordinating with other teams to ensure departmental objectives are met.`,
+    ],
+  },
+  {
+    jobTitle: 'Jr. Business Operation Specialist',
+    salaryRange: '$400 - $1K',
+    description: `Handle client communication, requirement analysis, and coordination
+    with product teams to ensure smooth business operations, problem resolution,
+    process optimization, and stakeholder collaboration while maintaining up-to-date
+    knowledge of industry trends and business tools.`,
+    jobRequirement: [
+      "Bachelor's degree in Business Administration, Management, Information Technology, or a related field.",
+      'Strong analytical and problem-solving skills.',
+      'Proficiency in understanding technical systems and their applications.',
+      'Proficiency in Microsoft Office (Word, Excel, PowerPoint, etc.).',
+      'Familiarity with customer relationship management (CRM) tools.',
+      'Basic knowledge of Agile/Scrum processes is a plus.',
+      'Excellent communication and interpersonal skills.',
+      'Strong organizational and time-management skills.',
+      'Ability to build and maintain strong client relationships.',
+      'Conflict resolution and negotiation skills.',
+      'Teamwork and collaboration.',
+    ],
+    jobResponsible: [
+      `Client Communication
+        - Act as the primary contact point for customers, understanding their needs and ensuring their requirements are clearly documented and communicated.
+        - Maintain proactive communication with clients, addressing inquiries, concerns, and updates in a timely and professional manner.`,
+      `Requirement Analysis
+        - Collaborate with clients to gather and analyze their demands and translate them into actionable requirements for the product team.
+        - Ensure that customer needs align with the company's business objectives and technical capabilities.`,
+      `Coordination with Product Teams
+        - Work closely with the product team to discuss, refine, and prioritize customer demands.
+        - Facilitate the development of solutions that meet customer expectations while adhering to project constraints and timelines.`,
+      `Problem Resolution
+        - Identify and resolve customer issues, including system problems, setup challenges, or operational concerns.
+        - Collaborate with internal teams to troubleshoot and implement effective solutions, minimizing disruption to customer operations.`,
+      `Process Optimization
+        - Suggest improvements in operational workflows to enhance customer satisfaction and internal efficiency.
+        - Assist in standardizing communication and requirement documentation processes.`,
+      `Reporting
+        - Document and report customer interactions, requirements, and resolutions to ensure transparency and facilitate continuous improvement.
+        - Provide regular updates to management on customer needs and operational challenges.`,
+      `Stakeholder Collaboration
+        - Engage with cross-functional teams, including IT, sales, and support, to ensure seamless coordination and delivery of services.
+        - Participate in meetings and discussions to align customer goals with organizational priorities.`,
+      `Stay Updated
+        - Keep abreast of industry trends, customer needs, and company's evolving products and services.
+        - Enhance knowledge of business operations tools and methodologies to improve performance.`,
+      `Nice to have
+        - Experience in business operations or project coordination.
+        - Knowledge of enterprise resource planning (ERP) systems.
+        - Understanding of software development lifecycle (SDLC).
+        - Familiarity with data visualization tools for reporting purposes.`,
+    ],
+  },
+  {
+    jobTitle: 'Sr. Business Operation Specialist',
+    salaryRange: '$1.1k - $2.5K',
+    description: `Handle client communication, requirement analysis, and coordination
+    with product teams to ensure smooth business operations, problem resolution,
+    process optimization, and stakeholder collaboration while maintaining up-to-date
+    knowledge of industry trends and business tools.`,
+    jobRequirement: [
+      "Bachelor's degree in Business Administration, Management, Information Technology, or a related field.",
+      'Strong analytical and problem-solving skills.',
+      'Proficiency in understanding technical systems and their applications.',
+      'Proficiency in Microsoft Office (Word, Excel, PowerPoint, etc.).',
+      'Familiarity with customer relationship management (CRM) tools.',
+      'Basic knowledge of Agile/Scrum processes is a plus.',
+      'Excellent communication and interpersonal skills.',
+      'Strong organizational and time-management skills.',
+      'Ability to build and maintain strong client relationships.',
+      'Conflict resolution and negotiation skills.',
+      'Teamwork and collaboration.',
+    ],
+    jobResponsible: [
+      `Client Communication
+        - Act as the primary contact point for customers, understanding their needs and ensuring their requirements are clearly documented and communicated.
+        - Maintain proactive communication with clients, addressing inquiries, concerns, and updates in a timely and professional manner.`,
+      `Requirement Analysis
+        - Collaborate with clients to gather and analyze their demands and translate them into actionable requirements for the product team.
+        - Ensure that customer needs align with the company's business objectives and technical capabilities.`,
+      `Coordination with Product Teams
+        - Work closely with the product team to discuss, refine, and prioritize customer demands.
+        - Facilitate the development of solutions that meet customer expectations while adhering to project constraints and timelines.`,
+      `Problem Resolution
+        - Identify and resolve customer issues, including system problems, setup challenges, or operational concerns.
+        - Collaborate with internal teams to troubleshoot and implement effective solutions, minimizing disruption to customer operations.`,
+      `Process Optimization
+        - Suggest improvements in operational workflows to enhance customer satisfaction and internal efficiency.
+        - Assist in standardizing communication and requirement documentation processes.`,
+      `Reporting
+        - Document and report customer interactions, requirements, and resolutions to ensure transparency and facilitate continuous improvement.
+        - Provide regular updates to management on customer needs and operational challenges.`,
+      `Stakeholder Collaboration
+        - Engage with cross-functional teams, including IT, sales, and support, to ensure seamless coordination and delivery of services.
+        - Participate in meetings and discussions to align customer goals with organizational priorities.`,
+      `Stay Updated
+        - Keep abreast of industry trends, customer needs, and company's evolving products and services.
+        - Enhance knowledge of business operations tools and methodologies to improve performance.`,
+      `Nice to have
+        - Experience in business operations or project coordination.
+        - Knowledge of enterprise resource planning (ERP) systems.
+        - Understanding of software development lifecycle (SDLC).
+        - Familiarity with data visualization tools for reporting purposes.`,
     ],
   },
   {
@@ -264,61 +440,69 @@ const jobData: IJobDetail[] = [
     HR compliance, payroll, benefits, and general administrative operations,
       ensuring a positive work environment and adherence to company policies.`,
     jobRequirement: [
-      'Coordinate the end-to-end recruitment process.',
-      'Assist in developing job descriptions, posting job ads, and managing candidate pipelines.',
-      'Schedule and conduct interviews alongside hiring managers.',
-      'Serve as the first point of contact for employee inquiries and issues.',
-      'Facilitate conflict resolution and maintain a positive work environment.',
-      'Organize employee engagement activities and events.',
-      'Ensure adherence to labor laws and company policies.',
-      'Maintain accurate and confidential employee records.',
-      'Assist in payroll processing and resolve discrepancies.',
-      'Manage employee benefits programs and respond to related queries.',
-      'Oversee office management tasks, including supplies inventory and liaising with vendors.',
-      'Coordinate internal and external meetings, including logistics and accommodations.',
-      'Prepare HR-related reports and maintain HR metrics.',
-      'Document processes and policies.',
+      `Educational Background:
+       - Bachelor's degree in Human Resources, Business Administration or a related field.`,
+      `Work Experience:
+       - Proven experience in HR and administrative roles, preferably in the tech industry.
+       - Experience in handling recruitment, employee relations, and HR compliance`,
+      `Skills and Competencies:
+        - Strong communication and interpersonal skills.
+        - Ability to handle sensitive information confidentially.
+        - Knowledge of HR best practices and employment legislation.
+        - Proficiency in HR software and Microsoft Office Suite.
+        - Excellent organizational and time-management abilities`,
+      `Personal Attributes:
+        - A problem-solver with a proactive approach.
+        - Ability to work independently and as part of a team.
+        - Strong attention to detail and accuracy.`,
     ],
     jobResponsible: [
-      "Bachelor's degree in Human Resources, Business Administration, or related field.",
-      'Proven experience in HR and administrative roles, preferably in the tech industry.',
-      'Experience handling recruitment, employee relations, and HR compliance.',
-      'Strong communication and interpersonal skills.',
-      'Ability to handle sensitive information confidentially.',
-      'Knowledge of HR best practices and employment legislation.',
-      'Proficiency in HR software and Microsoft Office Suite.',
-      'Excellent organizational and time-management abilities.',
-      'Problem-solver with a proactive approach.',
-      'Ability to work independently and as part of a team.',
-      'Strong attention to detail and accuracy.',
+      `Recruitment and Staffing:
+       - Coordinate the end-to-end recruitment process.
+       - Assist in developing job descriptions, posting job ads, and managing the candidate pipeline.
+       - Schedule and conduct interviews alongside hiring managers`,
+      `Employee Relations and Engagement:
+        - Serve as the first point of contact for employee inquiries and issues.
+        - Facilitate conflict resolution and maintain a positive work environment.
+        - Organize employee engagement activities and events`,
+      `HR Compliance:
+        - Ensure adherence to labor laws and company policies.
+        - Maintain accurate and confidential employee records.`,
+      `Compensation and Benefits Administration:
+        - Assist in payroll processing and resolving any discrepancies.
+        - Manage employee benefits programs and respond to related queries`,
+      `Administrative Support:
+        - Oversee office management tasks, including supplies inventory and liaising with vendors.
+        - Coordinate internal and external meetings, including logistics and accommodations`,
+      `Reporting and Documentation:
+        - Prepare HR-related reports and maintain HR metrics.
+        Document processes and policies.`,
     ],
   },
   {
     jobTitle: 'Finance Assistant',
-    salaryRange: '$400 - $900',
+    salaryRange: '$400 - $800',
     description: `Support Accounts Receivable (AR) and Accounts Payable (AP) processes, maintain financial records,
       assist with office administration, and provide client communication support.`,
     jobRequirement: [
-      'Support AR processes: issue invoices, resolve discrepancies, and follow up on collections.',
-      'Communicate with clients to address invoice issues, short payments, and AR matters.',
-      'Handle AP tasks: review vendor invoices, process payments, and manage staff reimbursements.',
-      'Maintain accurate records for all AR and AP transactions.',
-      `Provide support for general office administration,
-      including office supplies, petty cash, and vendor coordination.`,
-      'Assist with logistics such as courier services, equipment repairs, and document handling.',
-      `Respond to finance-related questions from internal teams or clients via Telegram,
-      WhatsApp, or other platforms, including after-hours.`,
-      'Perform other duties to support finance or administrative operations.',
-    ],
-    jobResponsible: [
-      "Bachelor's degree in Accounting, Finance, Business Administration, or a related field.",
-      '1-3 years of experience in AR, AP, or general finance support.',
-      'Experience in administrative or general affairs work (plus).',
+      'Bachelor\'s degree in Accounting, Finance, Business Administration, or a related field.',
+      '1-3 years of experience in accounts receivable, accounts payable, or general finance support.',
+      'Experience in administrative or general affairs work is a plus.',
       'Proficient in Microsoft Excel and Google Sheets.',
       'Basic understanding of invoicing, payment cycles, and financial documentation.',
-      'Able to communicate professionally in English (Chinese is a plus).',
-      'Comfortable handling client inquiries through chat platforms (Telegram, WhatsApp).',
+      'Able to communicate professionally in English (Chinese is a big plus)',
+      'Comfortable handling client inquiries through chat platforms (e.g., Telegram, WhatsApp).',
       'Clear and polite communication style, especially when dealing with payment or invoice issues.',
+    ],
+    jobResponsible: [
+      'Support Accounts Receivable (AR) processes, including issuing invoices, resolving discrepancies, and following up on collections.',
+      'Communicate with clients to address invoice issues, short payments, and related AR matters',
+      'Handle Accounts Payable (AP) tasks, including reviewing vendor invoices, processing payments, and managing staff reimbursements.',
+      'Maintain accurate records for all AR and AP transactions, and ensure timely financial processing.',
+      'Provide support for general office administration, including office supply management, petty cash handling, vendor coordination, and basic facility maintenance.',
+      'Assist in arranging logistics such as courier services, equipment repairs, and document handling.',
+      'Respond to finance-related questions from internal teams or clients via Telegram, Whatsapp or other platforms - including after-hours when necessary.',
+      'Perform other duties as assigned to support finance or administrative operations.',
     ],
   },
   {
@@ -328,63 +512,62 @@ const jobData: IJobDetail[] = [
       develop prototypes, ensure consistency and brand alignment, and collaborate with UX designers,
       developers, and product managers.`,
     jobRequirement: [
-      'Create visually appealing, easy-to-use, and efficient interfaces for digital products.',
-      'Develop prototypes for new interfaces or features for feedback and development guidance.',
-      'Establish and maintain a consistent design language across the product.',
-      'Work closely with UX designers, developers, and product managers to align design with functionality.',
-      'Participate in user testing and adjust designs based on feedback.',
-      'Create responsive designs for various platforms and screen sizes.',
-      'Ensure designs are accessible to all users, including those with disabilities.',
-      'Ensure all interface designs align with the brand identity.',
-      'Stay up-to-date with the latest design trends, technologies, and tools.',
+      'A degree in Design, Computer Science or a related field, or equivalent work experience.',
+      'Proven Ul design experience with a strong portfolio demonstrating past work and relevant experience.',
+      'Proficiency in design software, such as Sketch, Adobe XD, Figma, or Illustrator.',
+      'Understanding of basic front-end languages: HTML5, CSS3, and JavaScript.',
+      'Strong visual design skills with a good understanding of user-system interaction.',
+      'Excellent visual design skills with sensitivity to user-system interaction',
+      'Ability to solve problems creatively and effectively.',
+      'Good communication skills, especially when explaining design choices and their rationale to team members and stakeholders.',
+      'Understanding of responsive and mobile design.',
     ],
     jobResponsible: [
-      'Degree in Design, Computer Science, or related field, or equivalent experience.',
-      'Proven UI design experience with a strong portfolio.',
-      'Proficiency in design software such as Sketch, Adobe XD, Figma, or Illustrator.',
-      'Understanding of basic front-end languages: HTML5, CSS3, and JavaScript.',
-      'Strong visual design skills and understanding of user-system interaction.',
-      'Ability to solve design problems creatively and effectively.',
-      'Excellent communication skills, especially when explaining design choices.',
-      'Understanding of responsive and mobile design.',
-      'Understanding of the UX design process (nice to have).',
-      'Experience working in Agile/Scrum processes (nice to have).',
-      'Knowledge of UI design principles and techniques (nice to have).',
-      'Experience with user testing and conducting user research (nice to have).',
+      `Inerface Design:
+      - Create visually appealing, easy-to-use, and efficient interfaces for digital products. This often involves choosing color schemes, button designs, layout, typography, iconography, and more.`,
+      `Prototyping:
+      - Develop prototypes for new interfaces or features, which can be used to gather user feedback or guide development.`,
+      `Consistency:
+      - Establish and maintain a consistent design language across the product, often expressed through a style guide or design system. This helps to create a consistent and familiar experience for users.`,
+      `Collaboration:
+      - Work closely with User Experience (UX) Designers, developers, and product managers to ensure that the visual design works hand in hand with the products functionality and overall user experience.`,
+      `User Testing:
+      - Participate in user testing to understand how users interact with the interfaces and make adjustments based on user feedback.`,
+      `Responsive Design:
+      - Create designs that are effective and visually consistent across a variety of platforms and screen sizes, from mobile devices to desktop computers.`,
+      `Accessibility:
+      - Ensure that designs are accessible to all users, including those with visual, auditory, motor, or cognitive disabilities.`,
+      `Brand Alignment:
+      - Ensure that all interface designs align with the brand identity and communicate the desired message to the user.`,
+      `Stay Updated:
+      - Keep up-to-date with the latest design trends, technologies, and tools.`,
     ],
   },
   {
     jobTitle: 'Customer Service (軟體客戶服務)',
-    salaryRange: '$300 - $800',
-    description: `Provide customer support exclusively via chat, resolve technical issues, collect feedback, 
+    salaryRange: '$300 - $1K',
+    description: `Provide customer support exclusively via chat, resolve technical issues, collect feedback,
       and collaborate with internal teams to improve service quality and customer satisfaction.`,
-    jobRequirement: [
-      'Handle customer inquiries exclusively via chat and provide seamless support.',
-      'Guide customers through troubleshooting steps with clear and actionable solutions.',
-      'Escalate complex issues to Technical Support or Development teams when necessary.',
-      'Collect and document customer feedback on software bugs, feature requests, and usability concerns.',
-      'Update customers on progress of their feedback, software fixes, new features, and relevant changes.',
-      'Collaborate with product, technical support, and account management teams to address customer concerns.',
-      'Share customer insights and recurring issues with internal teams to drive product and service improvements.',
-      'Handle customer interactions professionally, maintaining a friendly approach.',
-      'Manage difficult interactions with patience and empathy to de-escalate situations.',
-      `Create and continuously improve support documentation,
-      SOPs, troubleshooting guides, and knowledge base articles.`,
-      '客戶支援: 回覆客戶詢問並提供如何使用系統/應用程式的指導，引導客戶完成複雜的功能.',
-      '問題解決: 協助客戶解決使用系統流程遇到的問題，引導客戶完成一系列步驟來解決問題，或者可能涉及將更複雜的問題回報給更高層級的支援或開發團隊.',
-      '回饋收集: 收集客戶的回饋並進行分類，有關：潛在錯誤、功能請求、使用者介面改進等的回饋，並將此回饋給公司中的相關團隊。',
-      '客戶滿意度: 透過提供及時、準確、友善的服務來確保客戶滿意度，需要平衡客戶的需求和願望與公司的政策和能力。',
-      '文件和知識共享: 例如常見問題解答、知識庫文章和教學影片等，不僅可以幫助客戶自行尋找解決方案，也能幫助其他客服處理類似問題。',
-      '產品知識: 深入了解所支援的軟體產品，這包括及時了解新功能、已知問題和使用。',
-      '跨部門合作: 與公司的其他團隊合作，例如產品、工程師和銷售，為客戶提供最好的服務。需要提供客戶回饋，提醒其他團隊注意緊急問題或協調產品上線.',
-    ],
     jobResponsible: [
-      'Able to communicate effectively in English, both written and verbal.',
-      'Strong sense of responsibility and problem-solving skills.',
-      'Basic logical skills to understand software technologies.',
-      'High level of patience and professionalism when handling challenging situations.',
-      'Ability to work under pressure and handle multiple tasks.',
-      'Experience in customer support or a similar role.',
+      `Customer Support & Issue Resolution:
+      - Handle customer inquiries exclusively via chat, ensuring every request is addressed and providing seamless support.
+      - Guide customers through troubleshooting steps, offering clear and actionable solutions to resolve technical problems.
+      - Escalate complex cases to Technical Support or the Development team for resolution when an issue requires deeper investigation.`,
+      `Feedback Collection & Team Collaboration:
+      - Collect and document customer feedback on software bugs, feature requests, and usability concerns to product team and CS team leader to improve service and system quality.
+      - Regularly update customers on the progress of their feedback, such as software fixes, new features, and relevant changes.
+      - Work with product, technical support, and account management teams to address customer concerns and improve service quality.
+      - Share customer insights and recurring issues with internal teams to drive product and service improvements.`,
+      `Customer Satisfaction:
+      - Handle customer interactions professionally and with a friendly approach to ensure a positive and seamless support experience.
+      - Manage difficult interactions with patience and empathy to de-escalate situations, align expectations, and work toward a satisfactory resolution.`,
+      `Knowledge & Product Expertise:
+      - Create and continuously improve support documentation such as SOP, troubleshooting guides, and knowledge base articles to enhance self-service options.`,
+      `Nice to have:
+      - Prior experience in a software company or technology-related industry.
+      - Technical background or degree in a technology-related field.
+      - Familiarity with customer support tools and ticket system, such as YouTrack and Jira.
+      - Available to communicate in Chinese.`,
       '優秀的書面和口頭溝通能力.',
       '較強的解決問題的能力.',
       '有客戶支援或類似職位經驗者優先.',
@@ -398,6 +581,21 @@ const jobData: IJobDetail[] = [
       '擁有軟體公司或技術相關產業的經驗',
       '精通多種語言',
       '熟悉客戶關係管理（CRM）軟體',
+    ],
+    jobRequirement: [
+      'Able to communicate effectively in English, both written and verbal.',
+      'A strong sense of responsibility and problem-solving skills.',
+      'Basic logic skills to understand software technologies.',
+      'High level of patience and professionalism when dealing with challenging situations or customers.',
+      'Ability to work under pressure and handle multiple tasks at once.',
+      'Experience with customer support or a similar role.',
+      '客戶支援: 回覆客戶詢問並提供如何使用系統/應用程式的指導，引導客戶完成複雜的功能.',
+      '問題解決: 協助客戶解決使用系統流程遇到的問題，引導客戶完成一系列步驟來解決問題，或者可能涉及將更複雜的問題回報給更高層級的支援或開發團隊.',
+      '回饋收集: 收集客戶的回饋並進行分類，有關：潛在錯誤、功能請求、使用者介面改進等的回饋，並將此回饋給公司中的相關團隊。',
+      '客戶滿意度: 透過提供及時、準確、友善的服務來確保客戶滿意度，需要平衡客戶的需求和願望與公司的政策和能力。',
+      '文件和知識共享: 例如常見問題解答、知識庫文章和教學影片等，不僅可以幫助客戶自行尋找解決方案，也能幫助其他客服處理類似問題。',
+      '產品知識: 深入了解所支援的軟體產品，這包括及時了解新功能、已知問題和使用。',
+      '跨部門合作: 與公司的其他團隊合作，例如產品、工程師和銷售，為客戶提供最好的服務。需要提供客戶回饋，提醒其他團隊注意緊急問題或協調產品上線.',
     ],
   },
 
