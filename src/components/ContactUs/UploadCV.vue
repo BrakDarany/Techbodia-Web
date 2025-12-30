@@ -22,31 +22,30 @@
           </p>
           <p class="text-xs text-gray-400">PDF, DOC, DOCX (Max 5MB)</p>
         </div>
-        <div v-else class="flex items-center justify-center gap-3">
-          <svg class="h-6 w-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-            stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
-              012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
-              01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <span class="text-sm text-gray-700">{{ modelValue.name }}</span>
-          <button type="button" @click.stop="openPreview"
-            class="text-pink-500 hover:text-pink-600 transition-colors" title="Preview CV">
-            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268
-                2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268
-                -2.943-9.542-7z" />
-            </svg>
-          </button>
-          <button type="button" @click.stop="removeFile" class="text-gray-400 hover:text-red-500 transition-colors"
-            title="Remove file">
-            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        <div v-else class="flex items-center justify-between w-full gap-4 p-4 md:p-16">
+          <!-- File info (left side) -->
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
+              <svg class="h-6 w-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
+                  012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
+                  01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div class="text-left max-w-45">
+              <p class="w-25 text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
+              <p class="text-xs text-gray-400">{{ formatFileSize(modelValue.size) }}</p>
+            </div>
+          </div>
+          <!-- Buttons (right side) -->
+          <div class="flex items-center gap-3">
+            <button type="button" @click.stop="openPreview"
+              class="px-4 py-2 text-sm font-medium text-pink-500 border border-pink-500 rounded-lg
+                hover:bg-pink-50 transition-colors">
+              Preview
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -159,6 +158,14 @@ const allowedTypes = [
 const maxFileSize = 5 * 1024 * 1024; // 5MB
 
 const isPdfFile = computed(() => props.modelValue?.type === 'application/pdf');
+
+const formatFileSize = (bytes) => {
+  if (!bytes) return '0 B';
+  const k = 1024;
+  const sizes = ['B', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return `${parseFloat((bytes / k ** i).toFixed(2))} ${sizes[i]}`;
+};
 
 const setCanvasRef = (el, pageNum) => {
   if (el) {
@@ -287,15 +294,6 @@ const downloadFile = () => {
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
-  }
-};
-
-const removeFile = () => {
-  closePreview();
-  emit('update:modelValue', null);
-  fileError.value = '';
-  if (fileInput.value) {
-    fileInput.value.value = '';
   }
 };
 
