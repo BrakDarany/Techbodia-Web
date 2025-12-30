@@ -16,7 +16,7 @@
       </div>
 
       <p
-        class="title-tertiary-bold leading-tight"
+        class="title-tertiary-bold leading-none"
       >
         We Build
         <br />
@@ -71,7 +71,7 @@
     <div
       data-aos="fade-left"
       data-aos-duration="800"
-      class="md:w-138 flex justify-center items-center mt-6 lg:mt-0 hover:cursor-pointer"
+      class="md:w-138 flex justify-center items-center mt-6 lg:mt-9 hover:cursor-pointer"
     >
       <div
         class="relative w-85.5 h-53.75 md:w-147 md:h-67.5
