@@ -22,7 +22,7 @@
           </p>
           <p class="text-xs text-gray-400">PDF, DOC, DOCX (Max 5MB)</p>
         </div>
-        <div v-else class="flex items-center justify-between w-full gap-4 p-4 md:p-16">
+        <div v-else class="flex items-center justify-between w-full gap-2 md:gap-6">
           <!-- File info (left side) -->
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
@@ -34,7 +34,7 @@
               </svg>
             </div>
             <div class="text-left max-w-45">
-              <p class="w-25 text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
+              <p class="w-22 md:w-50 text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
               <p class="text-xs text-gray-400">{{ formatFileSize(modelValue.size) }}</p>
             </div>
           </div>
