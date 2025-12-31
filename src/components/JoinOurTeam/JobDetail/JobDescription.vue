@@ -38,7 +38,6 @@
 
     <p class="mt-4 text-base-description">{{ props.job.description }}</p>
 
-    <!-- Job Application Popup -->
     <JobApplicationPopup
       :is-open="isPopupOpen"
       :selected-job="props.job.jobTitle"

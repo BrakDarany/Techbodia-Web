@@ -29,13 +29,9 @@
 import CultureCard from '@/components/PassionAndFun/PassionAndFunCard.vue';
 import passionAndFunEvents from '@/Data/passion-and-fun';
 
-const cultureData = passionAndFunEvents.map((event) => {
-  console.log('event.id:', event);
-
-  return {
-    title: event.title,
-    images: event.images.map((img) => `${event.id}/${img}`),
-  };
-});
+const cultureData = passionAndFunEvents.map((event) => ({
+  title: event.title,
+  images: event.images.map((img) => `${event.id}/${img}`),
+}));
 
 </script>
