@@ -27,85 +27,15 @@
 
 <script setup lang="ts">
 import CultureCard from '@/components/PassionAndFun/PassionAndFunCard.vue';
-import { ICultureItem } from '@/model/PassionAndFun';
+import passionAndFunEvents from '@/Data/passion-and-fun';
 
-const cultureData: ICultureItem[] = [
-  {
-    title: 'All Hands Meeting',
-    images: ['AllHand1', 'AllHand2', 'AllHand3', 'AllHand4', 'AllHand5', 'AllHand6'],
-  },
-  {
-    title: 'Company Trip',
-    images: [
-      'CompanyTrip1',
-      'CompanyTrip3',
-      'CompanyTrip4',
-      'CompanyTrip2',
-      'CompanyTrip5',
-      'CompanyTrip6',
-    ],
-  },
-  {
-    title: 'Bear Painting Day',
-    images: [
-      'bear1',
-      'bear2',
-      'bear3',
-      'bear5',
-      'bear6',
-      'bear7',
-      'bear8',
-      'bear9',
-    ],
-  },
-  {
-    title: 'Figma Workshop',
-    images: [
-      'FigmaWorkShop5',
-      'FigmaWorkShop1',
-      'FigmaWorkShop2',
-      'FigmaWorkShop3',
-      'FigmaWorkShop4',
-    ],
-  },
-  {
-    title: 'Hollaween',
-    images: [
-      'Halloween1',
-      'Halloween2',
-      'Halloween4',
-      'Halloween5',
-      'Halloween3',
-    ],
-  },
-  {
-    title: 'Khmer Coder',
-    images: [
-      'KhmerCoder6',
-      'KhmerCoder2',
-      'KhmerCoder3',
-      'KhmerCoder5',
-      'KhmerCoder1',
-      'KhmerCoder7',
-    ],
-  },
-  {
-    title: 'Sport Day',
-    images: [
-      'SportDay1',
-    ],
-  },
-  {
-    title: 'Picnic',
-    images: [
-      'Picnic1',
-      'Picnic2',
-      'Picnic3',
-      'Picnic4',
-      'Picnic5',
-      'Picnic6',
-      'Picnic7',
-    ],
-  },
-];
+const cultureData = passionAndFunEvents.map((event) => {
+  console.log('event.id:', event);
+
+  return {
+    title: event.title,
+    images: event.images.map((img) => `${event.id}/${img}`),
+  };
+});
+
 </script>
