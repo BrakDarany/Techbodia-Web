@@ -5,14 +5,8 @@
       :spaceBetween="30"
       :navigation="true"
       :slidesPerView="'auto'"
-      :autoplay="{
-        delay: 5000,
-        disableOnInteraction: false,
-      }"
       :speed="800"
-      effect="fade"
       class="h-64 w-full"
-      @swiper="onSwiperInit"
     >
       <SwiperSlide v-for="(img, index) in images" :key="index">
         <img
@@ -33,23 +27,12 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Navigation, EffectFade } from 'swiper';
-import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 
-const props = defineProps<{
+defineProps<{
   title: string
   images: string[]
-  slideDelay?: number
 }>();
-
-const onSwiperInit = (swiper: SwiperType) => {
-  if (props.slideDelay && props.slideDelay > 0) {
-    swiper.autoplay.stop();
-    setTimeout(() => {
-      swiper.autoplay.start();
-    }, props.slideDelay);
-  }
-};
 </script>
 
 <style scoped>
