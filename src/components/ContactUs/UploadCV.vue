@@ -10,36 +10,24 @@
       :class="{ 'border-pink-500 bg-pink-50/30': isDragging }">
       <input ref="fileInput" type="file" accept=".pdf,.doc,.docx" class="hidden" @change="handleFileChange" />
       <div class="text-center">
-        <div v-if="!modelValue" class="space-y-2">
-          <svg class="mx-auto h-10 w-10 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4
-              4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656
-              0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4
-              4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+        <div v-if="!modelValue" class="space-y-2 flex flex-col items-center text-center">
+          <img src="../../assets/ContactUs/gallery1.svg" alt="ref" width="34" height="34">
           <p class="text-sm text-gray-600">
             <span class="text-pink-500 font-medium">Click to upload</span> or drag and drop
           </p>
           <p class="text-xs text-gray-400">PDF, DOC, DOCX (Max 5MB)</p>
         </div>
         <div v-else class="flex items-center justify-between w-full gap-2">
-          <!-- File info (left side) -->
           <div class="flex items-center gap-3 min-w-0 flex-1">
-            <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg class="h-5 w-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
-                  012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
-                  01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+            <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center shrink-0">
+              <img src="../../assets/ContactUs/document.svg" alt="ref" width="26" height="26">
             </div>
             <div class="text-left min-w-0 flex-1">
               <p class="text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
               <p class="text-xs text-gray-400">{{ formatFileSize(modelValue.size) }}</p>
             </div>
           </div>
-          <!-- Buttons (right side) -->
-          <div class="flex items-center flex-shrink-0">
+          <div class="flex items-center shrink-0">
             <button type="button" @click.stop="openPreview"
               class="px-3 py-1.5 text-sm font-medium text-pink-500 border border-pink-500 rounded-lg
                 hover:bg-pink-50 transition-colors">
@@ -51,26 +39,17 @@
     </div>
     <p v-if="fileError" class="mt-1 text-sm text-red-500">{{ fileError }}</p>
 
-    <!-- CV Preview Modal -->
     <Teleport to="body">
       <Transition name="modal">
         <div v-if="showPreview" class="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <!-- Backdrop -->
           <div class="fixed inset-0 bg-black/50" @click="closePreview"></div>
 
-          <!-- Modal Content -->
           <div class="relative bg-white rounded-2xl shadow-2xl flex flex-col
             w-full max-w-3xl h-[85vh] overflow-hidden z-10">
-            <!-- Header -->
             <div class="flex items-center justify-between px-5 py-3 border-b
               border-gray-200">
               <div class="flex items-center gap-2">
-                <svg class="h-5 w-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
-                    012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
-                    01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+                <img src="../../assets/ContactUs/document.svg" alt="ref" width="26" height="26">
                 <div>
                   <h3 class="font-semibold text-gray-800">CV Preview</h3>
                   <p class="text-xs text-gray-500">{{ modelValue?.name }}</p>
@@ -85,13 +64,11 @@
               </button>
             </div>
 
-            <!-- PDF Preview -->
             <div v-if="isPdfFile" ref="pdfContainer" class="flex-1 w-full bg-white overflow-auto pdf-container">
               <canvas v-for="pageNum in totalPages" :key="pageNum" :ref="(el) => setCanvasRef(el, pageNum)"
                 class="pdf-page mx-auto block"></canvas>
             </div>
 
-            <!-- DOC/DOCX - Cannot preview, show download option -->
             <div v-else class="flex-1 flex flex-col items-center justify-center py-12">
               <svg class="h-16 w-16 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -125,7 +102,6 @@ import {
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as pdfjsLib from 'pdfjs-dist';
 
-// Set PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.mjs',
   import.meta.url,
@@ -184,15 +160,12 @@ const renderPage = async (pageNum) => {
   const viewport = page.getViewport({ scale: 1 });
   const scale = (containerWidth - 40) / viewport.width;
 
-  // Account for device pixel ratio for sharp rendering on high-DPI screens
   const pixelRatio = window.devicePixelRatio || 1;
   const scaledViewport = page.getViewport({ scale: scale * pixelRatio });
 
-  // Set canvas internal resolution
   canvas.width = scaledViewport.width;
   canvas.height = scaledViewport.height;
 
-  // Set display size via CSS
   canvas.style.width = `${scaledViewport.width / pixelRatio}px`;
   canvas.style.height = `${scaledViewport.height / pixelRatio}px`;
 
@@ -213,7 +186,6 @@ const loadPdf = async () => {
 
   await nextTick();
 
-  // Render all pages
   const renderPromises = [];
   for (let i = 1; i <= pdfDoc.numPages; i += 1) {
     renderPromises.push(renderPage(i));

@@ -8,30 +8,12 @@
         v-if="job" :job="job"
       />
     </div>
-    <div class="grid lg:grid-cols-2 gap-4">
-      <div
-        class="h-full" data-aos="flip-right" data-aos-duration="800"
-      >
-        <JobResponsible
-          v-if="job"
-          class="h-full"
-          :title="job.jobTitle.includes('Customer Service') ? 'Job Description (负责任的)' : 'Job Description'"
-          :responsibilities="job.jobResponsible"
-          icon="responsible"
-        />
-      </div>
-      <div
-        class="h-full" data-aos="flip-right" data-aos-duration="800"
-      >
-        <JobResponsible
-          v-if="job"
-          class="h-full"
-          :title="job.jobTitle.includes('Customer Service') ? 'Job Requirement (要求)' : 'Job Requirement'"
-          :responsibilities="job.jobRequirement"
-          icon="requirement"
-        />
-      </div>
-    </div>
+    <JobSpecGrid
+      v-if="job"
+      :job-title="job.jobTitle"
+      :job-responsible="job.jobResponsible"
+      :job-requirement="job.jobRequirement"
+    />
     <LeavePolocy v-if="job" :job-title="job.jobTitle"/>
     <JobBenefit v-if="job" :job-title="job.jobTitle"/>
   </div>
@@ -41,7 +23,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { IJobDetail } from '@/model/JoinOurTeam';
 import { onMounted, ref } from 'vue';
 import jobData from '@/Data/JobData';
-import JobResponsible from '@/components/JoinOurTeam/JobDetail/JobResponsible.vue';
+import JobSpecGrid from '@/components/JoinOurTeam/JobDetail/JobSpecGrid.vue';
 import JobDescription from '@/components/JoinOurTeam/JobDetail/JobDescription.vue';
 import JobBenefit from './JobDetail/JobBenefit.vue';
 import LeavePolocy from './JobDetail/LeavePolocyCard.vue';
