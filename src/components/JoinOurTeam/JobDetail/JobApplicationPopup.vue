@@ -1,9 +1,9 @@
 <template>
   <Teleport to="body">
     <Transition name="modal">
-      <div v-if="isOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4">
-        <!-- Backdrop -->
-        <div class="fixed inset-0 bg-black/50" @click="closePopup"></div>
+      <div v-if="isOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4" @keydown.esc.prevent>
+        <!-- Backdrop (click to close disabled) -->
+        <div class="fixed inset-0 bg-black/50"></div>
 
         <!-- Modal Content -->
         <div class="relative bg-white rounded-2xl shadow-2xl w-full md:w-xl z-10 max-h-[90vh] overflow-y-auto">
