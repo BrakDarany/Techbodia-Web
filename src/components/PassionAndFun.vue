@@ -18,6 +18,7 @@
         :key="index"
         :title="value.title"
         :images="value.images"
+        :slide-delay="randomDelays[index]"
         data-aos="fade-up"
         data-aos-duration="1000"
       />
@@ -28,6 +29,19 @@
 <script setup lang="ts">
 import CultureCard from '@/components/PassionAndFun/PassionAndFunCard.vue';
 import { ICultureItem } from '@/model/PassionAndFun';
+
+// Generate shuffled delay order for random slide timing
+const generateRandomDelays = (count: number, interval: number): number[] => {
+  const indices = Array.from({ length: count }, (_, i) => i);
+  // Fisher-Yates shuffle
+  for (let i = indices.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  return indices.map((i) => i * interval);
+};
+
+const randomDelays = generateRandomDelays(8, 1000);
 
 const cultureData: ICultureItem[] = [
   {

@@ -1,10 +1,18 @@
 <template>
   <div class="relative group rounded-2xl overflow-hidden shadow-lg hover:cursor-pointer">
     <Swiper
-      :modules="[Autoplay, Navigation]"
+      :modules="[Autoplay, Navigation, EffectFade]"
       :spaceBetween="30"
       :navigation="true"
+      :slidesPerView="'auto'"
+      :autoplay="{
+        delay: 5000,
+        disableOnInteraction: false,
+      }"
+      :speed="800"
+      effect="fade"
       class="h-64 w-full"
+      @swiper="onSwiperInit"
     >
       <SwiperSlide v-for="(img, index) in images" :key="index">
         <img
@@ -24,13 +32,24 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, Navigation, EffectFade } from 'swiper';
+import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 
-defineProps<{
+const props = defineProps<{
   title: string
   images: string[]
+  slideDelay?: number
 }>();
+
+const onSwiperInit = (swiper: SwiperType) => {
+  if (props.slideDelay && props.slideDelay > 0) {
+    swiper.autoplay.stop();
+    setTimeout(() => {
+      swiper.autoplay.start();
+    }, props.slideDelay);
+  }
+};
 </script>
 
 <style scoped>
