@@ -19,7 +19,7 @@
         :title="value.title"
         :images="value.images"
         data-aos="fade-up"
-        data-aos-duration="800"
+        data-aos-duration="600"
       />
     </div>
   </section>
