@@ -8,6 +8,7 @@
       <button
         type="button"
         class="btn-primary btn-rounded"
+        @click="openApplicationPopup"
       >
         Apply Now
         <img
@@ -36,14 +37,33 @@
     </div>
 
     <p class="mt-4 text-base-description">{{ props.job.description }}</p>
+
+    <!-- Job Application Popup -->
+    <JobApplicationPopup
+      :is-open="isPopupOpen"
+      :selected-job="props.job.jobTitle"
+      @close="closeApplicationPopup"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { IJobDetail } from '@/model/JoinOurTeam';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+import JobApplicationPopup from './JobApplicationPopup.vue';
 
 const props = defineProps<{ job: IJobDetail }>();
+
+const isPopupOpen = ref(false);
+
+const openApplicationPopup = () => {
+  isPopupOpen.value = true;
+};
+
+const closeApplicationPopup = () => {
+  isPopupOpen.value = false;
+};
+
 const infoItems = computed(() => [
   {
     icon: 'salary',
