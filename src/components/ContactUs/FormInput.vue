@@ -1,7 +1,7 @@
 <template>
   <div>
     <label class="block text-sm font-medium text-gray-700 mb-1">
-      {{ label }}
+      {{ label }}<span v-if="required" class="text-red-500 ml-0.5">*</span>
     </label>
     <input
       :value="modelValue"
@@ -31,6 +31,10 @@ defineProps({
   placeholder: {
     type: String,
     default: '',
+  },
+  required: {
+    type: Boolean,
+    default: false,
   },
 });
 
