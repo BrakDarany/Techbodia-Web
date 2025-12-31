@@ -39,26 +39,17 @@
     </div>
     <p v-if="fileError" class="mt-1 text-sm text-red-500">{{ fileError }}</p>
 
-    <!-- CV Preview Modal -->
     <Teleport to="body">
       <Transition name="modal">
         <div v-if="showPreview" class="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <!-- Backdrop -->
           <div class="fixed inset-0 bg-black/50" @click="closePreview"></div>
 
-          <!-- Modal Content -->
           <div class="relative bg-white rounded-2xl shadow-2xl flex flex-col
             w-full max-w-3xl h-[85vh] overflow-hidden z-10">
-            <!-- Header -->
             <div class="flex items-center justify-between px-5 py-3 border-b
               border-gray-200">
               <div class="flex items-center gap-2">
-                <svg class="h-5 w-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
-                    012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
-                    01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+                <img src="../../assets/ContactUs/document.svg" alt="ref" width="26" height="26">
                 <div>
                   <h3 class="font-semibold text-gray-800">CV Preview</h3>
                   <p class="text-xs text-gray-500">{{ modelValue?.name }}</p>
@@ -73,13 +64,11 @@
               </button>
             </div>
 
-            <!-- PDF Preview -->
             <div v-if="isPdfFile" ref="pdfContainer" class="flex-1 w-full bg-white overflow-auto pdf-container">
               <canvas v-for="pageNum in totalPages" :key="pageNum" :ref="(el) => setCanvasRef(el, pageNum)"
                 class="pdf-page mx-auto block"></canvas>
             </div>
 
-            <!-- DOC/DOCX - Cannot preview, show download option -->
             <div v-else class="flex-1 flex flex-col items-center justify-center py-12">
               <svg class="h-16 w-16 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -113,7 +102,6 @@ import {
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as pdfjsLib from 'pdfjs-dist';
 
-// Set PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.mjs',
   import.meta.url,
@@ -172,15 +160,12 @@ const renderPage = async (pageNum) => {
   const viewport = page.getViewport({ scale: 1 });
   const scale = (containerWidth - 40) / viewport.width;
 
-  // Account for device pixel ratio for sharp rendering on high-DPI screens
   const pixelRatio = window.devicePixelRatio || 1;
   const scaledViewport = page.getViewport({ scale: scale * pixelRatio });
 
-  // Set canvas internal resolution
   canvas.width = scaledViewport.width;
   canvas.height = scaledViewport.height;
 
-  // Set display size via CSS
   canvas.style.width = `${scaledViewport.width / pixelRatio}px`;
   canvas.style.height = `${scaledViewport.height / pixelRatio}px`;
 
@@ -201,7 +186,6 @@ const loadPdf = async () => {
 
   await nextTick();
 
-  // Render all pages
   const renderPromises = [];
   for (let i = 1; i <= pdfDoc.numPages; i += 1) {
     renderPromises.push(renderPage(i));
