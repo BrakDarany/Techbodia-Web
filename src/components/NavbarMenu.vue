@@ -100,7 +100,9 @@
 
 <script setup lang="ts">
 import { INavItem } from '@/model/Navbar';
-import { ref, onMounted, onUnmounted } from 'vue';
+import {
+  ref, onMounted, onUnmounted, watch, nextTick,
+} from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
 const router = useRouter();
@@ -142,6 +144,21 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', updateActiveSection);
 });
+
+// Watch for route changes to update active section when navigating back to Home
+watch(
+  () => route.name,
+  (newRouteName) => {
+    if (newRouteName === 'Home') {
+      // Use nextTick to ensure DOM is updated after navigation
+      nextTick(() => {
+        updateActiveSection();
+      });
+    } else {
+      activeSection.value = null;
+    }
+  },
+);
 
 const goTo = (hash: string) => {
   if (window.location.pathname !== '/') {

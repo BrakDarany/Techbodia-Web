@@ -22,26 +22,26 @@
           </p>
           <p class="text-xs text-gray-400">PDF, DOC, DOCX (Max 5MB)</p>
         </div>
-        <div v-else class="flex items-center justify-between w-full gap-2 md:gap-6">
+        <div v-else class="flex items-center justify-between w-full gap-2">
           <!-- File info (left side) -->
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
-              <svg class="h-6 w-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="h-5 w-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0
                   012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0
                   01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <div class="text-left max-w-45">
-              <p class="w-22 md:w-50 text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
+            <div class="text-left min-w-0 flex-1">
+              <p class="text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
               <p class="text-xs text-gray-400">{{ formatFileSize(modelValue.size) }}</p>
             </div>
           </div>
           <!-- Buttons (right side) -->
-          <div class="flex items-center gap-3">
+          <div class="flex items-center flex-shrink-0">
             <button type="button" @click.stop="openPreview"
-              class="px-4 py-2 text-sm font-medium text-pink-500 border border-pink-500 rounded-lg
+              class="px-3 py-1.5 text-sm font-medium text-pink-500 border border-pink-500 rounded-lg
                 hover:bg-pink-50 transition-colors">
               Preview
             </button>
