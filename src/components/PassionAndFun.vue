@@ -17,7 +17,7 @@
         v-for="(value, index) in cultureData"
         :key="index"
         :title="value.title"
-        :image="value.image"
+        :images="value.images"
         data-aos="fade-up"
         data-aos-duration="1000"
       />
@@ -31,40 +31,81 @@ import { ICultureItem } from '@/model/PassionAndFun';
 
 const cultureData: ICultureItem[] = [
   {
-    title: 'Bear Painting',
-    image: 'Painting1',
-  },
-  {
     title: 'All Hands Meeting',
-    image: 'AllHandMeeting1',
+    images: ['AllHand1', 'AllHand2', 'AllHand3', 'AllHand4', 'AllHand5', 'AllHand6'],
   },
   {
-    title: 'Halloween Party',
-    image: 'Halloween',
+    title: 'Company Trip',
+    images: [
+      'CompanyTrip1',
+      'CompanyTrip3',
+      'CompanyTrip4',
+      'CompanyTrip2',
+      'CompanyTrip5',
+      'CompanyTrip6',
+    ],
   },
   {
-    title: 'Khmer Coder Event',
-    image: 'KhmerCoder1',
+    title: 'Bear Painting Day',
+    images: [
+      'bear1',
+      'bear2',
+      'bear3',
+      'bear5',
+      'bear6',
+      'bear7',
+      'bear8',
+      'bear9',
+    ],
   },
   {
-    title: 'Tech Community',
-    image: 'KhmerCoder2',
+    title: 'Figma Workshop',
+    images: [
+      'FigmaWorkShop5',
+      'FigmaWorkShop1',
+      'FigmaWorkShop2',
+      'FigmaWorkShop3',
+      'FigmaWorkShop4',
+    ],
   },
   {
-    title: 'Team Picnic',
-    image: 'Picnic1',
+    title: 'Hollaween',
+    images: [
+      'Halloween1',
+      'Halloween2',
+      'Halloween4',
+      'Halloween5',
+      'Halloween3',
+    ],
   },
   {
-    title: 'Outdoor Fun',
-    image: 'Picnic2',
+    title: 'Khmer Coder',
+    images: [
+      'KhmerCoder6',
+      'KhmerCoder2',
+      'KhmerCoder3',
+      'KhmerCoder5',
+      'KhmerCoder1',
+      'KhmerCoder7',
+    ],
   },
   {
-    title: 'Nature Day',
-    image: 'Picnic3',
+    title: 'Sport Day',
+    images: [
+      'SportDay1',
+    ],
   },
   {
-    title: 'Year End Party',
-    image: 'YearEngParty',
+    title: 'Picnic',
+    images: [
+      'Picnic1',
+      'Picnic2',
+      'Picnic3',
+      'Picnic4',
+      'Picnic5',
+      'Picnic6',
+      'Picnic7',
+    ],
   },
 ];
 </script>
