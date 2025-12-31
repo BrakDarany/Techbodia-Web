@@ -13,6 +13,7 @@
           class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
           :src="require(`@/assets/PassionAndFun/${img}.jpg`)"
           :alt="title"
+          loading="lazy"
         />
       </SwiperSlide>
     </Swiper>
