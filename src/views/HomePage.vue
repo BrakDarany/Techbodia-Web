@@ -5,7 +5,7 @@
   <PassionAndFun />
   <AboutUsInfo />
   <JoinOurTeam />
-  <ContactUsForm />
+  <ContactUs />
 </template>
 
 <script setup lang="ts">
@@ -15,5 +15,5 @@ import TechnologyStack from '@/components/TechnologyStack.vue';
 import PassionAndFun from '@/components/PassionAndFun.vue';
 import AboutUsInfo from '@/components/AboutUsInfo.vue';
 import JoinOurTeam from '@/components/JoinOurTeam.vue';
-import ContactUsForm from '@/components/ContactUsForm.vue';
+import ContactUs from '@/components/ContactUs.vue';
 </script>

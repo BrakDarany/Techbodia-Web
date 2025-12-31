@@ -1,6 +1,6 @@
 <template>
   <div :class="containerClass">
-    <form @submit.prevent="handleSubmit" class="space-y-6">
+    <form @submit.prevent="submitForm" class="space-y-6">
       <FormInput v-model="form.fullName" label="Full Name" type="text" required />
 
       <FormInput v-model="form.phoneNumber" label="Phone Number" type="text" required />
@@ -52,8 +52,6 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['submit']);
-
 const jobOptions = jobData.map((job) => ({
   value: job.jobTitle,
   label: job.jobTitle,
@@ -67,18 +65,9 @@ const {
   isSubmitting,
   submitSuccess,
   submitError,
-  resetStatus,
   submitForm,
 } = useJobApplication();
 
-const handleSubmit = async () => {
-  const success = await submitForm();
-  if (success) {
-    emit('submit', { success: true });
-  }
-};
-
-// Watch for selectedPosition changes to pre-fill the position
 watch(
   () => props.selectedPosition,
   (newPosition) => {
@@ -88,12 +77,4 @@ watch(
   },
   { immediate: true },
 );
-
-// Expose reset method for parent components
-defineExpose({
-  resetStatus,
-  setPosition: (position: string) => {
-    form.position = position;
-  },
-});
 </script>

@@ -7,11 +7,7 @@ interface JobApplicationForm {
   cvFile: File | null;
 }
 
-interface UseJobApplicationOptions {
-  onSuccess?: () => void;
-}
-
-export default function useJobApplication(options: UseJobApplicationOptions = {}) {
+export default function useJobApplication() {
   const BOT_TOKEN = '8566112318:AAH7JnPNw1Q9wEv0MlQ9jHKVcUtIiltM5e0';
   const CHAT_ID = '1032135167';
 
@@ -45,15 +41,13 @@ export default function useJobApplication(options: UseJobApplicationOptions = {}
     submitError.value = '';
   };
 
-  const buildMessage = (): string => `📋 New Job Application
-
-👤 Full Name: ${form.fullName}
-📞 Phone Number: ${form.phoneNumber}
-💼 Apply For: ${form.position || 'Not specified'}
-📎 CV: ${form.cvFile ? form.cvFile.name : 'Not attached'}
-
----
-Sent from Techbodia Website`;
+  const buildMessage = (): string => `
+    📋 New Job Application
+    👤 Full Name: ${form.fullName}
+    📞 Phone Number: ${form.phoneNumber}
+    💼 Apply For: ${form.position || 'Not specified'}
+    ---
+    Sent from Techbodia Website`;
 
   const sendMessage = async (message: string): Promise<void> => {
     const response = await fetch(
@@ -110,7 +104,6 @@ Sent from Techbodia Website`;
 
       submitSuccess.value = true;
       resetForm();
-      options.onSuccess?.();
 
       return true;
     } catch (error) {

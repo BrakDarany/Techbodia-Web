@@ -46,8 +46,6 @@ const props = defineProps({
 
 const emit = defineEmits(['close']);
 
-const contactFormRef = ref<InstanceType<typeof ContactForm> | null>(null);
-
 const closePopup = () => {
   emit('close');
 };
@@ -58,18 +56,6 @@ const handleFormSubmit = () => {
   }, 1500);
 };
 
-// Reset form when popup opens
-watch(
-  () => props.isOpen,
-  (isOpen) => {
-    if (isOpen) {
-      contactFormRef.value?.resetStatus();
-      if (props.selectedJob) {
-        contactFormRef.value?.setPosition(props.selectedJob);
-      }
-    }
-  },
-);
 </script>
 
 <style scoped>
