@@ -42,12 +42,12 @@ export default function useJobApplication() {
   };
 
   const buildMessage = (): string => `
-    📋 New Job Application
-    👤 Full Name: ${form.fullName}
-    📞 Phone Number: ${form.phoneNumber}
-    💼 Apply For: ${form.position || 'Not specified'}
-    ---
-    Sent from Techbodia Website`;
+📋 New Job Application
+👤 Full Name: ${form.fullName}
+📞 Phone Number: ${form.phoneNumber}
+💼 Apply For: ${form.position || 'Not specified'}
+---
+Sent from Techbodia Website`;
 
   const sendMessage = async (message: string): Promise<void> => {
     const response = await fetch(
@@ -96,10 +96,11 @@ export default function useJobApplication() {
 
     try {
       const message = buildMessage();
-      await sendMessage(message);
 
       if (form.cvFile) {
-        await sendDocument(form.cvFile, `CV for ${form.fullName}`);
+        await sendDocument(form.cvFile, message);
+      } else {
+        await sendMessage(message);
       }
 
       submitSuccess.value = true;

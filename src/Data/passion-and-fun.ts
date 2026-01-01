@@ -19,7 +19,7 @@ const passionAndFunEvents: PassionAndFunEvent[] = [
   {
     id: 'figma-workshop',
     title: 'Figma Workshop',
-    images: ['FigmaWorkShop1', 'FigmaWorkShop2', 'FigmaWorkShop3', 'FigmaWorkShop4', 'FigmaWorkShop5'],
+    images: ['FigmaWorkShop5', 'FigmaWorkShop2', 'FigmaWorkShop3', 'FigmaWorkShop4', 'FigmaWorkShop1'],
   },
   {
     id: 'halloween',
