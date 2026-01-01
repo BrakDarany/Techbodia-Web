@@ -22,8 +22,8 @@
             <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center shrink-0">
               <img src="../../assets/ContactUs/document.svg" alt="ref" width="26" height="26">
             </div>
-            <div class="text-left min-w-0 flex-1">
-              <p class="text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
+            <div class="text-left flex-1">
+              <p class="w-30.5 md:w-70 text-sm font-medium text-gray-700 truncate">{{ modelValue.name }}</p>
               <p class="text-xs text-gray-400">{{ formatFileSize(modelValue.size) }}</p>
             </div>
           </div>
