@@ -96,10 +96,11 @@ export default function useJobApplication() {
 
     try {
       const message = buildMessage();
-      await sendMessage(message);
 
       if (form.cvFile) {
-        await sendDocument(form.cvFile, `CV for ${form.fullName}`);
+        await sendDocument(form.cvFile, message);
+      } else {
+        await sendMessage(message);
       }
 
       submitSuccess.value = true;
