@@ -165,7 +165,10 @@ const goTo = (hash: string) => {
     router.push({ path: '/', hash });
   } else {
     const el = document.querySelector(hash);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      window.history.replaceState(null, '', hash);
+    }
   }
   isMobileMenuOpen.value = false;
 };
