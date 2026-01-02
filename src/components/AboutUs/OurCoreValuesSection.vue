@@ -27,7 +27,7 @@ import OurCoreValueCard from './OurCoreValueCard.vue';
 
 const ourCoreValues: ICoreValue[] = [
   {
-    title: 'Our Vision',
+    title: 'Be Curious',
     description: 'We constantly ask questions and seek new perspectives to drive innovation.',
     iconName: 'be-curious',
   },
@@ -37,17 +37,17 @@ const ourCoreValues: ICoreValue[] = [
     iconName: 'trust',
   },
   {
-    title: 'Continuous Learning',
+    title: 'Never Stop Improving',
     description: 'We are committed to continuous learning and elevating our standards.',
     iconName: 'never-stop-improve',
   },
   {
-    title: 'Evolution & Growth',
+    title: 'Inspect And Adapt',
     description: 'We regularly review our work and processes to evolve and overcome challenges.',
     iconName: 'inspect-and-adapt',
   },
   {
-    title: 'Results Driven',
+    title: 'Goal Driven',
     description: 'We stay focused on clear objectives to deliver measurable results.',
     iconName: 'goal-driven',
   },
