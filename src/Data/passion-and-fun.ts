@@ -95,7 +95,7 @@ const passionAndFunEvents: PassionAndFunEvent[] = [
   {
     id: 'painting',
     title: 'Painting',
-    images: ['painting1', 'painting2', 'painting3', 'painting4'],
+    images: ['painting2', 'painting1', 'painting3', 'painting4'],
   },
   {
     id: 'women-day',
