@@ -13,7 +13,7 @@
     </div>
 
     <div
-      class="grid gap-12 grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-28 auto-rows-[100px] text-slate-900">
+      class="grid gap-12 grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-18 auto-rows-[100px] text-slate-900">
       <TechnologyCard
         v-for="(value, index) in technologyIcon"
         :key="index"
