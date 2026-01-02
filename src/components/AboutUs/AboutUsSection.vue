@@ -36,7 +36,7 @@ import AboutUsCard from './AboutUsCard.vue';
 const coreValueCards: ICoreValue[] = [
   {
     title: 'Our Vision',
-    description: 'We constantly ask questions and seek new perspectives to drive innovation.',
+    description: 'Being a top leading IT company in Cambodia which provides services that meet customer\'s satisfaction.',
     iconName: 'Our-Vision',
   },
   {
