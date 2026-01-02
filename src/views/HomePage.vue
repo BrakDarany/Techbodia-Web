@@ -19,6 +19,8 @@ import JoinOurTeam from '@/components/JoinOurTeam.vue';
 import ContactUs from '@/components/ContactUs.vue';
 
 onMounted(() => {
-  window.scrollTo(0, 0);
+  if (window.location.hash) {
+    window.history.replaceState(null, '', window.location.pathname);
+  }
 });
 </script>

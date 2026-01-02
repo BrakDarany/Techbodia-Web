@@ -23,24 +23,14 @@ const routes = [
   },
 ];
 
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
+
 export default createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    }
-    if (to.hash) {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const el = document.querySelector(to.hash);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-          }
-          resolve({ el: to.hash });
-        }, 100);
-      });
-    }
+  scrollBehavior() {
     return { top: 0 };
   },
 });
