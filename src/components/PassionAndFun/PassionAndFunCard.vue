@@ -14,6 +14,7 @@
           :src="require(`@/assets/PassionAndFun/${img}.jpg`)"
           :alt="title"
           loading="lazy"
+          @click="openImageInNewTab($event)"
         />
       </SwiperSlide>
     </Swiper>
@@ -34,6 +35,13 @@ defineProps<{
   title: string
   images: string[]
 }>();
+
+const openImageInNewTab = (event: Event) => {
+  const img = event.target as HTMLImageElement;
+  if (img?.src) {
+    window.open(img.src, '_blank');
+  }
+};
 </script>
 
 <style scoped>
